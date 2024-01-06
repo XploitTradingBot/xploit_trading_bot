@@ -467,3 +467,19 @@
 2024-01-06 10:26:46,683 - WARNING - Could not verify multiversx with cmc
 2024-01-06 10:26:46,858 - WARNING - Could not verify multiversx with cmc
 2024-01-06 10:26:56,555 - ERROR - Bot stopped due to an unexpected error: 'str' object has no attribute 'sleep', line: 58
+2024-01-06 11:24:13,258 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 11:24:17,650 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 11:24:44,269 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 11:24:44,425 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 11:24:46,116 - WARNING - Could not verify bitgert with cmc
+2024-01-06 11:24:46,397 - WARNING - Could not verify bitgert with cmc
+2024-01-06 11:25:11,257 - WARNING - Could not verify crypterium with cmc
+2024-01-06 11:25:11,432 - WARNING - Could not verify crypterium with cmc
+2024-01-06 11:25:25,417 - WARNING - Could not verify dypius with cmc
+2024-01-06 11:25:25,702 - WARNING - Could not verify dypius with cmc
+2024-01-06 11:25:42,717 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 11:25:42,869 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 11:25:57,272 - ERROR - Bot stopped due to an unexpected error: 'str' object has no attribute 'sleep', line: 59
+2024-01-06 11:33:22,908 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 11:33:33,011 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 11:33:33,202 - WARNING - Could not verify terra-classic with cmc

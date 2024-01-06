@@ -4,10 +4,11 @@ import threading
 import asyncio
 import ccxt
 import sys
-import time
+# import time
 from typing import Dict, List
 from trading_bot import setup, find_opportunity
 from run_telegram import *
+import time
 
 exit_signal = threading.Event()
 

@@ -1,6 +1,7 @@
 python-dotenv
 rq
 telebot
+python-telegram-bot
 pytz
 Flask
 Flask-Cors==3.0.10

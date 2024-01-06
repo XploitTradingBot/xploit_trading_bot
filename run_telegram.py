@@ -214,7 +214,7 @@ async def handle_response(text:str, chat_id) -> str:
 
 
 # send reports
-async def send_message(chat_id, text:str):
+async def send_message(chat_id:int, text:str):
     app = Application.builder().token(BOT_TOKEN).build()
     await app.bot.send_message(chat_id, text)
 
@@ -240,7 +240,6 @@ async def send_report(opp:Dict):
     tasks = [send_message(chat_id, messages[chat_id]) for chat_id in messages]
     await asyncio.gather(*tasks)
     adapter.info(f"{txt} \nsent to {users_profit}")
-
 
 async def notify_admin(txid:str):
     admin_id = "41c68165-929c-46c2-baee-d936b5d1714f"
