@@ -34,7 +34,7 @@ def start_telegram():
     print("Telegram bot stopped")
     exit_signal.set()
 
-async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_trade=False, keys:Dict={}):
+async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, paper_trade=False, keys:Dict={}):
     adapter.info("You have started the bot")
     if exchange_list is None:
         exchange_list = ['binance', 'bitmex', 'huobi', 'bingx', 'bitget', 'mexc',
@@ -73,19 +73,26 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
         sys.exit(1)
     except ccxt.ExchangeError as e:
         adapter.error(f"Bot stopped due to an exchange error: {e}")
-        asyncio.run(main(capital, fetch_once=fetch_once))
+        asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     except Exception as e:
         adapter.error(f"Bot stopped due to an unexpected error: {e}, line: {e.__traceback__.tb_lineno}")
 
-def bot_handler():
+def start_arbitrage_bot():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    loop.run_until_complete(main(500, exchange_list=None, fetch_once=False))
+    loop.run_until_complete(bot_handler(500, exchange_list=None, fetch_once=False))
+
+def start_telegram_bot():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(start_telegram())
 
 if __name__ == '__main__':
     print("starting arbitrage bot...")
-    bot_thread = threading.Thread(target=bot_handler)
+    bot_thread = threading.Thread(target=start_arbitrage_bot)
+    telegram_thread = threading.Thread(target=start_telegram_bot)
     bot_thread.start()
-    start_telegram()
+    telegram_thread.start()
 
     bot_thread.join()
+    telegram_thread.join()

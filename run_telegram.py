@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 
-BOT_TOKEN: Final = "6778474307:AAFOv0T9F3538MFVwyEafJwu15JLnrFHiB8"
+BOT_TOKEN: Final = handleEnv("BOT_TOKEN")
 BOT_USERNAME: Final = "@Xploit_trading_bot"
 time = "%Y-%m-%d %H:%M:%S"
 
@@ -190,8 +190,8 @@ async def handle_response(text:str, chat_id) -> str:
         await notify_admin(txid)
         return "Please hold on while we verify. This usually takes a few minutes"
     elif "recieved 100usdt" in text:
-        # if user.id not in ['41c68165-929c-46c2-baee-d936b5d1714f']:
-        #     return "Sorry I do not understand your command, send \"help\" for a list of all available commands"
+        if user.id not in ['41c68165-929c-46c2-baee-d936b5d1714f']:
+            return "Sorry I do not understand your command, send \"help\" for a list of all available commands"
         txts = text.split()
         txid = txts[-2]
         # admin_id = txts[-1]
