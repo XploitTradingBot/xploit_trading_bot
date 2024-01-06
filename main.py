@@ -45,7 +45,7 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
         if not fetch_once:
             while True:
                 if exit_signal.is_set():
-                    return
+                    break
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
                 adapter.info(best_opp)

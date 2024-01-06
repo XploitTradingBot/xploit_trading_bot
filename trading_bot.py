@@ -133,28 +133,33 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
         return {"trade_network":None, "fee":0, "address":None, "tag": None}
     # print("Getting withdrawal details...")
 
-    if from_exchange.has.get('fetchDepositWithdrawalFees', None) or from_exchange.has.get('fetchDepositWithdrawFees'):
-        try:
-            from_networks = {}
-            fee_struct = from_exchange.fetchDepositWithdrawFees(code, params={})
-            if "T" in fee_struct:
-                fee_struct = fee_struct["T"]
-            if 'networks' in fee_struct:
-                fee_struct = fee_struct['networks']
-                for network, info in fee_struct.items():
-                    if info['withdraw']['percentage'] is True:
-                        from_networks[network] = info['withdraw']['fee'] * amount
-                    else:
-                        from_networks[network] = info['withdraw']['fee']
-        except Exception as e:
+    from_ntwks = from_exchange.currencies[code]['networks']
+    if from_ntwks is not None:
+        from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
+                        if from_ntwks[network]['active'] is True}
+    else:
+        if from_exchange.has.get('fetchDepositWithdrawalFees', None) or from_exchange.has.get('fetchDepositWithdrawFees'):
+            try:
+                from_networks = {}
+                fee_struct = from_exchange.fetchDepositWithdrawFees(code, params={})
+                if "T" in fee_struct:
+                    fee_struct = fee_struct["T"]
+                if 'networks' in fee_struct:
+                    fee_struct = fee_struct['networks']
+                    for network, info in fee_struct.items():
+                        if info['withdraw']['percentage'] is True:
+                            from_networks[network] = info['withdraw']['fee'] * amount
+                        else:
+                            from_networks[network] = info['withdraw']['fee']
+            except Exception as e:
+                from_ntwks = from_exchange.currencies[code]['networks']
+                from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
+                                if from_ntwks[network]['active'] is True}
+        else:
             from_ntwks = from_exchange.currencies[code]['networks']
             from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
                             if from_ntwks[network]['active'] is True}
-
-    else:
-        from_ntwks = from_exchange.currencies[code]['networks']
-        from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
-                        if from_ntwks[network]['active'] is True}
+            
     # adapter.info("Code reach here")
     if len(from_networks) == 0:
         from_ntwks = from_exchange.currencies[code]['networks']
@@ -162,7 +167,7 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
                         if from_ntwks[network]['active'] is True}
     # adapter.info("Code reach here too")
     from_networks = dict(sorted(from_networks.items(), key=lambda x: x[1]))
-    adapter.info(f"Available networks in {from_exchange.id}: {from_networks}")
+    # adapter.info(f"Available networks in {from_exchange.id}: {from_networks}")
     address_struct = None
     try:
         to_nets = list((to_exchange.fetchDepositWithdrawFee(code, params={}))['networks'].keys())
@@ -172,10 +177,11 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
             to_nets = [net for net in to_nets if to_nets[net]['active'] is True]
         except Exception as e:
             return 1
-    adapter.info(f"Available networks in {to_exchange.id}: {to_nets}")
+    # adapter.info(f"Available networks in {to_exchange.id}: {to_nets}")
 
     sim_addr = {"BEP20": "BSC", "BSC": "BEP20", "ETH": "ERC20", "ERC20": "ETH", "TRX": "TRC20", "TRC20": "TRX",
-                "BNB": "BEP2", "BEP2": "BNB", "HT": "HECO", "HECO": "HT", "MATIC": "POLYGON", "POLYGON": "MATIC"}
+                "BNB": "BEP2", "BEP2": "BNB", "HT": "HECO", "HECO": "HT", "MATIC": "POLYGON", "POLYGON": "MATIC",
+                "ADA": "CARDANO", "CARDANO": "ADA"}
     network = None
     for net in from_networks:
         # print("Finding matching network for", net)
@@ -183,7 +189,7 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
             if net.lower() in to_net.lower() or to_net.lower() in net.lower():
                 if (net == "BEP2" and to_net == "BEP20") or (net == "BEP20" and to_net == "BEP2"):
                     continue
-                print("Match found", to_net)
+                # print("Match found", to_net)
                 return {'trade_network': net, 'fee':from_networks[net]}
                 try:
                     address_struct = to_exchange.fetchDepositAddress(code, params={"network": to_net})
@@ -406,7 +412,7 @@ async def get_fullName(symbol:str, exchange_id:str)->str:
                 return fullName
     except RequestException:
         print("* Your network connection is unstable, please try again later")
-        sys.exit(1)
+        return None
     except Exception as e:
         print("Error:", e)
     return None
@@ -461,12 +467,12 @@ async def verify_with_fullName(symbol:str, exchange_1:str, exchange_2:str)->bool
     if fullName_1 is not None:
         status = verify_with_cmc(fullName_1, exchange_1, exchange_2)
         if status is True:
-            adapter.info(f"{symbol} verified with cmc")
+            # adapter.info(f"{symbol} verified with cmc")
             return True
     if fullName_2 is not None:
         status = verify_with_cmc(fullName_2, exchange_1, exchange_2)
         if status is True:
-            adapter.info(f"{symbol} verified with cmc")
+            # adapter.info(f"{symbol} verified with cmc")
             return True
         
     if fullName_1.lower() == fullName_2.lower():
@@ -524,46 +530,72 @@ async def find_opportunity(capital:float, data:Dict):
         tasks = [find_opp(tickers, coin, capital) for coin in coins.keys()]
         opps = await asyncio.gather(*tasks)
         opps = sorted(opps, key=lambda x: x['profit'], reverse=True)
-        best_opps = []
+        opps = [opp for opp in opps if "coin" in opp and opp['profit'] > 1]
+        adapter.info(f"{len(opps)} opportunities found")
+        # best_opps = []
 
         # Verify and filter each opportunity
         adapter.info("Now verifying opportunities")
-        for opp in opps:
+
+        # for opp in opps:
+        async def get_best_opp(opp:Dict):
             if "coin" not in opp or opp['profit'] <= 0:
-                continue
+                return None
+                # continue
             if opp['profit'] > capital:
-                continue
+                return None
+                # continue
+            # blacklist
             if opp['coin'] in ["VELO/USDT"]:
-                continue
-            verified = await verify_with_fullName(opp['coin'], opp['buy_exchange'], opp['sell_exchange'])
+                return None
+                # continue
+            try:
+                verified = await verify_with_fullName(opp['coin'], opp['buy_exchange'], opp['sell_exchange'])
+            except Exception:
+                return None
             if verified is True:
-                adapter.info(f"{opp['coin']} has been verified between {opp['buy_exchange']} and {opp['sell_exchange']}")
+                # adapter.info(f"{opp['coin']} has been verified between {opp['buy_exchange']} and {opp['sell_exchange']}")
                 status = await executor(capital, opp, exchanges)
                 if status is False:
-                    continue
-                if status['total_fee'] > opp['profit']:
+                    return None
+                    # continue
+                if status['total_fee'] > opp['profit'] - 5:
                     gross_profit = status['total_fee'] + 5
                     min_capital = (capital * gross_profit) / opp['profit']
                     opp['min_cap'] = min_capital
-                    best_opps.append(opp)
+                    adapter.info(f"coin found: {opp}")
+                    # best_opps.append(opp)
+                    return opp
+                else:
+                    opp['min_cap'] = capital
+                    adapter.info(f"coin found: {opp}")
+                    return opp
             else:
-                time.sleep(0.5)
-            if len(best_opps) >= 3:
-                break
+                # time.sleep(0.5)
+                return None
+            # if len(best_opps) >= 3:
+            #     break
+
+        tasks = [get_best_opp(opp) for opp in opps]
+        verified_opps = await asyncio.gather(*tasks)
+        verified_opps = [opp for opp in verified_opps if opp is not None and opp['profit'] > 5]
+        sorted_verified_opps = sorted(verified_opps, key=lambda x: x['min_cap'])
         
-        if len(best_opps) == 0:
-            adapter.info("* No profitable coin found in the selected exchanges *")
-            return None
-        # adapter.info(best_opps)
+        # if len(best_opps) == 0:
+        #     adapter.info("* No profitable coin found in the selected exchanges *")
+        #     return None
+        adapter.info(sorted_verified_opps[:10])
+        return sorted_verified_opps
     except ccxt.NetworkError:
         adapter.error("* Seems your network connection is inactive. Try again later *")
         sys.exit(1)
     except Exception as e:
+        print(e.__traceback__.tb_lineno)
         # adapter.warning(traceback.format_exc())
         adapter.warning(e)
         return None
 
-    return best_opps
+    # return best_opps
 
 async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}, execute:bool=False):
     """This executes the trade on both exchanges
@@ -583,27 +615,18 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     sell_price = opportunity.get("sell_price", None)
 
     # set up the exchange instances
-    # exchange_1 = exchanges[buy_exchange]
-    # exchange_2 = exchanges[sell_exchange]
     exchange_1 = exchanges[buy_exchange]
     exchange_2 = exchanges[sell_exchange]
     if buy_exchange:
-        # exchange_1 = getattr(ccxt, buy_exchange)()
         for key, val in exchange_1.requiredCredentials.items():
             if val:
                 ky = keys.get(f"{buy_exchange}_{key}", handleEnv(f"{buy_exchange}_{key}"))
                 setattr(exchange_1, key, ky)
-                # print(f"{exchange_1.id} - {key} = {ky}")
-        # exchange_1.load_markets()
     if sell_exchange:
-        # exchange_2 = getattr(ccxt, sell_exchange)()
         for key, val in exchange_2.requiredCredentials.items():
             if val:
                 setattr(exchange_2, key, keys.get(f"{sell_exchange}_{key}",
                                                 handleEnv(f"{sell_exchange}_{key}")))
-        # exchange_2.load_markets()
-
-    # adapter.info(f"Exchange setup complete {exchange_1}, {exchange_2}")
 
     # calculate the total gas fee paid
     buy_amount = capital / buy_price
@@ -616,7 +639,10 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     if not withdraw_detail:
         adapter.warning(f"No withdrawal path found for {symbol} between {exchange_1} and {exchange_2}")
         return False
-    withdraw_fee = withdraw_detail['fee'] * buy_price
+    if withdraw_detail['fee']:
+        withdraw_fee = withdraw_detail['fee'] * buy_price
+    else:
+        withdraw_fee = 0
     sell_amount = actual_buy_amount - withdraw_fee
     sell_fee = get_trading_fee(symbol, exchange_2, 'maker', sell_amount) # in usdt
     total_fee = (buy_fee * buy_price) + sell_fee + withdraw_fee
@@ -627,12 +653,11 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     # opportunity['profit'] = opportunity['profit'] - total_fee
     opportunity['total_fee'] = total_fee
     opportunity['withdraw_network'] = withdraw_detail['trade_network']
-    opportunity['withdraw_fee'] = withdraw_detail['fee'] * buy_price
-    adapter.info("Executor completed", opportunity)
-    status = {"total_fee": total_fee, 'withdraw_network': withdraw_detail['trade_network'],
-              "withdraw_fee": withdraw_detail['fee']}
+    opportunity['withdraw_fee'] = withdraw_fee
+    # opportunity['profit'] = opportunity['profit'] - total_fee
+    # adapter.info(f"Executor completed: {opportunity}")
     if not execute:
-        return status
+        return opportunity
 
     # buy symbol in the buy_exchange
     buy_cost = await trade_coin(symbol, exchange_1, buy_amount, buy_price, 'buy')
@@ -660,14 +685,17 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
     adapter.info("You have started the bot")
     if exchange_list is None:
         exchange_list = ['binance', 'bitmex', 'huobi', 'bingx', 'bitget', 'mexc',
-                           'bybit', 'gate', 'bitmart', 'okx', 'kucoin']
-    wait_time = 30   # minutes
+                           'bybit', 'gate', 'okx', 'kucoin']
+    wait_time = 5   # minutes
     try:
         data = await setup(exchange_list)
-        adapter.info("Fetching opportunities")
 
         if not fetch_once:
             while True:
+                from run_telegram import exit_signal
+                if exit_signal.is_set():
+                    break
+                adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
                 adapter.info(best_opp)
                 if not best_opp:
@@ -675,48 +703,45 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
                     time.sleep(wait_time * 60)
                     continue
                 for opp in best_opp:
-                    result_string = f"Symbol      - {opp['coin']}\n"
-                    result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
-                    result_string += f"Buy on      - {opp['buy_exchange']}\n"
-                    result_string += f"Buy price   - {opp['buy_price']} or current market price\n"
-                    if "withdraw_network" in opp:
-                        result_string += f"Withdraw through - {opp['withdraw_network']} (fee: {opp['withdraw_fee']:.1f} USDT)\n"
-                    result_string += f"Sell on     - {opp['sell_exchange']}\n"
-                    result_string += f"sell price  - {opp['sell_price']} or current market price\n"
-                    # result_string += f"Potential profit - {opp['profit']:.2f}%"
                     from run_telegram import send_report
-                    await send_report(result_string, opp['min_cap'])
+                    await send_report(opp)
+                    # result_string = f"Symbol      - {opp['coin']}\n"
+                    # result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
+                    # result_string += f"Buy on      - {opp['buy_exchange']}\n"
+                    # result_string += f"Buy price   - {opp['buy_price']} or current market price\n"
+                    # if "withdraw_network" in opp:
+                    #     result_string += f"Withdraw network - {opp['withdraw_network']}\n"
+                    # result_string += f"Sell on     - {opp['sell_exchange']}\n"
+                    # result_string += f"sell price  - {opp['sell_price']} or current market price\n"
+                    # # result_string += f"Potential profit - {opp['profit']:.2f}%"
+                    
+                    # await send_report(result_string, opp)
                 time.sleep(wait_time * 60)
         else:
             best_opp = await find_opportunity(capital, data)
             if not best_opp:
                 adapter.warning("No profitable coin gotten")
                 sys.exit(1)
-            # if paper_trade:
-            #     adapter.info("Starting to execute trade...")
-            #     for opp in best_opp:
-            #         updated_opp = await executor(capital, opp, keys)
-            #         if updated_opp:
-            #             opp.update(updated_opp)
             adapter.info(best_opp)
             for opp in best_opp:
-                result_string = f"Symbol     - {opp['coin']}\n"
-                result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
-                result_string += f"Buy on     - {opp['buy_exchange']}\n"
-                result_string += f"Buy price  - {opp['buy_price']} or current market price\n"
-                if "withdraw_network" in opp:
-                    result_string += f"Withdraw through - {opp['withdraw_network']} (fee: {opp['withdraw_fee']:.1f} USDT)\n"
-                result_string += f"Sell on    - {opp['sell_exchange']}\n"
-                result_string += f"sell price - {opp['sell_price']} or current market price\n"
-                # result_string += f"Potential profit - {opp['profit']:.2f}%"
+                # result_string = f"Symbol     - {opp['coin']}\n"
+                # result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
+                # result_string += f"Buy on     - {opp['buy_exchange']}\n"
+                # result_string += f"Buy price  - {opp['buy_price']} or current market price\n"
+                # if "withdraw_network" in opp:
+                #     result_string += f"Withdraw network - {opp['withdraw_network']}\n"
+                # result_string += f"Sell on    - {opp['sell_exchange']}\n"
+                # result_string += f"sell price - {opp['sell_price']} or current market price\n"
+                # # result_string += f"Potential profit - {opp['profit']:.2f}%"
                 from run_telegram import send_report
-                await send_report(result_string, opp['min_cap'])
+                await send_report(opp)
 
     except ccxt.NetworkError as e:
         adapter.error(f"Bot stopped due to a network error: {e}")
         sys.exit(1)
     except ccxt.ExchangeError as e:
         adapter.error(f"Bot stopped due to an exchange error: {e}")
+        asyncio.run(main(capital, fetch_once=fetch_once))
     except Exception as e:
         adapter.error(f"Bot stopped due to an unexpected error: {e}, line: {e.__traceback__.tb_lineno}")
 

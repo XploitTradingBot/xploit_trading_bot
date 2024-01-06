@@ -2,6 +2,7 @@
 
 import uuid
 import requests
+from typing import Dict
 from utils.logging import adapter
 from model import storage
 from utils.helper import handleEnv
@@ -9,13 +10,16 @@ from datetime import datetime, timedelta
 
 time = "%Y-%m-%d %H:%M:%S"
 
-def fetch_eligible_users(cap:float):
-    eligible_users = []
+def fetch_eligible_users(opp:Dict)->Dict:
+    cap = opp['min_cap']
+    eligible_users = {}
     users = storage.all("User")
     for _, user in users.items():
         if user.subscribed is True:
             if user.min_cap >= cap:
-                eligible_users.append(user.chat_id)
+                net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
+                profit_percent = (net_profit / user.min_cap) * 100
+                eligible_users[user.chat_id] = (profit_percent, user.min_cap)
         else:
             if user.free_trial == 'active':
                 trial_start = user.free_trial_started
@@ -25,7 +29,9 @@ def fetch_eligible_users(cap:float):
                     user.save()
                 else:
                     if user.min_cap >= cap:
-                        eligible_users.append(user.chat_id)
+                        net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
+                        profit_percent = (net_profit / user.min_cap) * 100
+                        eligible_users[user.chat_id] = (profit_percent, user.min_cap)
     return eligible_users
 
 def payment_handler():

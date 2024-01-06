@@ -3,7 +3,6 @@ rq
 telebot
 pytz
 Flask
-python-telegram-bot
 Flask-Cors==3.0.10
 gunicorn==20.1.0
 Jinja2==3.1.2
@@ -14,4 +13,3 @@ networkx
 Cython
 lxml
 requests
-telegram

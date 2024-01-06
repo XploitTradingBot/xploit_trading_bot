@@ -162,3 +162,308 @@
 2024-01-04 16:51:53,585 - WARNING - Could not verify push-protocol with cmc
 2024-01-04 16:52:05,929 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
 2024-01-04 17:56:07,422 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 19:46:27,110 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/options/contracts?underlying=ETH_USDT
+2024-01-04 19:48:10,527 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 19:48:43,997 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-04 19:49:10,157 - WARNING - No withdrawal path found for FLR/USDT between Huobi and KuCoin
+2024-01-04 19:50:22,456 - WARNING - Could not verify omisego with cmc
+2024-01-04 19:50:22,814 - WARNING - Could not verify omisego with cmc
+2024-01-04 19:50:26,110 - ERROR - Bot stopped due to an unexpected error: cannot import name 'Update' from 'telegram' (C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\telegram\__init__.py), line: 712
+2024-01-04 20:02:32,552 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 20:03:08,961 - ERROR - Bot stopped due to an unexpected error: cannot import name 'Update' from 'telegram' (C:\Users\HP\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\telegram\__init__.py), line: 712
+2024-01-04 20:08:56,779 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 20:11:44,492 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-04 20:15:05,205 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 20:19:25,134 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 20:20:15,098 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-04 20:20:21,854 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 20:20:22,144 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 20:20:28,016 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-05 00:37:50,853 - WARNING - No withdrawal path found for POLK/USDT between KuCoin and BitMart
+2024-01-05 00:37:55,448 - WARNING - No withdrawal path found for KUBE/USDT between Huobi and BitMart
+2024-01-05 00:38:08,787 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-05 01:05:08,832 - WARNING - No withdrawal path found for MULTI/USDT between Huobi and BitMart
+2024-01-05 01:05:25,791 - WARNING - No withdrawal path found for POLK/USDT between KuCoin and BitMart
+2024-01-05 01:05:37,601 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-05 01:05:48,965 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 01:05:49,228 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 01:05:50,787 - WARNING - unsupported operand type(s) for *: 'NoneType' and 'float'
+2024-01-05 01:05:50,806 - WARNING - No profitable coin gotten
+2024-01-05 01:27:17,195 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-05 01:28:09,112 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-05 01:59:04,215 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-05 01:59:14,358 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 01:59:54,721 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-05 15:16:30,315 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 15:17:16,923 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:17:32,258 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:17:52,605 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 15:18:04,297 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:18:16,821 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:18:23,937 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:18:40,467 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:19:09,978 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:23:58,754 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 15:24:28,213 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 15:24:28,380 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 15:24:30,155 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:24:49,165 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:24:59,839 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:25:09,191 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 15:25:09,500 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 15:25:12,094 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 15:25:46,085 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:26:00,263 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:26:02,754 - WARNING - Could not verify omisego with cmc
+2024-01-05 15:26:02,944 - WARNING - Could not verify omisego with cmc
+2024-01-05 15:26:05,880 - WARNING - Total gas fee for execution greater than profit.
+2024-01-05 15:32:53,695 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 15:32:53,841 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 15:33:03,036 - WARNING - No withdrawal path found for PBR/USDT between Huobi and KuCoin
+2024-01-05 15:33:17,365 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 16:04:08,212 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 16:04:08,461 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 16:04:10,139 - WARNING - unsupported operand type(s) for *: 'NoneType' and 'float'
+2024-01-05 16:04:10,139 - WARNING - No profitable coin gotten
+2024-01-05 16:27:33,625 - ERROR - Bot stopped due to a network error: mexc GET https://api.mexc.com/api/v3/exchangeInfo
+2024-01-05 16:32:04,120 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 16:32:05,373 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 16:32:08,838 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 16:44:25,433 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 16:44:42,064 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 16:44:42,246 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 16:44:43,840 - WARNING - unsupported operand type(s) for *: 'NoneType' and 'float'
+2024-01-05 16:44:43,856 - WARNING - No profitable coin gotten
+2024-01-05 16:56:43,511 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 16:57:09,770 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-05 16:57:12,310 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 16:57:13,580 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 16:57:15,118 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 16:58:44,933 - WARNING - No withdrawal path found for ARTY/USDT between Huobi and KuCoin
+2024-01-05 16:59:23,074 - WARNING - Could not verify phala with cmc
+2024-01-05 16:59:23,339 - WARNING - Could not verify phala with cmc
+2024-01-05 16:59:25,065 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-05 16:59:48,409 - WARNING - No withdrawal path found for XETA/USDT between Huobi and KuCoin
+2024-01-05 17:00:06,185 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-05 17:01:22,408 - WARNING - Could not verify omisego with cmc
+2024-01-05 17:01:22,578 - WARNING - Could not verify omisego with cmc
+2024-01-05 17:01:31,582 - WARNING - Could not verify lido with cmc
+2024-01-05 17:02:48,202 - WARNING - dictionary update sequence element #0 has length 10; 2 is required
+2024-01-05 17:02:48,206 - WARNING - No profitable coin gotten
+2024-01-05 17:08:42,094 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 17:11:26,535 - WARNING - No withdrawal path found for JTO/USDT between KuCoin and Huobi
+2024-01-05 17:12:17,200 - WARNING - Could not verify phala with cmc
+2024-01-05 17:12:17,347 - WARNING - Could not verify phala with cmc
+2024-01-05 17:12:18,986 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-05 17:14:18,059 - WARNING - 'marketPairs'
+2024-01-05 17:14:18,074 - WARNING - No profitable coin gotten
+2024-01-05 17:20:03,012 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-05 17:20:20,864 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 17:20:21,026 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 17:20:25,851 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 17:21:45,551 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-05 17:22:14,428 - WARNING - Could not verify multiversx with cmc
+2024-01-05 17:22:14,682 - WARNING - Could not verify multiversx with cmc
+2024-01-05 17:22:59,085 - WARNING - Could not verify clover-finance with cmc
+2024-01-05 17:22:59,490 - WARNING - Could not verify clover-finance with cmc
+2024-01-05 17:23:05,651 - WARNING - Could not verify theta with cmc
+2024-01-05 17:23:05,913 - WARNING - Could not verify theta with cmc
+2024-01-05 17:23:07,459 - WARNING - No withdrawal path found for THETA/USDT between Huobi and KuCoin
+2024-01-05 17:23:38,627 - WARNING - Could not verify bittorrent-(new) with cmc
+2024-01-05 17:23:41,210 - WARNING - No withdrawal path found for BTT/USDT between Huobi and KuCoin
+2024-01-05 17:24:05,665 - WARNING - No withdrawal path found for DOT/USDT between Huobi and KuCoin
+2024-01-05 17:24:51,485 - WARNING - No withdrawal path found for FTM/USDT between Huobi and KuCoin
+2024-01-05 17:25:04,112 - WARNING - unsupported operand type(s) for *: 'NoneType' and 'float'
+2024-01-05 17:25:04,115 - WARNING - No profitable coin gotten
+2024-01-05 17:31:37,265 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 17:31:58,492 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-05 17:32:07,050 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 17:32:07,200 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 17:32:09,651 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 17:51:00,214 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 17:51:22,257 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 17:51:22,406 - WARNING - Could not verify huobi-token with cmc
+2024-01-05 17:51:23,934 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 17:52:18,443 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 17:52:18,641 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 17:53:22,310 - WARNING - No withdrawal path found for WMT/USDT between Huobi and KuCoin
+2024-01-05 17:54:07,054 - WARNING - No withdrawal path found for APT/USDT between Huobi and KuCoin
+2024-01-05 17:54:44,364 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-05 17:54:44,619 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-05 17:54:46,278 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-05 17:56:57,761 - WARNING - Could not verify clover-finance with cmc
+2024-01-05 17:56:57,896 - WARNING - Could not verify clover-finance with cmc
+2024-01-05 17:57:15,304 - WARNING - No withdrawal path found for LTC/USDT between Huobi and KuCoin
+2024-01-05 17:57:33,792 - WARNING - No profitable coin gotten
+2024-01-05 18:02:45,885 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-05 18:06:11,675 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:06:23,070 - WARNING - Could not verify crypterium with cmc
+2024-01-05 18:06:23,337 - WARNING - Could not verify crypterium with cmc
+2024-01-05 18:07:52,696 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 18:08:20,821 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 18:08:21,022 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 18:10:26,117 - WARNING - No withdrawal path found for POLYX/USDT between Huobi and KuCoin
+2024-01-05 18:13:58,301 - WARNING - unsupported operand type(s) for *: 'NoneType' and 'float'
+2024-01-05 18:13:58,301 - WARNING - No profitable coin gotten
+2024-01-05 18:20:22,706 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:20:49,984 - WARNING - No withdrawal path found for WMT/USDT between Huobi and KuCoin
+2024-01-05 18:21:45,450 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-05 18:22:32,419 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:22:32,591 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:23:19,256 - WARNING - Could not verify solar with cmc
+2024-01-05 18:23:19,450 - WARNING - Could not verify solar with cmc
+2024-01-05 18:23:21,116 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-05 18:23:48,984 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 18:24:22,511 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-05 18:25:04,880 - WARNING - No profitable coin gotten
+2024-01-05 18:30:30,280 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:30:38,841 - WARNING - Could not verify vertex with cmc
+2024-01-05 18:30:38,985 - WARNING - Could not verify vertex with cmc
+2024-01-05 18:30:41,570 - WARNING - No withdrawal path found for VRTX/USDT between Huobi and KuCoin
+2024-01-05 18:31:13,970 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-05 18:32:14,632 - WARNING - No withdrawal path found for JTO/USDT between KuCoin and Huobi
+2024-01-05 18:32:38,784 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:32:39,050 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:32:59,290 - WARNING - No withdrawal path found for IOTX/USDT between Huobi and KuCoin
+2024-01-05 18:33:15,907 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-05 18:33:27,247 - WARNING - Could not verify league-of-kingdoms-arena with cmc
+2024-01-05 18:33:27,472 - WARNING - Could not verify league-of-kingdoms-arena with cmc
+2024-01-05 18:35:13,057 - WARNING - Could not verify theta with cmc
+2024-01-05 18:35:13,235 - WARNING - Could not verify theta with cmc
+2024-01-05 18:35:14,827 - WARNING - No withdrawal path found for THETA/USDT between Huobi and KuCoin
+2024-01-05 18:40:55,064 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:42:25,727 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:42:38,979 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 18:42:39,146 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 18:42:51,468 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 18:44:07,552 - WARNING - Could not verify phala with cmc
+2024-01-05 18:44:07,741 - WARNING - Could not verify phala with cmc
+2024-01-05 18:44:09,856 - WARNING - No withdrawal path found for PHA/USDT between KuCoin and Huobi
+2024-01-05 18:44:47,764 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-05 18:44:48,870 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:44:49,041 - WARNING - Could not verify multiversx with cmc
+2024-01-05 18:53:16,812 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:55:34,475 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 18:56:32,994 - ERROR - Bot stopped due to a network error: mexc GET https://api.mexc.com/api/v3/exchangeInfo
+2024-01-05 19:01:14,931 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 19:01:17,286 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 19:02:07,870 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-05 19:08:29,364 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 19:09:25,335 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-05 19:15:42,827 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 19:16:40,142 - WARNING - Could not verify crypterium with cmc
+2024-01-05 19:16:40,259 - WARNING - Could not verify crypterium with cmc
+2024-01-05 19:22:18,926 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-05 19:34:53,067 - WARNING - Could not verify bit.store with cmc
+2024-01-05 19:34:53,534 - WARNING - Could not verify bit.store with cmc
+2024-01-05 21:03:18,929 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 21:03:19,057 - WARNING - Could not verify terra-classic with cmc
+2024-01-05 21:05:38,117 - WARNING - No withdrawal path found for ELF/USDT between Huobi and KuCoin
+2024-01-05 21:31:06,528 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 21:31:06,659 - WARNING - Could not verify push-protocol with cmc
+2024-01-05 21:31:40,672 - WARNING - Could not verify omisego with cmc
+2024-01-05 21:31:40,891 - WARNING - Could not verify omisego with cmc
+2024-01-05 21:32:00,632 - WARNING - No withdrawal path found for CSPR/USDT between Huobi and KuCoin
+2024-01-05 21:32:10,972 - WARNING - Could not verify multiversx with cmc
+2024-01-05 21:32:11,132 - WARNING - Could not verify multiversx with cmc
+2024-01-05 21:32:13,552 - ERROR - Bot stopped due to an unexpected error: 'list' object has no attribute 'items', line: 716
+2024-01-05 22:10:29,916 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-05 22:11:26,542 - WARNING - No withdrawal path found for ELF/USDT between Huobi and KuCoin
+2024-01-05 22:17:31,137 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-05 22:18:17,761 - WARNING - No withdrawal path found for ELF/USDT between Huobi and KuCoin
+2024-01-05 22:39:29,337 - WARNING - Could not verify euler with cmc
+2024-01-05 22:39:40,675 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-05 22:40:50,136 - WARNING - Could not verify omisego with cmc
+2024-01-05 22:40:50,303 - WARNING - Could not verify omisego with cmc
+2024-01-06 00:09:51,101 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:09:51,782 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:09:52,430 - WARNING - No withdrawal path found for VRTX/USDT between Huobi and KuCoin
+2024-01-06 00:09:56,009 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 00:10:05,613 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:11:31,911 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:11:32,073 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:11:34,721 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-06 00:17:31,784 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 00:17:35,619 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:17:35,857 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:17:37,548 - WARNING - No withdrawal path found for VRTX/USDT between Huobi and KuCoin
+2024-01-06 00:17:45,232 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-06 00:18:43,842 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:19:05,131 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:19:05,332 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:19:06,419 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-06 00:25:37,758 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 00:25:54,052 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:25:54,173 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:25:54,701 - WARNING - No withdrawal path found for VRTX/USDT between Huobi and KuCoin
+2024-01-06 00:27:21,602 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:28:05,640 - WARNING - No profitable coin gotten
+2024-01-06 00:33:39,585 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 00:33:50,205 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:33:50,444 - WARNING - Could not verify vertex with cmc
+2024-01-06 00:33:52,018 - WARNING - No withdrawal path found for VRTX/USDT between Huobi and KuCoin
+2024-01-06 00:34:53,933 - WARNING - Could not verify bit.store with cmc
+2024-01-06 00:34:54,105 - WARNING - Could not verify bit.store with cmc
+2024-01-06 00:41:57,864 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:41:58,050 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 00:42:00,057 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-06 00:42:16,659 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:48:41,477 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 00:48:42,209 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 00:49:54,597 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:50:21,024 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-06 00:56:53,428 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 00:57:12,644 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 00:58:18,734 - WARNING - No withdrawal path found for FLR/USDT between Huobi and KuCoin
+2024-01-06 00:58:19,157 - WARNING - Could not verify solar with cmc
+2024-01-06 00:58:19,336 - WARNING - Could not verify solar with cmc
+2024-01-06 00:58:19,849 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-06 00:58:37,476 - WARNING - No profitable coin gotten
+2024-01-06 01:03:58,901 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 01:03:59,117 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 01:04:23,305 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 01:04:47,143 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 01:04:47,312 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 01:05:09,189 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-06 01:11:33,899 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 01:12:13,628 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 01:12:13,800 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 01:18:57,160 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 01:18:57,356 - WARNING - Could not verify push-protocol with cmc
+2024-01-06 04:24:59,829 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-06 07:33:48,295 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 07:33:48,475 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-06 07:33:50,485 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-06 07:34:51,107 - WARNING - Could not verify phala with cmc
+2024-01-06 07:34:51,328 - WARNING - Could not verify phala with cmc
+2024-01-06 07:34:51,860 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-06 07:41:49,355 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-06 07:42:12,904 - WARNING - Could not verify phala with cmc
+2024-01-06 07:42:13,673 - WARNING - Could not verify phala with cmc
+2024-01-06 07:42:18,437 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-06 07:48:50,080 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 07:49:52,032 - WARNING - Could not verify euler with cmc
+2024-01-06 07:50:42,371 - WARNING - Could not verify multiversx with cmc
+2024-01-06 07:50:42,756 - WARNING - Could not verify multiversx with cmc
+2024-01-06 09:44:30,212 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 09:44:30,408 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 09:44:31,521 - WARNING - Could not verify euler with cmc
+2024-01-06 09:48:56,998 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 09:49:18,355 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 09:49:18,825 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 09:56:07,373 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 09:56:32,412 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 09:56:32,634 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 10:22:16,312 - WARNING - Could not verify crypterium with cmc
+2024-01-06 10:22:16,473 - WARNING - Could not verify crypterium with cmc
+2024-01-06 10:22:25,299 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 10:22:44,169 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 10:22:44,393 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 10:25:28,701 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-06 10:25:36,003 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 10:25:36,146 - WARNING - Could not verify terra-classic with cmc
+2024-01-06 10:26:08,854 - WARNING - Could not verify golem with cmc
+2024-01-06 10:26:09,141 - WARNING - Could not verify golem with cmc
+2024-01-06 10:26:46,683 - WARNING - Could not verify multiversx with cmc
+2024-01-06 10:26:46,858 - WARNING - Could not verify multiversx with cmc
+2024-01-06 10:26:56,555 - ERROR - Bot stopped due to an unexpected error: 'str' object has no attribute 'sleep', line: 58

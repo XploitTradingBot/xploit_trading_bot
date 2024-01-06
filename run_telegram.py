@@ -17,6 +17,8 @@ BOT_TOKEN: Final = "6778474307:AAFOv0T9F3538MFVwyEafJwu15JLnrFHiB8"
 BOT_USERNAME: Final = "@Xploit_trading_bot"
 time = "%Y-%m-%d %H:%M:%S"
 
+exit_signal = threading.Event()
+
 
 # Commands
 async def start_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
@@ -24,7 +26,8 @@ async def start_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
     chat_id = Update.message.chat.id
     user = storage.search("User", chat_id=chat_id)
     if len(user) > 0:
-        name = user[0].username
+        name:str = user[0].username
+        name = name.capitalize()
     else:
         name = "there"
     print(f"User ({chat_id}): {text}")
@@ -38,15 +41,36 @@ async def register_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
     if len(users) > 0:
         await Update.message.reply_text("You are already a registered user")
     else:
-        await Update.message.reply_text("Please enter your username in the format: \"Username - {username}\". eg Username - xploit")
+        await Update.message.reply_text("Please enter your username in the format below \n\n\"Username - {username}\".\n\n eg \"Username - xploit\"")
 
 async def subscribe_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    await Update.message.reply_text("This feature is not yet available. Please check back some other time")
-    pass
+    txt = "Welcome, subscription for this service cost 100 USDT per month\n"
+    txt += "/continue_with_payment\n"
+    txt += "/use_coupon"
+    await Update.message.reply_text(txt)
+
+async def continue_with_payment_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+    txt = "Please complete your payment by sending 100 USDT to any of the following addresses\n\n"
+    txt += "0x4a25bf5ffb9083d894faca43e29407a6c99f03dd\n"
+    txt += "BEP20\n\n"
+    txt += "TKUzV9HpakiNdMrFC7164Nb67XGvFYS6AA\n"
+    txt += "TRC20\n\n"
+    txt += "Click here after sending your payment /verify_payment"
+    await Update.message.reply_text(txt)
+
+async def verify_payment_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+    txt = "Please send the transaction id (txid) of the transaction\n\n"
+    txt += "Use the format:  \"txid - 0x12example\""
+    await Update.message.reply_text(txt)
+
+async def use_coupon_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+    await Update.message.reply_text("Sorry no coupon available now")
 
 async def start_free_trial_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
     chat_id = Update.message.chat.id
+    text:str = Update.message.text
     users = storage.search("User", chat_id=chat_id)
+    print(f"User ({chat_id}): {text}")
     if len(users) > 0:
         user = users[0]
         trial_created_at = None
@@ -78,84 +102,28 @@ async def recover_account_command(Update:Update, context:ContextTypes.DEFAULT_TY
     text:str = Update.message.text
     chat_id = Update.message.chat.id
     print(f"User ({chat_id}): {text}")
-    response = "To recover your account, please enter your recovery key below. Use the format:\n"
-    response += "recovery key - <recovery key>\n"
-    response += "Replace \"<recovery key>\" with your actual recovery key"
+    response = "To recover your account, please enter your recovery key below. Use the format:\n\n"
+    response += "\"recovery key - <recovery key>\"\n\n"
+    response += "Replace \"<recovery key>\" with your actual recovery key\n"
     response += "eg. \"recovery key - 1234567890\""
     await Update.message.reply_text(response)
 
-async def setup_exchanges_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Select an exchange to set up.\n"
-    for exchange in ['binance', 'bingx', 'bitget', 'bitmart', 'bitmex', 'bybit',
-                     'gate', 'huobi', 'mexc', 'okx']:
-        text += f"/{exchange}\n"
-    await Update.message.reply_text(text)
-
-async def edit_capital(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+async def edit_capital_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
     chat_id = Update.message.chat.id
+    text:str = Update.message.text
     user = storage.search("User", chat_id=chat_id)
+    print(f"User ({chat_id}): {text}")
     if not user:
         await Update.message.reply_text("You have to register an account first")
     else:
         ret = "Send in your planned capital using the format below:\n\n"
-        ret += "\"capital - 100\""
+        ret += "\"capital - 500\"\n\n"
+        ret += "Minimum starting capital is 500"
         await Update.message.reply_text(ret)
 
 
-# Exchange setup
-async def binance_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your binance API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"binance - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def bingx_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your bingx API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"bingx - apiKeyExample, secretExample\""
-    await Update.message.reply_text(text)
-
-async def bitget_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your bitget API key, secret key and password seperated by a comma as in the format below:\n"
-    text += "\"bitget - apiKeyExample, secretKeyExample, passwordExample\""
-    await Update.message.reply_text(text)
-
-async def bitmart_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your bitmart API key, secret key and uid seperated by a comma as in the format below:\n"
-    text += "\"bitmart - apiKeyExample, secretKeyExample, uidExample\""
-    await Update.message.reply_text(text)
-
-async def bitmex_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your bitmex API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"bitmex - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def bybit_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your bybit API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"bybit - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def gate_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your gate.io API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"gate.io - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def huobi_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your huobi API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"huobi - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def mexc_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your mexc API key and secret key seperated by a comma as in the format below:\n"
-    text += "\"mexc - apiKeyExample, secretKeyExample\""
-    await Update.message.reply_text(text)
-
-async def okx_setup(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    text = "Send your okx API key, secret key and password seperated by a comma as in the format below:\n"
-    text += "\"okx - apiKeyExample, secretKeyExample, PasswordExample\""
-    await Update.message.reply_text(text)
-
-
 # Responses
-def handle_response(text:str, chat_id) -> str:
+async def handle_response(text:str, chat_id) -> str:
     text = text.lower()
     text = text.strip()
     user = storage.search("User", chat_id=chat_id)
@@ -209,132 +177,36 @@ def handle_response(text:str, chat_id) -> str:
             capital = float(capital)
         except ValueError:
             return "Capital must be a number or decimal"
-        if capital < 100:
-            return "Capital must be a greater than 100"
+        if capital < 500:
+            return "Capital must be a greater than 500"
         setattr(user, "min_cap", capital)
         user.save()
-        return f"Congratulations, you will now receive arbitrage opportunities with at least {capital} of starting capital"
-    elif "binance" in text:
-        if not user:
-            return "Please register "
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['binance_apiKey'] = new_keys[0].strip()
-        keys['binance_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Binance keys successfully set!"
-    elif "bingx" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict = user.keys
-        keys['bingx_apiKey'] = new_keys[0].strip()
-        keys['bingx_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Bingx keys successfully set!"
-    elif "bitget" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 3:
-            return "Please enter your api key, secret key and password seperated by comma"
-        keys:Dict = user.keys
-        keys['bitget_apiKey'] = new_keys[0].strip()
-        keys['bitget_secret'] = new_keys[1].strip()
-        keys['bitget_password'] = new_keys[2].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Bitget keys successfully set!"
-    elif "bitmart" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 3:
-            return "Please enter your api key, secret key and uid seperated by a comma"
-        keys:Dict = user.keys
-        keys['bitmart_apiKey'] = new_keys[0].strip()
-        keys['bitmart_secret'] = new_keys[1].strip()
-        keys['bitmart_uid'] = new_keys[2].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Bitmart keys successfully set!"
-    elif "bitmex" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['bitmex_apiKey'] = new_keys[0].strip()
-        keys['bitmex_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Bitmex keys successfully set!"
-    elif "bybit" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['bybit_apiKey'] = new_keys[0].strip()
-        keys['bybit_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Bybit keys successfully set!"
-    elif "gate" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['gate_apiKey'] = new_keys[0].strip()
-        keys['gate_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Gate keys successfully set!"
-    elif "huobi" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['huobi_apiKey'] = new_keys[0].strip()
-        keys['huobi_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Huobi keys successfully set!"
-    elif "mexc" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(keys) < 2:
-            return "Please enter both your api key and secret key seperated by a comma"
-        keys:Dict[str, str] = user.keys
-        keys['mexc_apiKey'] = new_keys[0].strip()
-        keys['mexc_secret'] = new_keys[1].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Mexc keys successfully set!"
-    elif "okx" in text:
-        inp = text.split("-")[1]
-        new_keys = inp.split(",")
-        if len(new_keys) < 3:
-            return "Please enter both your api key, secret key and password seperated by comma"
-        keys:Dict[str, str] = user.keys
-        keys['okx_apiKey'] = new_keys[0].strip()
-        keys['okx_secret'] = new_keys[1].strip()
-        keys['okx_password'] = new_keys[2].strip()
-        setattr(user, "keys", keys)
-        user.save()
-        return "Okx keys successfully set!"
+        return f"Setup complete, you will now receive arbitrage opportunities with at most {capital} USDT of starting capital"
+    elif "txid" in text:
+        txid = text.split("-")
+        if len(txid) < 2:
+            return "Please use the correct format: \"txid - 0x123example\""
+        txid = txid[1]
+        await notify_admin(txid)
+        return "Please hold on while we verify. This usually takes a few minutes"
+    elif "recieved 100usdt" in text:
+        if user.id not in ['41c68165-929c-46c2-baee-d936b5d1714f']:
+            return "Sorry I do not understand your command, send \"help\" for a list of all available commands"
+        txts = text.split()
+        txid = txts[-2]
+        # admin_id = txts[-1]
+        usr = storage.search("User", txid=txid)
+        if not usr:
+            return "There was an error, confirm the text you're sending is accurate"
+        else:
+            setattr(usr, "subscribed", True)
+            usr.save()
+            send_message(usr.chat_id, "Your payment has been confirmed and you will now recieve arbitrage signals")
+            return "Alright, the user has been notified"
     else:
         if text == f"admin start {handleEnv('admin_key')}":
-            from trading_bot import main
-            bot_thread = threading.Thread(target=main, args=(100, None, False))
+            bot_thread = threading.Thread(target=bot_handler)
             bot_thread.start()
-            # main(100, exchange_list=None, fetch_once=False)
             return "Welcome Dennis, you have started the bot"
         else:
             ret_str = "Sorry I do not understand your command. Send /help to view a list of all available commands"
@@ -342,18 +214,47 @@ def handle_response(text:str, chat_id) -> str:
 
 
 # send reports
-async def send_trade_report(chat_id, text:str):
+async def send_message(chat_id, text:str):
     app = Application.builder().token(BOT_TOKEN).build()
     await app.bot.send_message(chat_id, text)
 
-async def send_report(text:str, min_capital:float):
+async def send_report(opp:Dict):
     adapter.info("Sending result...")
-    eligible_users = fetch_eligible_users(min_capital)
-        
-    tasks = [send_trade_report(chat_id, text) for chat_id in eligible_users]
+    users_profit = fetch_eligible_users(opp)
+    messages = {}
+    for user_chat_id, profit in users_profit.items():
+        result_string = f"Symbol      - {opp['coin']}\n"
+        result_string += f"Capital     - {profit[1]} USDT\n"
+        result_string += f"Buy on      - {opp['buy_exchange']}\n"
+        result_string += f"Buy price   - {opp['buy_price']} or current market price\n"
+        if "withdraw_network" in opp:
+            result_string += f"Withdraw network - {opp['withdraw_network']}\n"
+        result_string += f"Sell on     - {opp['sell_exchange']}\n"
+        result_string += f"sell price  - {opp['sell_price']} or current market price\n"
+        txt = result_string + f"\nProfit rate  - {profit[0]:.2f}%"
+        if profit[0] >= 5:
+            messages[user_chat_id] = txt
+        else:
+            adapter.info(f"Could not send {txt} cause of low profit")
+
+    tasks = [send_message(chat_id, messages[chat_id]) for chat_id in messages]
     await asyncio.gather(*tasks)
-    adapter.info(f"{text} \nsent to {eligible_users}")
-    
+    adapter.info(f"{txt} \nsent to {users_profit}")
+
+
+async def notify_admin(txid:str):
+    admin_id = "41c68165-929c-46c2-baee-d936b5d1714f"
+    admin = storage.get("User", admin_id)
+    if not admin:
+        return
+    txt = f"A user has sent 100 USDT to your wallet. The transaction id is {txid}\n\n"
+    txt += "Wait for 5 minutes if you haven't received it to make sure it is not a delay in network\n\n"
+    txt += "If you have confirmed the payment, copy and paste the following text followed by a space and your admin key\n"
+    txt += f"\"Received 100USDT from {txid} ((your admin key here))\"\n"
+    txt += "eg. \"Received 100USDT from 0x123example789 123youradminkey789\n\n"
+    txt += "/Not_received"
+    await send_message(admin.chat_id, txt)
+
 
 # Messages
 async def handle_message(update: Update, context:ContextTypes.DEFAULT_TYPE):
@@ -362,7 +263,7 @@ async def handle_message(update: Update, context:ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat.id
 
     print(f"User ({chat_id}) in {message_type}: \"{text}\"")
-    response = handle_response(text, chat_id)
+    response = await handle_response(text, chat_id)
     print("Bot:", response)
     await update.message.reply_text(response)
 
@@ -372,7 +273,7 @@ async def error(update: Update, context:ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} caused error: {context.error}')
 
 
-def main():
+def start_telegram():
     print("Starting bot ...")
     app = Application.builder().token(BOT_TOKEN).build()
 
@@ -381,21 +282,11 @@ def main():
     app.add_handler(CommandHandler('register', register_command))
     app.add_handler(CommandHandler('start_free_trial', start_free_trial_command))
     app.add_handler(CommandHandler('recover_account', recover_account_command))
-    app.add_handler(CommandHandler('setup_exchanges', setup_exchanges_command))
     app.add_handler(CommandHandler('subscribe', subscribe_command))
-    app.add_handler(CommandHandler("edit_capital", edit_capital))
-
-    # Setups
-    app.add_handler(CommandHandler('binance', binance_setup))
-    app.add_handler(CommandHandler('bingx', bingx_setup))
-    app.add_handler(CommandHandler('bitget', bitget_setup))
-    app.add_handler(CommandHandler('bitmex', bitmex_setup))
-    app.add_handler(CommandHandler('bitmart', bitmart_setup))
-    app.add_handler(CommandHandler('bybit', bybit_setup))
-    app.add_handler(CommandHandler('huobi', huobi_setup))
-    app.add_handler(CommandHandler('gate', gate_setup))
-    app.add_handler(CommandHandler('mexc', mexc_setup))
-    app.add_handler(CommandHandler('okx', okx_setup))
+    app.add_handler(CommandHandler("edit_capital", edit_capital_command))
+    app.add_handler(CommandHandler("continue_with_payment", continue_with_payment_command))
+    app.add_handler(CommandHandler("use_coupon", use_coupon_command))
+    app.add_handler(CommandHandler("verify_payment", verify_payment_command))
 
     # Messages
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
@@ -406,7 +297,21 @@ def main():
     # Polls the bot
     print("Polling ...")
     app.run_polling(poll_interval=3)
-    print("Code reaches here")
+    global exit_signal
+    exit_signal.set()
+    print("Telegram bot stopped")
+
+def bot_handler():
+    from trading_bot import main
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(main(500, exchange_list=None, fetch_once=False))
 
 if __name__ == '__main__':
-    main()
+    # telegram_thread = threading.Thread(target=start_telegram)
+    bot_thread = threading.Thread(target=bot_handler)
+    bot_thread.start()
+    start_telegram()
+
+    # telegram_thread.join()
+    bot_thread.join()

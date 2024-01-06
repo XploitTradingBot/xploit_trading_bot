@@ -11,6 +11,7 @@ class User(BaseModel):
         self.subscribed = False
         self.keys = {}
         self.min_cap = 0
+        self.txid = None
         super().__init__(*args, **kwargs)
         
         # required_vals = ['name', 'email', 'password']
