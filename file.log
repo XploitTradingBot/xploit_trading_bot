@@ -1,0 +1,164 @@
+2023-12-31 03:24:55,010 - ERROR - Bot stopped due to a network error: binance GET https://api.binance.com/api/v3/exchangeInfo
+2023-12-31 10:57:44,845 - ERROR - * Seems your network connection is inactive. Try again later *
+
+2024-01-01 03:05:43,989 - WARNING - 'symbol'
+2024-01-01 03:11:25,461 - WARNING - 'str' object has no attribute 'subscribed'
+2024-01-01 03:14:43,550 - WARNING - too many values to unpack (expected 2)
+2024-01-01 13:04:47,904 - WARNING - name 'app' is not defined
+2024-01-01 18:55:10,290 - ERROR - Bot stopped due to a network error: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC
+2024-01-01 19:01:30,540 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object has no attribute 'get'
+2024-01-02 03:26:47,885 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not str
+2024-01-02 03:32:35,599 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not str
+2024-01-02 03:35:20,620 - ERROR - Bot stopped due to an exchange error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2024-01-02 03:44:04,551 - ERROR - Bot stopped due to an exchange error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2024-01-03 16:18:28,436 - ERROR - Bot stopped due to an exchange error: binance {"code":-2015,"msg":"Invalid API-key, IP, or permissions for action."}
+2024-01-03 16:30:20,972 - ERROR - Bot stopped due to an unexpected error: invalid literal for int() with base 10: '15.69'
+2024-01-03 16:33:56,574 - ERROR - Bot stopped due to a network error: bingx GET https://open-api.bingx.com/openApi/spot/v1/common/symbols?timestamp=1704295966830
+2024-01-03 16:36:44,112 - ERROR - Bot stopped due to an unexpected error: object float can't be used in 'await' expression
+2024-01-03 16:40:00,798 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/options/contracts?underlying=ETH_USDT
+2024-01-03 17:03:01,202 - ERROR - * Seems your network connection is inactive. Try again later *
+
+2024-01-03 17:03:01,437 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable
+2024-01-03 17:13:47,296 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict
+2024-01-03 17:19:04,187 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict
+2024-01-03 17:22:24,825 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict
+2024-01-03 17:25:21,909 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/spot/currencies
+2024-01-03 17:29:12,332 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict
+2024-01-03 17:39:12,315 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict
+2024-01-03 17:46:14,261 - ERROR - Bot stopped due to a network error: binance GET https://api.binance.com/api/v3/exchangeInfo
+2024-01-03 17:49:13,074 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/futures/usdt/contracts
+2024-01-03 17:53:37,496 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict, line: 601
+2024-01-03 17:59:56,801 - ERROR - Bot stopped due to an unexpected error: list indices must be integers or slices, not dict, line: 602
+2024-01-03 18:58:39,183 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-03 19:40:17,453 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-03 22:26:53,428 - ERROR - Bot stopped due to a network error: kucoin GET https://api.kucoin.com/api/v3/currencies
+2024-01-03 22:28:55,986 - ERROR - Bot stopped due to a network error: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2024-01-03 22:32:03,769 - ERROR - Bot stopped due to a network error: bitmex GET https://www.bitmex.com/api/v1/wallet/assets
+2024-01-03 22:33:46,549 - ERROR - Bot stopped due to a network error: mexc GET https://contract.mexc.com/api/v1/contract/detail
+2024-01-03 22:36:55,079 - ERROR - Bot stopped due to a network error: bitmart GET https://api-cloud.bitmart.com/spot/v1/symbols/details
+2024-01-03 22:41:10,947 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-03 22:45:03,070 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/options/contracts?underlying=BTC_USDT
+2024-01-03 22:47:40,097 - ERROR - Bot stopped due to a network error: bingx GET https://open-api.bingx.com/openApi/swap/v2/quote/contracts?timestamp=1704318375069
+2024-01-03 22:55:32,778 - ERROR - Bot stopped due to a network error: huobi GET https://api.hbdm.com/swap-api/v1/swap_contract_info
+2024-01-03 22:59:19,508 - ERROR - Bot stopped due to a network error: mexc GET https://api.mexc.com/api/v3/exchangeInfo
+2024-01-03 23:02:32,681 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/futures/usdt/contracts
+2024-01-03 23:06:04,747 - ERROR - Bot stopped due to a network error: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2024-01-03 23:09:28,418 - ERROR - Bot stopped due to a network error: bitget GET https://api.bitget.com/api/spot/v1/public/products
+2024-01-03 23:15:19,894 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/options/contracts?underlying=ETH_USDT
+2024-01-03 23:18:31,885 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not subscriptable, line: 604
+2024-01-03 23:27:47,211 - ERROR - Bot stopped due to a network error: huobi GET https://api.hbdm.com/linear-swap-api/v1/swap_contract_info?business_type=futures
+2024-01-03 23:30:57,427 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not subscriptable, line: 604
+2024-01-04 04:37:21,060 - WARNING - No withdrawal path found
+2024-01-04 04:37:30,077 - WARNING - No withdrawal path found
+2024-01-04 04:37:40,356 - ERROR - Bot stopped due to an unexpected error: 'networks', line: 607
+2024-01-04 05:15:22,007 - WARNING - No withdrawal path found
+2024-01-04 05:15:31,119 - WARNING - No withdrawal path found
+2024-01-04 05:15:40,991 - ERROR - Bot stopped due to an unexpected error: 'networks', line: 622
+2024-01-04 05:50:38,298 - WARNING - Could not verify Dfy.money with cmc
+2024-01-04 05:50:40,411 - WARNING - local variable 'marketPairs' referenced before assignment
+2024-01-04 05:50:40,414 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 647
+2024-01-04 06:07:43,944 - WARNING - Could not verify Dfy.money with cmc
+2024-01-04 06:07:46,440 - WARNING - local variable 'marketPairs' referenced before assignment
+2024-01-04 06:07:46,440 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 649
+2024-01-04 06:14:29,263 - WARNING - Could not verify Dfy.money with cmc
+2024-01-04 06:14:32,487 - WARNING - Could not verify Xeno-NFT-Hub with cmc
+2024-01-04 06:14:35,626 - WARNING - Could not verify L7 with cmc
+2024-01-04 06:14:39,445 - WARNING - Could not verify VIC-Token with cmc
+2024-01-04 06:14:43,127 - WARNING - Could not verify Satoshi-Island-Coin with cmc
+2024-01-04 06:14:45,011 - WARNING - Could not verify Vacuum-Coin with cmc
+2024-01-04 06:14:47,753 - WARNING - Could not verify Probinex-Token with cmc
+2024-01-04 06:14:51,014 - WARNING - Could not verify Brazil-Fan-Token with cmc
+2024-01-04 06:15:03,664 - WARNING - Could not verify Argonon-Helium with cmc
+2024-01-04 06:15:05,621 - WARNING - Could not verify Unique-Network with cmc
+2024-01-04 06:15:22,915 - WARNING - No withdrawal path found
+2024-01-04 06:15:27,164 - ERROR - Bot stopped due to an unexpected error: set env file with key 'gate_apiKey' value, line: 650
+2024-01-04 07:22:35,109 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-04 08:26:09,043 - WARNING - executor() missing 1 required positional argument: 'keys'
+2024-01-04 08:26:09,141 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 687
+2024-01-04 08:28:51,990 - ERROR - Bot stopped due to a network error: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH
+2024-01-04 08:30:23,913 - ERROR - Bot stopped due to a network error: bybit GET https://api.bybit.com/v5/market/instruments-info?category=spot
+2024-01-04 08:33:27,720 - WARNING - 'coroutine' object is not subscriptable
+2024-01-04 08:33:30,615 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 687
+2024-01-04 08:40:13,927 - WARNING - No withdrawal path found
+2024-01-04 08:40:32,853 - WARNING - No withdrawal path found
+2024-01-04 08:41:10,677 - WARNING - 'networks'
+2024-01-04 08:41:10,735 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 689
+2024-01-04 11:35:38,462 - WARNING - 'symbol'
+2024-01-04 11:35:39,073 - WARNING - No profitable coin gotten
+2024-01-04 11:35:39,076 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 700
+2024-01-04 11:41:11,489 - WARNING - kucoin markets not loaded
+2024-01-04 11:41:11,489 - WARNING - No profitable coin gotten
+2024-01-04 11:41:11,505 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 700
+2024-01-04 11:50:06,527 - WARNING - No withdrawal path found for POLK/USDT between KuCoin and BitMart
+2024-01-04 11:50:26,188 - WARNING - 'networks'
+2024-01-04 11:50:26,217 - WARNING - No profitable coin gotten
+2024-01-04 11:50:26,222 - ERROR - Bot stopped due to an unexpected error: 'NoneType' object is not iterable, line: 702
+2024-01-04 11:54:07,073 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 11:56:23,877 - WARNING - No withdrawal path found for HBB/USDT between Huobi and KuCoin
+2024-01-04 11:58:33,792 - ERROR - Bot stopped due to an unexpected error: 'fee', line: 707
+2024-01-04 12:12:25,325 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 12:13:21,183 - WARNING - No withdrawal path found for HBB/USDT between Huobi and KuCoin
+2024-01-04 12:13:52,429 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 12:13:52,736 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 12:16:00,771 - ERROR - Bot stopped due to a network error: binance GET https://api.binance.com/api/v3/exchangeInfo
+2024-01-04 12:19:56,836 - ERROR - Bot stopped due to a network error: bitmex GET https://www.bitmex.com/api/v1/wallet/assets
+2024-01-04 12:24:45,733 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 12:25:00,955 - WARNING - No withdrawal path found for HBB/USDT between Huobi and KuCoin
+2024-01-04 12:25:11,872 - WARNING - No withdrawal path found for EVER/USDT between Huobi and KuCoin
+2024-01-04 12:25:19,139 - WARNING - No withdrawal path found for XCN/USDT between Huobi and KuCoin
+2024-01-04 12:25:51,058 - WARNING - No withdrawal path found for SDN/USDT between Huobi and Gate.io
+2024-01-04 13:02:20,911 - ERROR - Bot stopped due to a network error: kucoin GET https://api.kucoin.com/api/v3/currencies
+2024-01-04 13:05:37,407 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 13:11:09,776 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 13:17:27,560 - ERROR - Bot stopped due to a network error: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2024-01-04 13:25:23,051 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 13:38:55,499 - ERROR - Bot stopped due to a network error: binance GET https://fapi.binance.com/fapi/v1/exchangeInfo
+2024-01-04 13:40:38,528 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-04 13:42:26,136 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-04 13:46:27,139 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 13:46:47,457 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 13:46:54,854 - WARNING - No withdrawal path found for HBB/USDT between Huobi and KuCoin
+2024-01-04 13:48:33,339 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 13:48:34,123 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 13:48:47,455 - WARNING - No withdrawal path found for PBR/USDT between Huobi and KuCoin
+2024-01-04 13:49:07,108 - WARNING - No withdrawal path found for CUDOS/USDT between Huobi and KuCoin
+2024-01-04 13:58:44,577 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 13:59:05,666 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 13:59:37,244 - WARNING - 'marketPairs'
+2024-01-04 13:59:37,246 - WARNING - No profitable coin gotten
+2024-01-04 14:02:33,472 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 14:02:45,887 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 14:03:21,759 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-04 14:04:50,138 - WARNING - No withdrawal path found for EVER/USDT between Huobi and KuCoin
+2024-01-04 14:13:36,195 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 14:19:13,382 - ERROR - Bot stopped due to a network error: bingx GET https://open-api.bingx.com/openApi/spot/v1/common/symbols?timestamp=1704374277452
+2024-01-04 14:21:43,804 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 14:22:48,622 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 14:22:56,592 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-04 14:28:10,574 - ERROR - Bot stopped due to a network error: huobi GET https://api.hbdm.com/linear-swap-api/v1/swap_contract_info
+2024-01-04 14:32:58,732 - ERROR - Bot stopped due to a network error: huobi GET https://api.huobi.pro/v2/reference/currencies
+2024-01-04 14:34:30,192 - ERROR - Bot stopped due to a network error: bybit GET https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC
+2024-01-04 14:37:01,523 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 14:37:40,621 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 14:46:34,033 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 14:47:03,051 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 14:47:47,138 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 14:47:47,377 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 14:48:57,367 - WARNING - Could not verify solar with cmc
+2024-01-04 14:48:57,651 - WARNING - Could not verify solar with cmc
+2024-01-04 14:49:00,270 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-04 14:49:16,968 - WARNING - No withdrawal path found for EVER/USDT between Huobi and KuCoin
+2024-01-04 15:01:43,898 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 15:02:05,129 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-04 15:12:26,368 - ERROR - Bot stopped due to a network error: binance GET https://api.binance.com/api/v3/exchangeInfo
+2024-01-04 15:18:37,236 - ERROR - Bot stopped due to a network error: mexc GET https://api.mexc.com/api/v3/exchangeInfo
+2024-01-04 15:21:35,569 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 15:21:42,197 - WARNING - Could not verify vertex with cmc
+2024-01-04 15:21:42,544 - WARNING - Could not verify vertex with cmc
+2024-01-04 15:21:44,319 - WARNING - No withdrawal path found for VRTX/USDT between KuCoin and Huobi
+2024-01-04 15:23:20,550 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 15:23:20,734 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 16:51:51,817 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 16:51:53,585 - WARNING - Could not verify push-protocol with cmc
+2024-01-04 16:52:05,929 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-04 17:56:07,422 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi

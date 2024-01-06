@@ -1,0 +1,5 @@
+#ignore env files
+.env
+__pycache__
+.vscode
+file.json

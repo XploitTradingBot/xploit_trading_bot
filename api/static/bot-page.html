@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configure your bot</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1> Welcome to XPLOIT Trading bot</h1>
+    <div id="form">
+
+        <div id="exchange-select">
+            <label for="exchange">Upcoming tokens</label><br>
+            <textarea readonly style="width: 300px; min-height: 100px;" id="token"></textarea>
+        </div>
+        <br>
+        <div id="existing_bots"></div>
+
+        <div class="new_bot">
+            <h3>Create your bot</h3>
+            <div id="exchange-select">
+                <p>Which exchange would you like to perform the trade on?</p>
+                <select id="exchange" name=""Exchange>
+                    <option value="gate">Gate.io</option>
+                    <option value="mexc">MEXC</option>
+                </select>
+            </div><br>
+            <h6>Fill in the exchange keys appropriately</h6>
+            <div id="keys">
+                <label>Enter the exchange API and secret keys</label><br>
+                <input id="api-key" placeholder="API-key" style="width: 250px;"><br>
+                <input id="secret" placeholder="API-secret" style="width: 250px;"><br><br>
+            </div>
+            <div id="cap">
+                <label class="capital">Capital</label><br>
+                <span><input id="capital" type="number"></span><br>
+                <br>
+            </div>
+            <div id="save-btn">
+                <br><button id="save">Create bot</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="start-btn">
+        <br><button class="disappear" id="start">Start</button>
+    </div>
+    <div>
+        <br><button class="disappear" id="stop">Stop bot</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/bot-page.js"></script>
+
+
+</body>
