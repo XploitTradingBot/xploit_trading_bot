@@ -502,3 +502,982 @@
 2024-01-06 14:16:53,583 - WARNING - Could not verify omisego with cmc
 2024-01-06 14:20:54,675 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
 2024-01-06 14:21:03,134 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-06 14:21:38,416 - WARNING - Could not verify crypterium with cmc
+2024-01-06 14:21:38,591 - WARNING - Could not verify crypterium with cmc
+2024-01-06 14:21:43,158 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-06 14:22:01,205 - WARNING - Could not verify dypius with cmc
+2024-01-06 14:22:01,358 - WARNING - Could not verify dypius with cmc
+2024-01-06 14:22:07,852 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-07 06:04:13,284 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-07 07:07:37,434 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 07:08:40,702 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:08:40,876 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:15:04,296 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 07:15:25,114 - WARNING - No withdrawal path found for SILLY/USDT between Huobi and KuCoin
+2024-01-07 07:15:49,949 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:15:50,106 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:16:03,617 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 07:16:35,366 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-07 07:16:55,487 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:16:55,679 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:17:07,906 - WARNING - Could not verify multiversx with cmc
+2024-01-07 07:17:08,107 - WARNING - Could not verify multiversx with cmc
+2024-01-07 07:19:29,715 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 07:19:32,702 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 07:20:14,726 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-07 07:21:15,618 - WARNING - No withdrawal path found for SHRAP/USDT between Huobi and KuCoin
+2024-01-07 07:21:18,108 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-07 07:21:18,267 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-07 07:21:19,354 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-07 07:21:42,173 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:21:42,346 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:21:44,918 - WARNING - No profitable coin gotten
+2024-01-07 07:23:30,188 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 07:24:04,044 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-07 07:24:04,227 - WARNING - Could not verify terra-classic-usd with cmc
+2024-01-07 07:24:06,261 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-07 07:24:09,542 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-07 07:24:52,978 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:24:53,170 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:25:02,776 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 07:30:57,812 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 07:31:02,296 - WARNING - No withdrawal path found for EVER/USDT between Huobi and KuCoin
+2024-01-07 07:35:42,411 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:35:42,586 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:43:53,647 - WARNING - Could not verify terra-classic with cmc
+2024-01-07 07:43:54,157 - WARNING - Could not verify terra-classic with cmc
+2024-01-07 07:44:12,253 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:44:12,410 - WARNING - Could not verify push-protocol with cmc
+2024-01-07 07:45:20,729 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:45:20,905 - WARNING - Could not verify omisego with cmc
+2024-01-07 07:45:23,558 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 07:58:19,698 - WARNING - Could not verify terra-classic with cmc
+2024-01-07 07:58:19,845 - WARNING - Could not verify terra-classic with cmc
+2024-01-07 07:58:24,869 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 08:03:51,123 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 08:04:13,108 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 08:15:12,331 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 08:15:31,082 - WARNING - Could not verify solar with cmc
+2024-01-07 08:15:31,302 - WARNING - Could not verify solar with cmc
+2024-01-07 08:15:32,022 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-07 08:15:45,338 - WARNING - Could not verify euler with cmc
+2024-01-07 08:15:49,687 - WARNING - No profitable coin gotten
+2024-01-07 08:21:09,302 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 08:22:45,252 - WARNING - No withdrawal path found for SHRAP/USDT between KuCoin and Huobi
+2024-01-07 08:23:11,289 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 08:23:42,721 - WARNING - No profitable coin gotten
+2024-01-07 08:29:12,435 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 08:29:29,342 - WARNING - Could not verify bitgert with cmc
+2024-01-07 08:29:29,596 - WARNING - Could not verify bitgert with cmc
+2024-01-07 08:29:42,564 - WARNING - Could not verify bit.store with cmc
+2024-01-07 08:29:42,733 - WARNING - Could not verify bit.store with cmc
+2024-01-07 08:30:04,555 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-07 08:31:42,781 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 08:31:44,962 - WARNING - No withdrawal path found for KAI/USDT between KuCoin and Huobi
+2024-01-07 08:33:16,763 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 08:34:06,875 - WARNING - Could not verify euler with cmc: The system is busy, please try again later!
+2024-01-07 08:34:19,884 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-07 08:39:41,359 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 08:39:43,014 - WARNING - No withdrawal path found for KAI/USDT between KuCoin and Huobi
+2024-01-07 08:41:24,346 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 08:54:13,597 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 08:54:19,291 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 08:54:25,073 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 08:54:33,822 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 08:54:48,403 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 08:54:51,593 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 08:55:14,654 - WARNING - No withdrawal path found for VRA/USDT between KuCoin and Bitget
+2024-01-07 08:55:16,445 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 08:55:20,220 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-07 08:55:28,507 - WARNING - No withdrawal path found for LMWR/USDT between KuCoin and Bitget
+2024-01-07 08:56:39,695 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 08:56:41,909 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 08:56:47,787 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 08:57:02,866 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 08:57:04,797 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 08:57:13,779 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 08:57:22,930 - WARNING - No withdrawal path found for VRA/USDT between KuCoin and Bitget
+2024-01-07 08:57:24,413 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Bitget
+2024-01-07 08:57:26,517 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-07 08:57:51,262 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 08:57:59,508 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 08:58:02,400 - WARNING - No withdrawal path found for CGPT/USDT between KuCoin and Bitget
+2024-01-07 08:58:08,421 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 08:58:15,848 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-07 08:58:18,480 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 08:58:19,928 - WARNING - Could not verify ispolink-token with cmc: The system is busy, please try again later!
+2024-01-07 08:58:22,327 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 08:58:25,519 - WARNING - No withdrawal path found for DCK/USDT between KuCoin and Bitget
+2024-01-07 08:58:35,188 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 08:58:36,473 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 08:58:51,950 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 08:58:57,119 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 08:59:10,634 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 08:59:16,177 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 08:59:24,410 - WARNING - No withdrawal path found for LABS/USDT between Gate.io and KuCoin
+2024-01-07 08:59:26,005 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-07 08:59:32,747 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-07 08:59:36,206 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 08:59:40,482 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 08:59:50,399 - WARNING - Could not verify wingoal with cmc: The system is busy, please try again later!
+2024-01-07 08:59:50,994 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-07 08:59:58,561 - WARNING - No withdrawal path found for CVX/USDT between Huobi and Bitget
+2024-01-07 09:00:06,986 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:00:11,948 - WARNING - No withdrawal path found for XAVA/USDT between Gate.io and KuCoin
+2024-01-07 09:00:13,729 - WARNING - Could not verify xyo-network with cmc: The system is busy, please try again later!
+2024-01-07 09:00:14,497 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 09:00:28,850 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 09:00:35,031 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 09:00:36,559 - WARNING - Could not verify aave-protocol with cmc: The system is busy, please try again later!
+2024-01-07 09:00:37,857 - WARNING - Could not verify phala with cmc: The system is busy, please try again later!
+2024-01-07 09:00:46,050 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 09:00:46,050 - WARNING - 'ETH'
+2024-01-07 09:00:46,050 - WARNING - No profitable coin gotten
+2024-01-07 09:06:24,313 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 09:06:30,205 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 09:06:33,832 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 09:06:37,303 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-07 09:06:47,483 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 09:06:59,300 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 09:07:03,405 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 09:07:25,906 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-07 09:07:30,453 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-07 09:07:43,918 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 09:07:45,272 - WARNING - Could not verify zeroswaptoken with cmc: The system is busy, please try again later!
+2024-01-07 09:07:50,477 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 09:07:52,701 - WARNING - No withdrawal path found for LMWR/USDT between KuCoin and Bitget
+2024-01-07 09:08:03,336 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-07 09:08:24,697 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 09:08:30,930 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-07 09:08:34,257 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 09:08:37,271 - WARNING - Could not verify polychain-monsters with cmc: The system is busy, please try again later!
+2024-01-07 09:08:38,619 - WARNING - Could not verify wingoal with cmc: The system is busy, please try again later!
+2024-01-07 09:09:07,460 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 09:09:09,459 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 09:09:11,528 - WARNING - No withdrawal path found for CGPT/USDT between KuCoin and Bitget
+2024-01-07 09:09:15,117 - WARNING - No withdrawal path found for SPA/USDT between Gate.io and KuCoin
+2024-01-07 09:09:22,941 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 09:09:23,661 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 09:10:00,810 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:10:30,489 - WARNING - No withdrawal path found for VRA/USDT between KuCoin and Bitget
+2024-01-07 09:10:33,921 - WARNING - No withdrawal path found for UNFI/USDT between Bitget and Huobi
+2024-01-07 09:10:38,966 - WARNING - Could not verify euler with cmc: The system is busy, please try again later!
+2024-01-07 09:10:38,981 - WARNING - 'ETH'
+2024-01-07 09:10:38,981 - WARNING - No profitable coin gotten
+2024-01-07 09:15:51,952 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 09:15:54,194 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 09:15:57,272 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 09:16:06,035 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 09:16:08,042 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-07 09:16:12,687 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 09:17:02,468 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 09:17:03,918 - WARNING - Could not verify zeroswaptoken with cmc: The system is busy, please try again later!
+2024-01-07 09:17:05,995 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 09:17:11,420 - WARNING - No withdrawal path found for LMWR/USDT between KuCoin and Bitget
+2024-01-07 09:17:13,712 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-07 09:17:24,143 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-07 09:17:26,117 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 09:17:27,325 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 09:17:53,814 - WARNING - No withdrawal path found for TURT/USDT between Gate.io and KuCoin
+2024-01-07 09:18:00,155 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 09:18:06,800 - WARNING - No withdrawal path found for IZI/USDT between Gate.io and KuCoin
+2024-01-07 09:18:08,193 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 09:18:19,712 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 09:18:23,763 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 09:18:25,519 - WARNING - No withdrawal path found for XETA/USDT between Bitget and KuCoin
+2024-01-07 09:18:50,337 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:18:53,476 - WARNING - No withdrawal path found for BLOK/USDT between Gate.io and KuCoin
+2024-01-07 09:18:58,373 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-07 09:19:01,064 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 09:19:15,474 - WARNING - No withdrawal path found for CGPT/USDT between KuCoin and Bitget
+2024-01-07 09:19:18,568 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 09:19:23,902 - WARNING - Could not verify decentralized-social with cmc: The system is busy, please try again later!
+2024-01-07 09:19:35,953 - WARNING - 'ETH'
+2024-01-07 09:19:35,953 - WARNING - No profitable coin gotten
+2024-01-07 09:23:14,899 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 583, in find_opportunity
+    verified_opps = asyncio.run(main())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\runners.py", line 33, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+
+2024-01-07 09:23:14,899 - WARNING - asyncio.run() cannot be called from a running event loop
+2024-01-07 09:23:14,924 - WARNING - No profitable coin gotten
+2024-01-07 09:27:44,921 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 583, in find_opportunity
+    verified_opps = asyncio.run(main())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\runners.py", line 33, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+
+2024-01-07 09:27:44,921 - WARNING - asyncio.run() cannot be called from a running event loop
+2024-01-07 09:27:44,929 - WARNING - No profitable coin gotten
+2024-01-07 09:29:52,479 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 09:29:55,521 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 09:30:02,403 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 09:30:03,862 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 09:30:04,489 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 09:30:10,336 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 09:30:20,244 - WARNING - No withdrawal path found for QRDO/USDT between Huobi and Bitget
+2024-01-07 09:30:27,552 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 09:30:44,951 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 09:31:04,745 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and Huobi
+2024-01-07 09:31:06,104 - WARNING - Could not verify zeroswaptoken with cmc: The system is busy, please try again later!
+2024-01-07 09:31:20,158 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 09:31:27,403 - WARNING - No withdrawal path found for VRA/USDT between KuCoin and Bitget
+2024-01-07 09:31:36,464 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-07 09:31:37,452 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 09:31:38,503 - WARNING - Could not verify kok with cmc: The system is busy, please try again later!
+2024-01-07 09:31:44,712 - WARNING - Could not verify bitgert with cmc: The system is busy, please try again later!
+2024-01-07 09:31:46,743 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 09:31:49,368 - WARNING - No withdrawal path found for SEAM/USDT between KuCoin and Bitget
+2024-01-07 09:31:51,232 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 09:32:06,424 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 09:32:09,640 - WARNING - No withdrawal path found for QKC/USDT between Bitget and KuCoin
+2024-01-07 09:32:17,555 - WARNING - Could not verify shibaswap-bone with cmc: The system is busy, please try again later!
+2024-01-07 09:32:19,500 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-07 09:32:34,314 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 09:32:36,336 - WARNING - No withdrawal path found for OGV/USDT between Huobi and Bitget
+2024-01-07 09:32:42,105 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 09:33:01,921 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 09:33:02,548 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-07 09:33:30,516 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 09:33:41,945 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:33:43,231 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 09:33:57,322 - WARNING - Could not verify hacken-token with cmc: The system is busy, please try again later!
+2024-01-07 09:34:11,212 - WARNING - Could not verify ispolink-token with cmc: The system is busy, please try again later!
+2024-01-07 09:34:18,597 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 579, in find_opportunity
+    verified_opps = await asyncio.gather(*tasks)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 562, in verify_opp
+    status = await executor(capital, opp, exchanges)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 638, in executor
+    withdraw_detail = get_withdrawal_detail(exchange_1, exchange_2, symbol.split("/")[0], actual_buy_amount)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 213, in get_withdrawal_detail
+    "fee": from_networks[net], "address": address_struct['address']}
+KeyError: 'ETH'
+
+2024-01-07 09:34:18,616 - WARNING - 'ETH'
+2024-01-07 09:34:18,616 - WARNING - No profitable coin gotten
+2024-01-07 09:37:20,207 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 09:37:22,653 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 09:37:29,551 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 09:37:31,228 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 09:37:38,628 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 09:37:41,433 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 09:37:56,739 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 09:38:02,111 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 09:38:08,210 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 09:38:24,060 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and Huobi
+2024-01-07 09:38:28,104 - WARNING - Could not verify kok with cmc: The system is busy, please try again later!
+2024-01-07 09:38:32,650 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-07 09:38:45,521 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 09:38:49,252 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 09:38:50,570 - WARNING - Could not verify king-token-(kt) with cmc: The system is busy, please try again later!
+2024-01-07 09:39:01,732 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 09:39:16,309 - WARNING - No withdrawal path found for QKC/USDT between Bitget and KuCoin
+2024-01-07 09:39:18,709 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 09:39:25,095 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 09:39:32,003 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 09:39:37,599 - WARNING - No withdrawal path found for OGV/USDT between Huobi and Bitget
+2024-01-07 09:39:43,306 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 09:39:50,341 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 09:40:03,641 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 09:40:05,098 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-07 09:40:16,323 - WARNING - Could not verify shibaswap-bone with cmc: The system is busy, please try again later!
+2024-01-07 09:40:24,505 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-07 09:40:25,887 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-07 09:40:28,699 - WARNING - Could not verify astar-network with cmc: The system is busy, please try again later!
+2024-01-07 09:40:30,150 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 09:40:31,200 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:40:37,806 - WARNING - Could not verify gari-network with cmc: The system is busy, please try again later!
+2024-01-07 09:40:50,097 - WARNING - Could not verify ispolink-token with cmc: The system is busy, please try again later!
+2024-01-07 09:40:52,082 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 09:41:06,738 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 581, in find_opportunity
+    verified_opps = asyncio.run(main())
+TypeError: main() missing 1 required positional argument: 'capital'
+
+2024-01-07 09:41:06,738 - WARNING - main() missing 1 required positional argument: 'capital'
+2024-01-07 09:41:06,753 - WARNING - No profitable coin gotten
+2024-01-07 09:43:19,453 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 09:43:22,718 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 09:43:25,457 - WARNING - Could not verify vertex with cmc: The system is busy, please try again later!
+2024-01-07 09:43:32,011 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 09:43:34,831 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 09:43:39,411 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 09:43:40,680 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 09:44:16,281 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 09:44:16,705 - WARNING - Could not verify stepn with cmc: The system is busy, please try again later!
+2024-01-07 09:44:18,071 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 09:44:20,921 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 09:44:28,039 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 09:44:28,979 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 09:44:51,619 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 09:45:04,683 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 09:45:16,467 - WARNING - Could not verify king-token-(kt) with cmc: The system is busy, please try again later!
+2024-01-07 09:45:17,598 - WARNING - Could not verify shibaswap-bone with cmc: The system is busy, please try again later!
+2024-01-07 09:45:24,727 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 09:45:35,044 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-07 09:45:41,063 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 09:45:52,711 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and Huobi
+2024-01-07 09:45:56,959 - WARNING - Could not verify sushi with cmc: The system is busy, please try again later!
+2024-01-07 09:46:00,084 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 09:46:10,682 - WARNING - No withdrawal path found for OGV/USDT between Huobi and Bitget
+2024-01-07 09:46:11,758 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 09:46:14,315 - WARNING - Could not verify meter with cmc: The system is busy, please try again later!
+2024-01-07 09:46:15,380 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 09:46:16,493 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 09:46:17,605 - WARNING - Could not verify truefi with cmc: The system is busy, please try again later!
+2024-01-07 09:46:25,240 - WARNING - Could not verify cobak with cmc: The system is busy, please try again later!
+2024-01-07 09:46:38,081 - WARNING - Could not verify ioi-token with cmc: The system is busy, please try again later!
+2024-01-07 09:46:53,008 - WARNING - Could not verify gari-network with cmc: The system is busy, please try again later!
+2024-01-07 09:46:55,309 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 09:46:58,648 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 09:47:04,964 - WARNING - Could not verify seedify.fund with cmc: The system is busy, please try again later!
+2024-01-07 09:47:15,361 - WARNING - Could not verify ispolink-token with cmc: The system is busy, please try again later!
+2024-01-07 09:47:28,576 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 09:47:30,646 - WARNING - No withdrawal path found for XCN/USDT between Huobi and Bitget
+2024-01-07 12:45:03,409 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 12:45:04,601 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 12:45:17,017 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-07 12:45:19,431 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 12:45:22,662 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 12:45:41,881 - WARNING - Could not verify zignaly with cmc: The system is busy, please try again later!
+2024-01-07 12:45:43,115 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-07 12:45:56,226 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 12:46:02,985 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 12:46:06,352 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-07 12:46:06,698 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 12:46:10,259 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 12:46:13,266 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 12:46:14,568 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 12:46:21,591 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 12:46:27,791 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 12:46:31,294 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 12:46:38,553 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 12:46:54,151 - WARNING - Could not verify polychain-monsters with cmc: The system is busy, please try again later!
+2024-01-07 12:47:19,236 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 12:47:21,611 - WARNING - Could not verify hifi-finance with cmc: The system is busy, please try again later!
+2024-01-07 12:47:25,458 - WARNING - Could not verify ioi-token with cmc: The system is busy, please try again later!
+2024-01-07 12:47:31,870 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 12:47:33,626 - WARNING - Could not verify cirus with cmc: The system is busy, please try again later!
+2024-01-07 12:47:34,221 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-07 12:47:52,251 - WARNING - Could not verify ellipsis-x with cmc: The system is busy, please try again later!
+2024-01-07 12:48:00,278 - WARNING - Could not verify yfdai.finance with cmc: The system is busy, please try again later!
+2024-01-07 12:48:05,592 - WARNING - Could not verify standard with cmc: The system is busy, please try again later!
+2024-01-07 12:48:07,191 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-07 12:48:19,353 - WARNING - No withdrawal path found for TRADE/USDT between Gate.io and KuCoin
+2024-01-07 12:48:21,606 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 12:48:28,654 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 12:48:37,354 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 12:48:38,639 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-07 12:53:52,401 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 12:54:01,669 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 12:54:02,153 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 12:54:11,108 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 12:54:20,512 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-07 12:54:30,634 - WARNING - Could not verify zignaly with cmc: The system is busy, please try again later!
+2024-01-07 12:54:48,377 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 12:54:50,603 - WARNING - No withdrawal path found for QRDO/USDT between Huobi and Bitget
+2024-01-07 12:54:53,204 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 12:54:57,381 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-07 12:54:58,900 - WARNING - Could not verify metaverse.network-&-bit.country with cmc: The system is busy, please try again later!
+2024-01-07 12:55:00,109 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-07 12:55:02,727 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 12:55:07,132 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 12:55:08,436 - WARNING - Could not verify lithium-finance with cmc: The system is busy, please try again later!
+2024-01-07 12:55:11,443 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 12:55:22,888 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 12:55:27,402 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 12:55:35,210 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 12:55:36,526 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 12:55:50,981 - WARNING - Could not verify polychain-monsters with cmc: The system is busy, please try again later!
+2024-01-07 12:55:53,238 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 12:55:59,431 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 12:56:01,140 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 12:56:13,276 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 12:56:15,531 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 12:56:22,884 - WARNING - Could not verify radicle with cmc: The system is busy, please try again later!
+2024-01-07 12:56:25,799 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 12:56:32,761 - WARNING - Could not verify dai with cmc: The system is busy, please try again later!
+2024-01-07 12:56:35,583 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 12:56:36,969 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 12:56:38,123 - WARNING - No withdrawal path found for FITFI/USDT between KuCoin and Huobi
+2024-01-07 12:57:01,293 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-07 12:57:03,378 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 12:57:07,203 - WARNING - Could not verify wax-token-(waxp) with cmc: The system is busy, please try again later!
+2024-01-07 12:57:30,968 - WARNING - Could not verify xdc-mainnet with cmc: The system is busy, please try again later!
+2024-01-07 12:57:32,050 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:03:00,529 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:03:05,076 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:03:05,467 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:03:16,143 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:03:24,923 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:03:34,139 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 13:03:37,384 - WARNING - No withdrawal path found for ORDS/USDT between Huobi and Bitget
+2024-01-07 13:03:40,835 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 13:03:47,403 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 13:03:49,473 - WARNING - Could not verify stepn with cmc: The system is busy, please try again later!
+2024-01-07 13:04:31,041 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 13:04:36,067 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 13:04:38,332 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:04:48,350 - WARNING - Could not verify kok with cmc: The system is busy, please try again later!
+2024-01-07 13:04:49,512 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:04:52,635 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 13:05:27,617 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 13:05:29,475 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 13:05:32,101 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 13:05:33,806 - WARNING - No withdrawal path found for FRM/USDT between Gate.io and KuCoin
+2024-01-07 13:05:34,955 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 13:05:45,620 - WARNING - No withdrawal path found for AXS/USDT between Bitget and KuCoin
+2024-01-07 13:05:48,768 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-07 13:05:49,789 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 13:05:51,054 - WARNING - Could not verify meter with cmc: The system is busy, please try again later!
+2024-01-07 13:05:54,309 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 13:06:15,243 - WARNING - Could not verify dai with cmc: The system is busy, please try again later!
+2024-01-07 13:06:22,597 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-07 13:06:31,724 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-07 13:06:34,373 - WARNING - Could not verify bitgert with cmc: The system is busy, please try again later!
+2024-01-07 13:06:45,174 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:07:02,259 - WARNING - Could not verify sensorium with cmc: The system is busy, please try again later!
+2024-01-07 13:07:04,103 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:07:05,168 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 13:07:11,056 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-07 13:12:24,616 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:12:29,742 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:12:30,107 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:12:35,382 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:12:44,089 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:12:46,765 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 13:13:04,886 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:13:15,915 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 13:13:17,251 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-07 13:13:24,642 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 13:13:26,039 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 13:13:41,828 - WARNING - No withdrawal path found for VLX/USDT between Huobi and KuCoin
+2024-01-07 13:13:46,341 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 13:13:52,853 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 13:13:55,259 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 13:13:59,118 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:14:01,118 - WARNING - No withdrawal path found for LMWR/USDT between KuCoin and Bitget
+2024-01-07 13:14:04,848 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 13:14:08,065 - WARNING - Could not verify mil.k with cmc: The system is busy, please try again later!
+2024-01-07 13:14:09,765 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:14:12,951 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 13:14:14,120 - WARNING - Could not verify polychain-monsters with cmc: The system is busy, please try again later!
+2024-01-07 13:14:23,902 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 13:14:40,901 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 13:14:43,058 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-07 13:14:48,338 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 13:14:52,338 - WARNING - Could not verify dai with cmc: The system is busy, please try again later!
+2024-01-07 13:14:52,825 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 13:14:59,674 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 13:15:00,046 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 13:15:06,117 - WARNING - Could not verify route with cmc: The system is busy, please try again later!
+2024-01-07 13:15:08,990 - WARNING - Could not verify visiongame with cmc: The system is busy, please try again later!
+2024-01-07 13:15:10,253 - WARNING - Could not verify meter with cmc: The system is busy, please try again later!
+2024-01-07 13:15:11,584 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 13:15:17,420 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 13:15:26,730 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 13:15:33,592 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 13:15:41,305 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-07 13:15:45,580 - WARNING - Could not verify xmoney with cmc: The system is busy, please try again later!
+2024-01-07 13:15:54,598 - WARNING - Could not verify sushi with cmc: The system is busy, please try again later!
+2024-01-07 13:15:57,953 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:21:14,593 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:21:20,709 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:21:21,091 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:21:24,194 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:21:28,333 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 13:21:30,301 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:21:36,343 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:21:55,361 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 13:21:59,764 - WARNING - No withdrawal path found for SAO/USDT between Gate.io and Huobi
+2024-01-07 13:22:05,860 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 13:22:26,485 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:22:27,583 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-07 13:22:32,819 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 13:22:33,808 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 13:22:39,556 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-07 13:22:43,560 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 13:22:55,708 - WARNING - No withdrawal path found for WAXL/USDT between Gate.io and Huobi
+2024-01-07 13:23:03,964 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:23:05,502 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 13:23:17,184 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 13:23:19,175 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 13:23:28,811 - WARNING - No withdrawal path found for VLX/USDT between Gate.io and Huobi
+2024-01-07 13:23:34,810 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 13:23:57,818 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 13:24:06,720 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 13:24:10,627 - WARNING - Could not verify mantra-dao with cmc: The system is busy, please try again later!
+2024-01-07 13:24:13,903 - WARNING - No withdrawal path found for DC/USDT between Gate.io and KuCoin
+2024-01-07 13:24:14,311 - WARNING - Could not verify just-stablecoin with cmc: The system is busy, please try again later!
+2024-01-07 13:24:15,521 - WARNING - Could not verify unilend-finance with cmc: The system is busy, please try again later!
+2024-01-07 13:24:17,912 - WARNING - Could not verify meter with cmc: The system is busy, please try again later!
+2024-01-07 13:24:21,421 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-07 13:24:33,841 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:24:35,264 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 13:24:36,594 - WARNING - Could not verify dypius with cmc: The system is busy, please try again later!
+2024-01-07 13:24:51,101 - WARNING - Could not verify zignaly with cmc: The system is busy, please try again later!
+2024-01-07 13:30:06,749 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:30:12,236 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:30:12,653 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:30:17,667 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:30:26,157 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:30:30,093 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:31:01,812 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 13:31:07,630 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 13:31:15,643 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 13:31:18,842 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 13:31:22,311 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:31:36,014 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 13:31:49,126 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 13:31:50,047 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 13:32:07,230 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:32:08,558 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 13:32:13,382 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-07 13:32:14,445 - WARNING - Could not verify phala with cmc: The system is busy, please try again later!
+2024-01-07 13:32:24,155 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 13:32:26,724 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 13:32:48,158 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 13:32:54,780 - WARNING - No withdrawal path found for VLX/USDT between Gate.io and Huobi
+2024-01-07 13:33:11,233 - WARNING - Could not verify unilend-finance with cmc: The system is busy, please try again later!
+2024-01-07 13:33:13,219 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 13:33:37,291 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-07 13:33:44,841 - WARNING - No withdrawal path found for UMA/USDT between Huobi and Bitget
+2024-01-07 13:34:11,079 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 13:34:16,610 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:34:25,174 - WARNING - No withdrawal path found for OBI/USDT between Gate.io and KuCoin
+2024-01-07 13:34:26,249 - WARNING - Could not verify zignaly with cmc: The system is busy, please try again later!
+2024-01-07 13:34:27,414 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 13:34:29,786 - WARNING - Could not verify gatechain with cmc: The system is busy, please try again later!
+2024-01-07 13:39:41,892 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:39:49,056 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:39:49,674 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:39:51,029 - WARNING - Could not verify darkshield-games-studio with cmc: The system is busy, please try again later!
+2024-01-07 13:39:52,094 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:39:55,105 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:40:01,777 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and KuCoin
+2024-01-07 13:40:06,184 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:40:37,776 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-07 13:40:42,356 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 13:42:18,518 - WARNING - Could not verify polychain-monsters with cmc: The system is busy, please try again later!
+2024-01-07 13:42:20,665 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-07 13:42:21,771 - WARNING - Could not verify shibaswap-bone with cmc: The system is busy, please try again later!
+2024-01-07 13:42:26,852 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 13:42:39,698 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 13:42:56,381 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:43:04,229 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 13:43:17,046 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 13:43:32,112 - WARNING - Could not verify phala with cmc: The system is busy, please try again later!
+2024-01-07 13:43:36,538 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-07 13:43:51,369 - WARNING - Could not verify fuse with cmc: The system is busy, please try again later!
+2024-01-07 13:43:58,023 - WARNING - No withdrawal path found for WAXL/USDT between Gate.io and Huobi
+2024-01-07 13:43:58,981 - WARNING - No withdrawal path found for FLR/USDT between Huobi and KuCoin
+2024-01-07 13:44:07,042 - WARNING - No withdrawal path found for ARB/USDT between Huobi and Gate.io
+2024-01-07 13:44:09,620 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 13:44:19,947 - WARNING - Could not verify gatechain with cmc: The system is busy, please try again later!
+2024-01-07 13:44:27,758 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 13:44:28,791 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:49:42,318 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:49:46,657 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:49:47,269 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:49:51,392 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:49:53,144 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 13:50:00,199 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:50:02,663 - WARNING - Could not verify kok with cmc: The system is busy, please try again later!
+2024-01-07 13:50:31,992 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 13:50:33,108 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 13:50:35,599 - WARNING - Could not verify vertex with cmc: The system is busy, please try again later!
+2024-01-07 13:50:36,750 - WARNING - Could not verify deepbrainchain with cmc: The system is busy, please try again later!
+2024-01-07 13:50:39,172 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 13:50:40,396 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:50:43,892 - WARNING - No withdrawal path found for ORDS/USDT between Huobi and Bitget
+2024-01-07 13:50:53,822 - WARNING - No withdrawal path found for SCLP/USDT between KuCoin and Bitget
+2024-01-07 13:51:13,800 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 13:51:16,833 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 13:51:18,043 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 13:51:34,671 - WARNING - No withdrawal path found for TLOS/USDT between Gate.io and Huobi
+2024-01-07 13:51:44,259 - WARNING - Could not verify cobak with cmc: The system is busy, please try again later!
+2024-01-07 13:51:45,367 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-07 13:51:50,282 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 13:52:04,526 - WARNING - Could not verify yfdai.finance with cmc: The system is busy, please try again later!
+2024-01-07 13:52:05,631 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 13:52:07,359 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 13:52:12,209 - WARNING - Could not verify gari-network with cmc: The system is busy, please try again later!
+2024-01-07 13:52:22,099 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 13:52:27,633 - WARNING - No withdrawal path found for AXS/USDT between Bitget and KuCoin
+2024-01-07 13:52:37,947 - WARNING - Could not verify fuse with cmc: The system is busy, please try again later!
+2024-01-07 13:52:42,041 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 13:52:44,859 - WARNING - Could not verify tomtom-coin with cmc: The system is busy, please try again later!
+2024-01-07 13:52:46,854 - WARNING - No withdrawal path found for XCN/USDT between Huobi and Bitget
+2024-01-07 13:53:06,398 - WARNING - No withdrawal path found for ROCO/USDT between Huobi and Gate.io
+2024-01-07 13:53:19,489 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 13:53:35,418 - WARNING - Could not verify zeroswaptoken with cmc: The system is busy, please try again later!
+2024-01-07 13:53:44,357 - WARNING - No withdrawal path found for UMA/USDT between Huobi and Bitget
+2024-01-07 13:53:48,171 - WARNING - Could not verify nakamoto.games with cmc: The system is busy, please try again later!
+2024-01-07 13:53:49,866 - WARNING - No withdrawal path found for NWC/USDT between Gate.io and KuCoin
+2024-01-07 13:53:50,255 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 13:53:52,402 - WARNING - Could not verify gatechain with cmc: The system is busy, please try again later!
+2024-01-07 13:53:53,452 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 13:59:09,290 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 13:59:23,734 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 13:59:24,189 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 13:59:30,855 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 13:59:34,019 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-07 13:59:40,756 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 13:59:43,149 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 13:59:57,793 - WARNING - No withdrawal path found for WAXL/USDT between Gate.io and Huobi
+2024-01-07 14:00:06,948 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 14:00:08,029 - WARNING - Could not verify gensokishi-metaverse with cmc: The system is busy, please try again later!
+2024-01-07 14:00:10,876 - WARNING - Could not verify vertex with cmc: The system is busy, please try again later!
+2024-01-07 14:00:12,137 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 14:00:23,424 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 14:00:26,529 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 14:00:52,065 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 14:01:10,659 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 14:01:28,986 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 14:01:32,584 - WARNING - No withdrawal path found for AXS/USDT between Bitget and KuCoin
+2024-01-07 14:01:34,959 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Bitget
+2024-01-07 14:01:39,682 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 14:01:40,971 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 14:01:47,312 - WARNING - Could not verify yfdai.finance with cmc: The system is busy, please try again later!
+2024-01-07 14:01:56,578 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-07 14:01:57,286 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-07 14:01:59,367 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-07 14:02:01,154 - WARNING - Could not verify taraxa-coin with cmc: The system is busy, please try again later!
+2024-01-07 14:02:06,611 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 14:02:18,023 - WARNING - Could not verify tomtom-coin with cmc: The system is busy, please try again later!
+2024-01-07 14:02:21,786 - WARNING - Could not verify standard with cmc: The system is busy, please try again later!
+2024-01-07 14:02:24,671 - WARNING - Could not verify deepbrainchain with cmc: The system is busy, please try again later!
+2024-01-07 14:02:29,813 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 14:02:31,772 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and KuCoin
+2024-01-07 14:02:33,857 - WARNING - No withdrawal path found for BABYDOGE/USDT between KuCoin and Bitget
+2024-01-07 14:02:36,382 - WARNING - No withdrawal path found for VLX/USDT between Huobi and Gate.io
+2024-01-07 14:02:47,476 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-07 14:02:48,842 - WARNING - Could not verify orbit-chain-(orc) with cmc: The system is busy, please try again later!
+2024-01-07 14:02:49,916 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 14:02:58,265 - WARNING - Could not verify aave-protocol with cmc: The system is busy, please try again later!
+2024-01-07 14:02:59,536 - WARNING - Could not verify fuse with cmc: The system is busy, please try again later!
+2024-01-07 14:03:00,606 - WARNING - Could not verify sensorium with cmc: The system is busy, please try again later!
+2024-01-07 14:03:03,193 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 14:03:05,058 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 14:05:12,615 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 14:05:12,992 - WARNING - Could not verify kardiachain-token with cmc: The system is busy, please try again later!
+2024-01-07 14:05:13,964 - WARNING - Could not verify vertex with cmc: The system is busy, please try again later!
+2024-01-07 14:05:24,279 - WARNING - Could not verify metavisa with cmc: The system is busy, please try again later!
+2024-01-07 14:05:29,687 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-07 14:05:34,610 - WARNING - Could not verify geojam with cmc: The system is busy, please try again later!
+2024-01-07 14:05:40,347 - WARNING - No withdrawal path found for WAXL/USDT between Gate.io and Huobi
+2024-01-07 14:05:56,653 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 14:06:03,743 - WARNING - Could not verify artificial-liquid-intelligence with cmc: The system is busy, please try again later!
+2024-01-07 14:06:20,851 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-07 14:06:27,311 - WARNING - Could not verify crust with cmc: The system is busy, please try again later!
+2024-01-07 14:06:29,808 - WARNING - Could not verify layerai with cmc: The system is busy, please try again later!
+2024-01-07 14:06:45,459 - WARNING - Could not verify ascendex-token with cmc: The system is busy, please try again later!
+2024-01-07 14:06:50,475 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 14:06:55,036 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 14:06:59,411 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-07 14:07:03,659 - WARNING - No withdrawal path found for VLX/USDT between KuCoin and Huobi
+2024-01-07 14:07:04,976 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-07 14:07:16,608 - WARNING - No withdrawal path found for AXS/USDT between Bitget and KuCoin
+2024-01-07 14:07:17,752 - WARNING - Could not verify yfdai.finance with cmc: The system is busy, please try again later!
+2024-01-07 14:07:33,798 - WARNING - Could not verify infinity-games with cmc: The system is busy, please try again later!
+2024-01-07 14:07:36,675 - WARNING - Could not verify grape-coin with cmc: The system is busy, please try again later!
+2024-01-07 14:07:40,092 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-07 14:07:42,563 - WARNING - Could not verify true-usd with cmc: The system is busy, please try again later!
+2024-01-07 14:07:49,030 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-07 14:07:51,105 - WARNING - Could not verify tomtom-coin with cmc: The system is busy, please try again later!
+2024-01-07 14:07:53,858 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-07 14:07:56,097 - WARNING - Could not verify deepbrainchain with cmc: The system is busy, please try again later!
+2024-01-07 14:08:03,962 - WARNING - Could not verify zec with cmc: The system is busy, please try again later!
+2024-01-07 14:08:05,246 - WARNING - Could not verify orbit-chain-(orc) with cmc: The system is busy, please try again later!
+2024-01-07 14:08:10,320 - WARNING - Could not verify euro-tether with cmc: The system is busy, please try again later!
+2024-01-07 14:08:12,332 - WARNING - Could not verify the-open-network with cmc: The system is busy, please try again later!
+2024-01-07 14:08:15,817 - WARNING - Could not verify squad with cmc: The system is busy, please try again later!
+2024-01-07 14:08:22,099 - WARNING - Could not verify fuse with cmc: The system is busy, please try again later!
+2024-01-07 14:08:30,551 - WARNING - Could not verify gatechain with cmc: The system is busy, please try again later!
+2024-01-07 14:08:33,677 - WARNING - Could not verify bware with cmc: The system is busy, please try again later!
+2024-01-07 14:08:41,937 - WARNING - Could not verify darkshield-games-studio with cmc: The system is busy, please try again later!
+2024-01-07 14:28:25,706 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 14:28:33,467 - WARNING - No withdrawal path found for SAO/USDT between Gate.io and Huobi
+2024-01-07 14:28:43,806 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-07 14:28:51,125 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-07 14:29:05,607 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 14:29:27,646 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-07 14:30:08,532 - WARNING - Could not verify xpet.tech with cmc: The system is busy, please try again later!
+2024-01-07 14:30:17,140 - WARNING - No withdrawal path found for AURORA/USDT between Huobi and KuCoin
+2024-01-07 14:30:26,153 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 14:30:26,748 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-07 14:30:32,143 - WARNING - No withdrawal path found for AXS/USDT between Gate.io and KuCoin
+2024-01-07 14:30:33,288 - WARNING - Could not verify cobak with cmc: The system is busy, please try again later!
+2024-01-07 14:30:37,395 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-07 14:30:43,400 - WARNING - No withdrawal path found for XPLL/USDT between Gate.io and KuCoin
+2024-01-07 14:31:10,803 - WARNING - No withdrawal path found for MARSH/USDT between Gate.io and KuCoin
+2024-01-07 14:31:28,315 - WARNING - Could not verify sinverse with cmc: The system is busy, please try again later!
+2024-01-07 14:31:39,616 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-07 14:31:50,215 - WARNING - No withdrawal path found for RACA/USDT between Huobi and Gate.io
+2024-01-07 14:32:04,135 - WARNING - Could not verify ispolink-token with cmc: The system is busy, please try again later!
+2024-01-07 14:32:18,280 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-07 14:32:22,575 - WARNING - No withdrawal path found for FLR/USDT between Huobi and KuCoin
+2024-01-07 14:32:27,467 - WARNING - No withdrawal path found for MTS/USDT between Gate.io and KuCoin
+2024-01-07 14:32:29,604 - WARNING - Could not verify wirex with cmc: The system is busy, please try again later!
+2024-01-07 14:32:38,329 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-07 14:32:42,204 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 600, in find_opportunity
+    verified_opps = await asyncio.gather(*tasks)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 564, in verify_opp
+    if verified is True:
+UnboundLocalError: local variable 'verified' referenced before assignment
+
+2024-01-07 14:32:42,206 - WARNING - local variable 'verified' referenced before assignment
+2024-01-07 14:32:42,206 - WARNING - No profitable coin gotten
+2024-01-07 14:37:55,131 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 14:37:59,765 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-07 14:38:18,615 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 14:38:24,337 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-07 14:38:28,715 - WARNING - No withdrawal path found for DEGO/USDT between Gate.io and KuCoin
+2024-01-07 14:38:33,969 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 15:05:33,008 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-07 15:05:43,527 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-07 15:05:54,626 - WARNING - No withdrawal path found for POLYX/USDT between Gate.io and KuCoin
+2024-01-07 15:05:59,005 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-07 15:06:13,848 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-07 15:06:31,064 - WARNING - No withdrawal path found for RACA/USDT between Huobi and KuCoin
+2024-01-07 15:06:33,888 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-07 15:06:37,107 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-07 15:06:40,413 - WARNING - No withdrawal path found for SOUL/USDT between Gate.io and KuCoin
+2024-01-07 15:06:58,062 - WARNING - Could not verify yfii-finance with cmc: The system is busy, please try again later!
+2024-01-07 15:07:34,295 - WARNING - Could not verify shibaswap-bone with cmc: The system is busy, please try again later!
+2024-01-07 15:07:36,436 - WARNING - No withdrawal path found for AXS/USDT between Bitget and KuCoin
+2024-01-07 15:07:37,975 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-07 15:07:39,057 - WARNING - Could not verify terra-classic-usd with cmc: The system is busy, please try again later!
+2024-01-07 15:07:41,897 - WARNING - No withdrawal path found for BSV/USDT between Huobi and KuCoin
+2024-01-07 15:07:45,833 - WARNING - No withdrawal path found for CGPT/USDT between Gate.io and KuCoin
+2024-01-07 15:07:52,014 - WARNING - Could not verify forj(bondly) with cmc: The system is busy, please try again later!
+2024-01-07 15:08:01,804 - WARNING - Could not verify berry-store with cmc: The system is busy, please try again later!
+2024-01-07 15:08:10,254 - WARNING - Could not verify multiversx with cmc: The system is busy, please try again later!
+2024-01-07 15:08:30,353 - WARNING - Could not verify osmo with cmc: The system is busy, please try again later!
+2024-01-07 15:08:35,141 - WARNING - Could not verify gensokishi-metaverse with cmc: The system is busy, please try again later!
+2024-01-07 15:08:40,053 - WARNING - Could not verify unbound-finance with cmc: The system is busy, please try again later!
+2024-01-07 15:08:46,639 - WARNING - No withdrawal path found for TOKEN/USDT between Gate.io and KuCoin
+2024-01-07 15:08:55,707 - WARNING - No withdrawal path found for SXP/USDT between Huobi and KuCoin
+2024-01-07 15:09:02,178 - WARNING - Could not verify aave-protocol with cmc: The system is busy, please try again later!
+2024-01-08 08:32:36,189 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 08:32:39,589 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-08 08:33:10,663 - WARNING - Could not verify dtravel with cmc: The system is busy, please try again later!
+2024-01-08 08:33:26,894 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-08 08:33:28,793 - WARNING - Could not verify auction with cmc: The system is busy, please try again later!
+2024-01-08 08:33:36,857 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-08 08:34:04,625 - WARNING - No withdrawal path found for TOX/USDT between Gate.io and Huobi
+2024-01-08 08:34:06,640 - WARNING - Could not verify zignaly with cmc: The system is busy, please try again later!
+2024-01-08 08:34:21,996 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-08 08:34:22,997 - WARNING - Could not verify redfox with cmc: The system is busy, please try again later!
+2024-01-08 08:34:30,356 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-08 08:34:31,547 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-08 08:34:32,534 - WARNING - Could not verify unibot with cmc: The system is busy, please try again later!
+2024-01-08 08:34:50,421 - WARNING - Could not verify metaverse.network-&-bit.country with cmc: The system is busy, please try again later!
+2024-01-08 08:34:52,592 - WARNING - No withdrawal path found for ATEM/USDT between Gate.io and KuCoin
+2024-01-08 08:35:07,630 - WARNING - Could not verify hacken-token with cmc: The system is busy, please try again later!
+2024-01-08 08:35:14,191 - WARNING - Could not verify tellor-tributes with cmc: The system is busy, please try again later!
+2024-01-08 08:35:26,453 - WARNING - Could not verify nakamoto.games with cmc: The system is busy, please try again later!
+2024-01-08 08:35:34,279 - WARNING - Could not verify baby-shark-bubblefong-friends with cmc: The system is busy, please try again later!
+2024-01-08 08:35:46,492 - WARNING - Could not verify captain-tsubasa--rivals with cmc: The system is busy, please try again later!
+2024-01-08 08:35:52,089 - WARNING - Could not verify theta with cmc: The system is busy, please try again later!
+2024-01-08 08:36:04,743 - WARNING - No withdrawal path found for GFT/USDT between Gate.io and Huobi
+2024-01-08 08:41:25,027 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 08:41:46,366 - WARNING - Could not verify auction with cmc: The system is busy, please try again later!
+2024-01-08 08:41:50,382 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-08 08:41:54,349 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-08 08:42:00,078 - WARNING - No withdrawal path found for TOX/USDT between Gate.io and Huobi
+2024-01-08 08:42:17,306 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-08 08:42:30,194 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 08:42:37,741 - WARNING - Could not verify kava-lend with cmc: The system is busy, please try again later!
+2024-01-08 08:42:40,652 - WARNING - No withdrawal path found for STRAX/USDT between Gate.io and KuCoin
+2024-01-08 08:42:50,207 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-08 08:43:23,162 - WARNING - Could not verify grovecoin with cmc: The system is busy, please try again later!
+2024-01-08 08:43:32,728 - WARNING - No withdrawal path found for FITFI/USDT between Huobi and Gate.io
+2024-01-08 08:43:45,028 - WARNING - Could not verify stader-labs with cmc: The system is busy, please try again later!
+2024-01-08 08:43:51,673 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and Huobi
+2024-01-08 08:43:56,528 - WARNING - No withdrawal path found for RMRK/USDT between KuCoin and Gate.io
+2024-01-08 08:49:12,611 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 08:49:17,254 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-08 08:49:19,987 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-08 08:49:40,009 - WARNING - No withdrawal path found for TOX/USDT between Gate.io and Huobi
+2024-01-08 08:49:42,625 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-08 08:49:59,700 - WARNING - No withdrawal path found for REEF/USDT between Bitget and Huobi
+2024-01-08 08:50:02,820 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 08:50:26,392 - WARNING - No withdrawal path found for USTC/USDT between KuCoin and Huobi
+2024-01-08 08:50:29,256 - WARNING - No withdrawal path found for RMRK/USDT between KuCoin and Gate.io
+2024-01-08 08:50:45,488 - WARNING - Could not verify taraxa-coin with cmc: The system is busy, please try again later!
+2024-01-08 08:50:57,556 - WARNING - No withdrawal path found for STRAX/USDT between Bitget and KuCoin
+2024-01-08 08:50:58,565 - WARNING - Could not verify chrono.tech with cmc: The system is busy, please try again later!
+2024-01-08 08:51:02,803 - WARNING - No withdrawal path found for GFT/USDT between Gate.io and Huobi
+2024-01-08 08:51:17,307 - WARNING - Could not verify aleph.im with cmc: The system is busy, please try again later!
+2024-01-08 08:51:34,150 - WARNING - Could not verify decentralized-social with cmc: The system is busy, please try again later!
+2024-01-08 08:56:51,808 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 08:57:04,860 - WARNING - No withdrawal path found for POLC/USDT between Gate.io and Huobi
+2024-01-08 08:57:08,152 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and Bitget
+2024-01-08 08:57:16,683 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-08 08:57:30,279 - WARNING - No withdrawal path found for TOX/USDT between Gate.io and Huobi
+2024-01-08 08:57:48,860 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-08 08:57:56,325 - WARNING - No withdrawal path found for PZP/USDT between Gate.io and KuCoin
+2024-01-08 08:58:08,781 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 08:58:18,274 - WARNING - No withdrawal path found for AKT/USDT between Gate.io and KuCoin
+2024-01-08 08:58:29,502 - WARNING - Could not verify swash-token with cmc: The system is busy, please try again later!
+2024-01-08 08:58:39,414 - WARNING - No withdrawal path found for REEF/USDT between Gate.io and Huobi
+2024-01-08 08:59:20,426 - WARNING - No withdrawal path found for CSPR/USDT between Huobi and KuCoin
+2024-01-08 08:59:22,215 - WARNING - Could not verify rats with cmc: The system is busy, please try again later!
+2024-01-08 08:59:35,876 - WARNING - No withdrawal path found for COQ/USDT between KuCoin and Bitget
+2024-01-08 09:04:56,606 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-08 19:32:24,970 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 19:33:07,203 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-08 19:33:17,722 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 19:33:24,363 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-08 19:33:29,910 - WARNING - Could not verify karate with cmc: The system is busy, please try again later!
+2024-01-08 19:33:49,487 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-08 19:33:52,931 - WARNING - No withdrawal path found for TT/USDT between Gate.io and KuCoin
+2024-01-08 19:33:58,515 - WARNING - Could not verify zkspace with cmc: The system is busy, please try again later!
+2024-01-08 19:34:04,124 - WARNING - Could not verify mil.k with cmc: The system is busy, please try again later!
+2024-01-08 19:34:05,030 - WARNING - Could not verify osmo with cmc: The system is busy, please try again later!
+2024-01-08 19:34:17,066 - WARNING - No withdrawal path found for SHRAP/USDT between KuCoin and Huobi
+2024-01-08 19:34:21,626 - WARNING - Could not verify camelot with cmc: The system is busy, please try again later!
+2024-01-08 19:34:32,581 - WARNING - Could not verify xyo-network with cmc: The system is busy, please try again later!
+2024-01-08 19:34:50,755 - WARNING - No withdrawal path found for STX/USDT between Gate.io and KuCoin
+2024-01-08 19:35:03,581 - WARNING - No withdrawal path found for RMRK/USDT between KuCoin and Gate.io
+2024-01-08 19:35:04,626 - WARNING - Could not verify iron with cmc: The system is busy, please try again later!
+2024-01-08 19:35:15,978 - WARNING - Could not verify vanry with cmc: The system is busy, please try again later!
+2024-01-08 19:40:27,078 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 19:40:54,206 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 19:41:04,727 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-08 19:41:12,301 - WARNING - Could not verify secret-network with cmc: The system is busy, please try again later!
+2024-01-08 19:41:26,511 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-08 19:41:34,715 - WARNING - No withdrawal path found for MYRO/USDT between Bitget and Huobi
+2024-01-08 19:41:43,253 - WARNING - No withdrawal path found for QKC/USDT between KuCoin and Bitget
+2024-01-08 19:41:57,403 - WARNING - No withdrawal path found for OLT/USDT between Gate.io and KuCoin
+2024-01-08 19:41:59,541 - WARNING - No withdrawal path found for XPRT/USDT between Gate.io and KuCoin
+2024-01-08 19:42:03,809 - WARNING - No withdrawal path found for RACA/USDT between Huobi and Gate.io
+2024-01-08 19:42:13,051 - WARNING - No withdrawal path found for UNFI/USDT between Bitget and Huobi
+2024-01-08 19:42:15,479 - WARNING - Could not verify aioz-network-inc with cmc: The system is busy, please try again later!
+2024-01-08 19:42:18,855 - WARNING - No withdrawal path found for PHA/USDT between KuCoin and Huobi
+2024-01-08 19:49:57,558 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 19:50:23,646 - WARNING - No withdrawal path found for XETA/USDT between Bitget and KuCoin
+2024-01-08 19:50:36,628 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and Bitget
+2024-01-08 19:50:48,274 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 19:51:02,672 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-08 19:51:05,243 - WARNING - Could not verify vertex with cmc: The system is busy, please try again later!
+2024-01-08 19:51:24,238 - WARNING - No withdrawal path found for REEF/USDT between Bitget and Huobi
+2024-01-08 19:51:28,219 - WARNING - Could not verify seedify with cmc: The system is busy, please try again later!
+2024-01-08 19:51:32,929 - WARNING - No withdrawal path found for UNFI/USDT between Bitget and Huobi
+2024-01-08 19:51:42,580 - WARNING - Could not verify playmining with cmc: The system is busy, please try again later!
+2024-01-08 19:51:44,112 - WARNING - Could not verify synapse with cmc: The system is busy, please try again later!
+2024-01-08 19:52:15,780 - WARNING - Could not verify clover-finance with cmc: The system is busy, please try again later!
+2024-01-08 19:52:33,918 - WARNING - Could not verify spellfire with cmc: The system is busy, please try again later!
+2024-01-08 19:52:46,663 - WARNING - Could not verify xdc-mainnet with cmc: The system is busy, please try again later!
+2024-01-08 19:57:13,549 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 19:57:22,117 - WARNING - No withdrawal path found for COQ/USDT between Huobi and Bitget
+2024-01-08 19:57:37,456 - WARNING - Could not verify lunarcrush with cmc: The system is busy, please try again later!
+2024-01-08 19:57:39,571 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-08 19:57:41,245 - WARNING - Could not verify qredo-token with cmc: The system is busy, please try again later!
+2024-01-08 19:58:01,245 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-08 19:58:06,928 - WARNING - No withdrawal path found for NWC/USDT between Gate.io and KuCoin
+2024-01-08 19:58:11,626 - WARNING - No withdrawal path found for UNFI/USDT between Bitget and Huobi
+2024-01-08 19:58:20,116 - WARNING - No withdrawal path found for GRAIL/USDT between Huobi and Gate.io
+2024-01-08 19:58:38,027 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-08 19:58:50,794 - WARNING - No withdrawal path found for AKT/USDT between Gate.io and KuCoin
+2024-01-08 19:59:05,322 - WARNING - Could not verify clintex with cmc: The system is busy, please try again later!
+2024-01-08 19:59:14,279 - WARNING - Could not verify seedify with cmc: The system is busy, please try again later!
+2024-01-08 19:59:15,418 - WARNING - Could not verify sushi with cmc: The system is busy, please try again later!
+2024-01-08 20:00:43,030 - ERROR - Bot stopped due to a network error: bitget GET https://api.bitget.com/api/spot/v1/public/currencies
+2024-01-08 20:03:22,336 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-08 20:04:03,878 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and Bitget
+2024-01-08 20:04:11,058 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-08 20:04:37,663 - WARNING - No withdrawal path found for TT/USDT between Gate.io and KuCoin
+2024-01-08 20:04:40,752 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-09 01:17:49,868 - ERROR - Bot stopped due to a network error: bitget GET https://api.bitget.com/api/spot/v1/public/currencies
+2024-01-09 03:05:05,893 - ERROR - Bot stopped due to an unexpected error: Event.is_set() missing 1 required positional argument: 'self', line: 61
+2024-01-09 03:09:52,324 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:09:54,147 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:09:57,741 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-09 03:10:05,004 - WARNING - No withdrawal path found for ZKF/USDT between Bitget and KuCoin
+2024-01-09 03:10:06,511 - WARNING - Could not verify hifi-finance with cmc: The system is busy, please try again later!
+2024-01-09 03:10:21,032 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:10:26,981 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-09 03:10:27,860 - WARNING - Could not verify standard with cmc: The system is busy, please try again later!
+2024-01-09 03:10:33,347 - WARNING - Could not verify crypterium with cmc: The system is busy, please try again later!
+2024-01-09 03:10:35,021 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-09 03:10:38,158 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-09 03:10:49,611 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:11:05,470 - WARNING - Could not verify bitgert with cmc: The system is busy, please try again later!
+2024-01-09 03:11:12,850 - WARNING - No withdrawal path found for ODDZ/USDT between Gate.io and KuCoin
+2024-01-09 03:11:25,329 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
+2024-01-09 03:11:35,528 - WARNING - Could not verify meta-x-connect with cmc: The system is busy, please try again later!
+2024-01-09 03:11:42,261 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-09 03:11:43,478 - WARNING - No withdrawal path found for PHA/USDT between KuCoin and Huobi
+2024-01-09 03:16:46,071 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-09 03:21:35,178 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:21:43,226 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:21:54,510 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Bitget
+2024-01-09 03:22:12,045 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:22:20,949 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-09 03:22:22,878 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-09 03:22:24,204 - WARNING - No withdrawal path found for CEEK/USDT between Huobi and KuCoin
+2024-01-09 03:22:35,654 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:22:46,593 - WARNING - No withdrawal path found for XCAD/USDT between Huobi and Bitget
+2024-01-09 03:22:51,492 - WARNING - No withdrawal path found for REEF/USDT between Gate.io and Huobi
+2024-01-09 03:23:03,585 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
+2024-01-09 03:23:19,366 - WARNING - Could not verify numbers-protocol-(num) with cmc: The system is busy, please try again later!
+2024-01-09 03:23:51,316 - WARNING - Could not verify milady with cmc: The system is busy, please try again later!
+2024-01-09 03:24:01,472 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:24:04,582 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:24:06,748 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and KuCoin
+2024-01-09 03:24:28,336 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-09 03:24:28,885 - WARNING - No withdrawal path found for CEEK/USDT between Huobi and KuCoin
+2024-01-09 03:24:31,961 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:24:39,081 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:24:42,796 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-09 03:25:03,398 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-09 03:25:05,262 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
+2024-01-09 03:25:07,691 - WARNING - Could not verify cirus with cmc: The system is busy, please try again later!
+2024-01-09 03:25:13,745 - WARNING - No withdrawal path found for SILLY/USDT between Huobi and KuCoin
+2024-01-09 03:25:18,717 - WARNING - No withdrawal path found for REEF/USDT between Gate.io and Huobi
+2024-01-09 03:25:32,089 - WARNING - No withdrawal path found for SOUL/USDT between KuCoin and Gate.io
+2024-01-09 03:25:45,347 - WARNING - Could not verify aave-protocol with cmc: The system is busy, please try again later!
+2024-01-09 03:25:54,827 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:25:58,189 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:25:59,419 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-09 03:26:13,238 - WARNING - Could not verify alpha-quark with cmc: The system is busy, please try again later!
+2024-01-09 03:26:17,050 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-09 03:26:17,975 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-09 03:26:19,168 - WARNING - No withdrawal path found for XCAD/USDT between Huobi and Bitget
+2024-01-09 03:26:23,657 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:26:29,509 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-09 03:26:39,155 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:28:14,103 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:28:18,232 - WARNING - No withdrawal path found for ABBC/USDT between Huobi and Gate.io
+2024-01-09 03:28:19,976 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:28:26,490 - WARNING - No withdrawal path found for XCAD/USDT between Huobi and Bitget
+2024-01-09 03:28:36,155 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-09 03:28:38,005 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-09 03:28:44,417 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:28:48,096 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-09 03:29:03,317 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:29:12,708 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
+2024-01-09 03:29:16,788 - WARNING - Could not verify nakamoto.games with cmc: The system is busy, please try again later!
+2024-01-09 03:29:22,998 - WARNING - Could not verify clover-finance with cmc: The system is busy, please try again later!
+2024-01-09 03:29:32,063 - WARNING - No withdrawal path found for REEF/USDT between Bitget and Huobi
+2024-01-09 03:30:01,162 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-09 03:35:12,688 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 03:35:15,356 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 03:35:37,660 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-09 03:35:43,547 - WARNING - No withdrawal path found for XCAD/USDT between Huobi and Bitget
+2024-01-09 03:35:44,414 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-09 03:35:56,564 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-09 03:36:02,687 - WARNING - No withdrawal path found for NWC/USDT between Gate.io and KuCoin
+2024-01-09 03:36:09,320 - WARNING - No withdrawal path found for REEF/USDT between Gate.io and Huobi
+2024-01-09 03:36:15,256 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-09 03:36:24,196 - WARNING - Could not verify hifi-finance with cmc: The system is busy, please try again later!
+2024-01-09 03:36:29,152 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
+2024-01-09 03:36:50,206 - WARNING - Could not verify numbers-protocol-(num) with cmc: The system is busy, please try again later!
+2024-01-09 03:37:08,609 - WARNING - Could not verify rats with cmc: The system is busy, please try again later!

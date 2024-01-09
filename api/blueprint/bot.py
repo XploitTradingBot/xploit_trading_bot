@@ -13,7 +13,7 @@ import asyncio
 # import traceback
 # import tracemalloc
 from typing import Dict
-from uuid import uuid4
+# from uuid import uuid4
 from api.blueprint import app_views, auth
 from flask import request, jsonify
 from datetime import datetime, timedelta

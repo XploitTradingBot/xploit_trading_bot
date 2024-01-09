@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-import uuid
 import requests
-from typing import Dict
+from typing import Dict, List
 from utils.logging import adapter
 from model import storage
+from model.user import User
 from utils.helper import handleEnv
 from datetime import datetime, timedelta
 
@@ -34,33 +34,32 @@ def fetch_eligible_users(opp:Dict)->Dict:
                         eligible_users[user.chat_id] = (profit_percent, user.min_cap)
     return eligible_users
 
-def payment_handler():
-    url = "https://api.paystack.co/transaction/initialize"
-    amount = 50000 * 100
-    reference = str(uuid.uuid4())
-    key = handleEnv("paystack_key")
-    authorization = "Bearer " + key
-    email = "akinwonjowodennisco@gmail.com"
+def send_sms(phones:List, text:str):
+    base_url = "https://api.ng.termii.com/api"
+    api_key = handleEnv('TERMII_APIKEY')
+    headers = {'Content-Type': 'application/json'}
+    url = base_url + '/sms/send/bulk'
 
-    res = requests.post(url, data={"amount": amount, "email": email, "reference": reference},
-                        headers={"Authorization": authorization, "content_type": "application/json"})
+    data = {"api_key":api_key, "to": phones, "from": "Xploit", "sms": text,
+            "type": "plain", "channel": "dnd"}
     
-    if res.status_code == 200:
-        res = res.json()
-        return res['data']['authorization_url']
-    pass
-
-def verify_transaction(reference):
-    url = 'https://api.paystack.co/transaction/verify/' + reference
-    key = handleEnv("paystack_key")
-    authorization = "Bearer " + key
-    resp = requests.get(url, headers={"Authorization": authorization, "content_type": "application/json"})
-    if resp.status_code == 200:
-        resp = resp.json()
-        if resp['data']['status'] == 'success':
-            return True
-        else:
-            return False
+    res = requests.post(url, json=data, headers=headers)
+    if res.status_code != 200:
+        adapter.warning(f"Could not send sms notification {phones}, err: {res.text}")
     else:
-        adapter.warning("Could not fetch verification status")
+        adapter.info(f"sms successfully sent to {phones}")
+
+def check_user_subscribe_status(user:User):
+    if not user.subscribed:
         return False
+    current_datetime = datetime.now()
+    if hasattr(user, "subscribed_date"):
+        subscribed_date = user.subscribed_date
+    else:
+        return False
+    subscribed_datetime = datetime.strptime(subscribed_date, time)
+    valid_till = subscribed_datetime + timedelta(days=30)
+    if current_datetime > valid_till:
+        return False
+    else:
+        return True

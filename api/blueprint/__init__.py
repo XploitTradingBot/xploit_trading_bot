@@ -21,6 +21,6 @@ def verify_token(token):
         return user
     
 
-from api.blueprint.user import *
-from api.blueprint.bot import *
-from api.blueprint.coin import *
+# from api.blueprint.user import *
+from api.blueprint.bot2 import *
+# from api.blueprint.coin import *

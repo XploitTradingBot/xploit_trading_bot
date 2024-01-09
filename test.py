@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import time
 import ccxt
+import threading
 import asyncio
 import traceback
 from pprint import pprint
@@ -414,45 +415,57 @@ def create_withdraw(coin:str, amount:float, network:str, address:str):
     else:
         print("Error:", resp.status_code, resp.text)
 
+def test_threading(stop_event):
+    while not stop_event.is_set():
+        print("thread is running")
+        time.sleep(1)
+
 if __name__ == '__main__':
-    try:
-        # exchanges = []
-        # for exchange in init_exchanges:
-        #     try:
-        #         exchange.load_markets()
-        #         exchanges.append(exchange)
-        #         print(f"{exchange} has been cleared")
-        #     except Exception as e:
-        #         print(e)
-        exc = [bybit, huobi, bitget]
-        exchanges = main(exc)
-        print()
-        print(exchanges)
-        from trading_bot import get_withdrawal_detail
+    stop_event = threading.Event()
+    func_thread = threading.Thread(target=test_threading, args=(stop_event,))
+    func_thread.start()
+    time.sleep(5)
+    stop_event.set()
+    func_thread.join()
 
-        withdraw_from, deposit_to = None, None
-        for exchange in exchanges:
-            if exchange.id == 'bitget':
-                withdraw_from = exchange
-            if exchange.id == 'bybit':
-                deposit_to = exchange
-        if withdraw_from and deposit_to:
-            withdraw_detail = get_withdrawal_detail(withdraw_from, deposit_to, 'USDT', 15)
-            # withdraw_detail = get_withdrawal_fee(withdraw_from, deposit_to, 'USDT', 14.43)
-            print(withdraw_detail)
-            # test_withdrawal_time(withdraw_from, deposit_to, 'USDT', 13, withdraw_detail)
-        else:
-            print("Exchanges not found")
+    # try:
+    #     # exchanges = []
+    #     # for exchange in init_exchanges:
+    #     #     try:
+    #     #         exchange.load_markets()
+    #     #         exchanges.append(exchange)
+    #     #         print(f"{exchange} has been cleared")
+    #     #     except Exception as e:
+    #     #         print(e)
+    #     exc = [bybit, huobi, bitget]
+    #     exchanges = main(exc)
+    #     print()
+    #     print(exchanges)
+    #     from trading_bot import get_withdrawal_detail
 
-        # find_new_coins(exchanges)
+    #     withdraw_from, deposit_to = None, None
+    #     for exchange in exchanges:
+    #         if exchange.id == 'bitget':
+    #             withdraw_from = exchange
+    #         if exchange.id == 'bybit':
+    #             deposit_to = exchange
+    #     if withdraw_from and deposit_to:
+    #         withdraw_detail = get_withdrawal_detail(withdraw_from, deposit_to, 'USDT', 15)
+    #         # withdraw_detail = get_withdrawal_fee(withdraw_from, deposit_to, 'USDT', 14.43)
+    #         print(withdraw_detail)
+    #         # test_withdrawal_time(withdraw_from, deposit_to, 'USDT', 13, withdraw_detail)
+    #     else:
+    #         print("Exchanges not found")
 
-        # for exchange in exchanges:
-        #     if exchange.id == 'mexc':
-        #         place_market_buy_order(exchange, 'IOST/USDT', 6.6)
-        #         # balance_check(exchange)
-        #         buy_coin(exchange)
-        #         # sell_coin(exchange)
-        #         # transfer_funds(exchange)
-    except Exception:
-        print(traceback.format_exc())
-        pass
+    #     # find_new_coins(exchanges)
+
+    #     # for exchange in exchanges:
+    #     #     if exchange.id == 'mexc':
+    #     #         place_market_buy_order(exchange, 'IOST/USDT', 6.6)
+    #     #         # balance_check(exchange)
+    #     #         buy_coin(exchange)
+    #     #         # sell_coin(exchange)
+    #     #         # transfer_funds(exchange)
+    # except Exception:
+    #     print(traceback.format_exc())
+    #     pass

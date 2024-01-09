@@ -6,6 +6,7 @@ import time
 import ccxt
 import asyncio
 import requests
+import traceback
 from requests.exceptions import RequestException
 from typing import Dict, List
 from utils.logging import adapter
@@ -133,11 +134,16 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
         return {"trade_network":None, "fee":0, "address":None, "tag": None}
     # print("Getting withdrawal details...")
 
-    from_ntwks = from_exchange.currencies[code]['networks']
+    from_ntwks = from_exchange.currencies[code].get('networks', None)
     if from_ntwks is not None:
         from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
                         if from_ntwks[network]['active'] is True}
-    else:
+    not_nullable_fee = {}
+    for network, fee in from_networks.items():
+        if fee is not None:
+            not_nullable_fee[network] = fee
+    from_networks = not_nullable_fee
+    if len(from_networks) == 0:
         if from_exchange.has.get('fetchDepositWithdrawalFees', None) or from_exchange.has.get('fetchDepositWithdrawFees'):
             try:
                 from_networks = {}
@@ -160,15 +166,20 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
             from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
                             if from_ntwks[network]['active'] is True}
             
-    # adapter.info("Code reach here")
     if len(from_networks) == 0:
-        from_ntwks = from_exchange.currencies[code]['networks']
-        from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
-                        if from_ntwks[network]['active'] is True}
-    # adapter.info("Code reach here too")
+        if from_exchange.id == 'gate':
+            from_ntwks = from_exchange.fetchDepositWithdrawFee(code)
+            from_ntwks = from_ntwks.get("networks", None)
+            if from_ntwks:
+                from_networks = {network: from_ntwks[network]['withdraw']['fee'] for network in from_ntwks.keys()}
+            else:
+                return 1
+        else:
+            from_ntwks = from_exchange.currencies[code]['networks']
+            from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
+                            if from_ntwks[network]['active'] is True}
     from_networks = dict(sorted(from_networks.items(), key=lambda x: x[1]))
     # adapter.info(f"Available networks in {from_exchange.id}: {from_networks}")
-    address_struct = None
     try:
         to_nets = list((to_exchange.fetchDepositWithdrawFee(code, params={}))['networks'].keys())
     except Exception as e:
@@ -189,40 +200,22 @@ def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:st
             if net.lower() in to_net.lower() or to_net.lower() in net.lower():
                 if (net == "BEP2" and to_net == "BEP20") or (net == "BEP20" and to_net == "BEP2"):
                     continue
-                # print("Match found", to_net)
+                print("Match found", to_net)
                 return {'trade_network': net, 'fee':from_networks[net]}
-                try:
-                    address_struct = to_exchange.fetchDepositAddress(code, params={"network": to_net})
-                except Exception:
-                    continue
-                info = {"trade_network": net, "tag": address_struct.get("tag", None),
-                        "fee": from_networks[net], "address": address_struct['address']}
-                return info
             else:
                 if net in sim_addr:
+                    orig_net = net
                     net = sim_addr[net]
                     if net.lower() in to_net.lower() or to_net.lower() in net.lower():
                         if (net == "BEP2" and to_net == "BEP20") or (net == "BEP20" and to_net == "BEP2"):
                             continue
-                        try:
-                            address_struct = to_exchange.fetchDepositAddress(code, params={"network": to_net})
-                        except Exception:
-                            continue
-                        info = {"trade_network": net, "tag": address_struct.get("tag", None),
-                                "fee": from_networks[net], "address": address_struct['address']}
-                        return info
+                        return {'trade_network': net, 'fee': from_networks[orig_net]}
                 elif to_net in sim_addr:
                     to_net = sim_addr[to_net]
                     if net.lower() in to_net.lower() or to_net.lower() in net.lower():
                         if (net == "BEP2" and to_net == "BEP20") or (net == "BEP20" and to_net == "BEP2"):
                             continue
-                        try:
-                            address_struct = to_exchange.fetchDepositAddress(code, params={"network": to_net})
-                        except Exception:
-                            continue
-                        info = {"trade_network": net, "tag": address_struct.get("tag", None),
-                                "fee": from_networks[net], "address": address_struct['address']}
-                        return info
+                        return {'trade_network': net, 'fee': from_networks[net]}
 
 def trade_coin(coin:str, exchange:ccxt.Exchange, amount:float, price:float, side='buy') -> (float | None):
     """This place a buy order in an exchange
@@ -458,31 +451,29 @@ async def verify_with_fullName(symbol:str, exchange_1:str, exchange_2:str)->bool
             json.dump(fullNames, f)
 
     # verify with cmc first, then with fullNames
-    if fullName_1 is None or fullName_2 is None:
+    if fullName_1 is None and fullName_2 is None:
         return False
 
-    if fullName_1.lower() not in fullName_2.lower():
-        return False
+    try:
+        if fullName_1.lower() == fullName_2.lower():
+            return True
+        else:
+            if "".join(fullName_1.split()).lower() == fullName_2.lower() or "".join(fullName_2.split()).lower() == fullName_1.lower():
+                return True
+    except Exception as e:
+        pass
 
     if fullName_1 is not None:
-        status = verify_with_cmc(fullName_1, exchange_1, exchange_2)
+        status = await verify_with_cmc(fullName_1, exchange_1, exchange_2)
         if status is True:
-            # adapter.info(f"{symbol} verified with cmc")
             return True
-    if fullName_2 is not None:
-        status = verify_with_cmc(fullName_2, exchange_1, exchange_2)
+    elif fullName_2 is not None:
+        status = await verify_with_cmc(fullName_2, exchange_1, exchange_2)
         if status is True:
-            # adapter.info(f"{symbol} verified with cmc")
-            return True
-        
-    if fullName_1.lower() == fullName_2.lower():
-        return True
-    else:
-        if "".join(fullName_1.split()).lower() in fullName_2.lower() or "".join(fullName_2.split()).lower() in fullName_1.lower():
             return True
     return False
 
-def verify_with_cmc(coinName:str, exchange_1:str, exchange_2:str) ->bool:
+async def verify_with_cmc(coinName:str, exchange_1:str, exchange_2:str) ->bool:
     coinName = "-".join(coinName.split())
     coinName = coinName.lower()
     baseurl = f"https://api.coinmarketcap.com"
@@ -505,10 +496,10 @@ def verify_with_cmc(coinName:str, exchange_1:str, exchange_2:str) ->bool:
                 if exchange_1.lower() in marketPairs and exchange_2.lower() in marketPairs:
                     return True
         else:
-            adapter.warning(f"Could not verify {coinName} with cmc")
+            adapter.warning(f"Could not verify {coinName} with cmc: {resp['status']['error_message']}")
             return False
     else:
-        adapter.warning(f"Error obtained while verifying {coinName} with cmc")
+        adapter.warning(f"Error obtained while verifying {coinName} with cmc: {resp.status_code}")
         return False
 
 async def find_opportunity(capital:float, data:Dict):
@@ -532,66 +523,93 @@ async def find_opportunity(capital:float, data:Dict):
         opps = sorted(opps, key=lambda x: x['profit'], reverse=True)
         opps = [opp for opp in opps if "coin" in opp and opp['profit'] > 1]
         adapter.info(f"{len(opps)} opportunities found")
-        # best_opps = []
 
         # Verify and filter each opportunity
         adapter.info("Now verifying opportunities")
 
-        # for opp in opps:
-        async def get_best_opp(opp:Dict):
+        filename = 'verified_symbols.json'
+        try:
+            with open(filename, 'r') as fp:
+                symbols = json.load(fp)
+        except FileNotFoundError:
+            symbols = {'whitelist': {}, 'blacklist': {}}
+
+        async def verify_opp(opp:Dict):
+            """This verifies an opportunity. Returns the opp if verified else return None"""
             if "coin" not in opp or opp['profit'] <= 0:
                 return None
-                # continue
             if opp['profit'] > capital:
                 return None
-                # continue
             # blacklist
             if opp['coin'] in ["VELO/USDT"]:
                 return None
-                # continue
-            try:
-                verified = await verify_with_fullName(opp['coin'], opp['buy_exchange'], opp['sell_exchange'])
-            except Exception:
-                return None
+            coin = opp['coin']
+            exchange_1 = opp['buy_exchange']
+            exchange_2 = opp['sell_exchange']
+            update_status = False
+            cached = False
+            if coin in symbols['whitelist']:
+                if exchange_1 in symbols['whitelist'][coin] and exchange_2 in symbols['whitelist'][coin]:
+                    verified = True
+                    cached = True
+            elif coin in symbols['blacklist']:
+                if exchange_1 in symbols['blacklist'][coin] and exchange_2 in symbols['blacklist'][coin]:
+                    verified = False
+                    cached = True
+            if cached is False:
+                try:
+                    verified = await verify_with_fullName(opp['coin'], opp['buy_exchange'], opp['sell_exchange'])
+                    update_status = True
+                except Exception:
+                    return None
             if verified is True:
-                # adapter.info(f"{opp['coin']} has been verified between {opp['buy_exchange']} and {opp['sell_exchange']}")
                 status = await executor(capital, opp, exchanges)
                 if status is False:
                     return None
-                    # continue
                 if status['total_fee'] > opp['profit'] - 5:
                     gross_profit = status['total_fee'] + 5
                     min_capital = (capital * gross_profit) / opp['profit']
                     opp['min_cap'] = min_capital
-                    adapter.info(f"coin found: {opp}")
-                    # best_opps.append(opp)
-                    return opp
+                    adapter.info(f"opportunity verified: {opp}")
+                    # return opp
                 else:
                     opp['min_cap'] = capital
-                    adapter.info(f"coin found: {opp}")
-                    return opp
+                    adapter.info(f"opportunity verified: {opp}")
+                if update_status is True:
+                    if coin in symbols['whitelist']:
+                        symbols['whitelist'][coin].extend([exchange_1, exchange_2])
+                        unique_exc = set(symbols['whitelist'][coin])
+                        symbols['whitelist'][coin] = list(unique_exc)
+                    else:
+                        symbols['whitelist'][coin] = [exchange_1, exchange_2]
+                    with open(filename, 'w', encoding='utf-8') as f:
+                        json.dump(symbols, f)
+                return opp
             else:
-                # time.sleep(0.5)
-                return None
-            # if len(best_opps) >= 3:
-            #     break
+                if update_status is True:
+                    if coin in symbols['blacklist']:
+                        symbols['blacklist'][coin].extend([exchange_1, exchange_2])
+                        unique_exc = set(symbols['blacklist'][coin])
+                        symbols['blacklist'][coin] = list(unique_exc)
+                    else:
+                        symbols['blacklist'][coin] = [exchange_1, exchange_2]
+                    with open(filename, 'w', encoding='utf-8') as f:
+                        json.dump(symbols, f)
+                    return None
 
-        tasks = [get_best_opp(opp) for opp in opps]
+        tasks = [verify_opp(opp) for opp in opps]
         verified_opps = await asyncio.gather(*tasks)
-        verified_opps = [opp for opp in verified_opps if opp is not None and opp['profit'] > 5]
+        verified_opps = [opp for opp in verified_opps if opp is not None and opp['min_cap'] <= 5000]
         sorted_verified_opps = sorted(verified_opps, key=lambda x: x['min_cap'])
         
-        # if len(best_opps) == 0:
-        #     adapter.info("* No profitable coin found in the selected exchanges *")
-        #     return None
-        adapter.info(sorted_verified_opps[:10])
+        adapter.info(sorted_verified_opps)
         return sorted_verified_opps
     except ccxt.NetworkError:
         adapter.error("* Seems your network connection is inactive. Try again later *")
         sys.exit(1)
     except Exception as e:
         print(e.__traceback__.tb_lineno)
-        # adapter.warning(traceback.format_exc())
+        adapter.warning(traceback.format_exc())
         adapter.warning(e)
         return None
 
@@ -634,7 +652,10 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     buy_fee = get_trading_fee(symbol, exchange_1, 'taker', buy_amount) # in trade currency
     actual_buy_amount = buy_amount - buy_fee
     # adapter.info("Obtained taker trading fee")
-    withdraw_detail = get_withdrawal_detail(exchange_1, exchange_2, symbol.split("/")[0], actual_buy_amount)
+    try:
+        withdraw_detail = get_withdrawal_detail(exchange_1, exchange_2, symbol.split("/")[0], actual_buy_amount)
+    except Exception:
+        return False
     # adapter.info("Withdrawal details obtained")
     if not withdraw_detail:
         adapter.warning(f"No withdrawal path found for {symbol} between {exchange_1} and {exchange_2}")
@@ -692,8 +713,8 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
 
         if not fetch_once:
             while True:
-                from run_telegram import exit_signal
-                if exit_signal.is_set():
+                from main import bot_exit_signal
+                if bot_exit_signal.is_set():
                     break
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
@@ -702,37 +723,22 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
                     adapter.warning("No profitable coin gotten")
                     time.sleep(wait_time * 60)
                     continue
+                adapter.info("Sending result...")
                 for opp in best_opp:
                     from run_telegram import send_report
                     await send_report(opp)
-                    # result_string = f"Symbol      - {opp['coin']}\n"
-                    # result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
-                    # result_string += f"Buy on      - {opp['buy_exchange']}\n"
-                    # result_string += f"Buy price   - {opp['buy_price']} or current market price\n"
-                    # if "withdraw_network" in opp:
-                    #     result_string += f"Withdraw network - {opp['withdraw_network']}\n"
-                    # result_string += f"Sell on     - {opp['sell_exchange']}\n"
-                    # result_string += f"sell price  - {opp['sell_price']} or current market price\n"
-                    # # result_string += f"Potential profit - {opp['profit']:.2f}%"
-                    
-                    # await send_report(result_string, opp)
-                time.sleep(wait_time * 60)
+                if bot_exit_signal.is_set():
+                    break
+                else:
+                    time.sleep(wait_time * 60)
         else:
             best_opp = await find_opportunity(capital, data)
             if not best_opp:
                 adapter.warning("No profitable coin gotten")
                 sys.exit(1)
             adapter.info(best_opp)
+            adapter.info("Sending result...")
             for opp in best_opp:
-                # result_string = f"Symbol     - {opp['coin']}\n"
-                # result_string += f"Minimum capital - {opp['min_cap']:.2f}\n"
-                # result_string += f"Buy on     - {opp['buy_exchange']}\n"
-                # result_string += f"Buy price  - {opp['buy_price']} or current market price\n"
-                # if "withdraw_network" in opp:
-                #     result_string += f"Withdraw network - {opp['withdraw_network']}\n"
-                # result_string += f"Sell on    - {opp['sell_exchange']}\n"
-                # result_string += f"sell price - {opp['sell_price']} or current market price\n"
-                # # result_string += f"Potential profit - {opp['profit']:.2f}%"
                 from run_telegram import send_report
                 await send_report(opp)
 
