@@ -271,6 +271,11 @@ async def handle_response(orig_text:str, chat_id) -> str:
             # return response
         else:
             response = "I do not understand your command. send \"help\" for a list of all available commands"
+            if chat_id == 1209605960:
+                if orig_text == "admin start":
+                    from main import start_arbitrage_bot, bot_exit_signal
+                    asyncio.run(start_arbitrage_bot(bot_exit_signal))
+                    return "You have successfully start the arbitrage bot"
         return response
     else:
         return "I do not understand your command, send \"help\" to view a list of all available commands"
