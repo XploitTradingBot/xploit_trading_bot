@@ -185,6 +185,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
     if "help" in text:
         response = "Here is a list of all the available commands:\n\n"
         response += "/edit_capital - Set your capital to receive signals according to your budget\n"
+        response += "/edit_phone_number - Edit your mobile number to receive sms notification\n"
         response += "/recover_account - Recover your account on another telegram account\n"
         response += "/register - Create a new account\n"
         response += "/start_free_trial - Start free trial for 24 hours\n"
