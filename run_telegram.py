@@ -301,7 +301,8 @@ async def send_report(opp:Dict):
             adapter.info(f"Result {txt} sent to {user_chat_id}")
             user = storage.search("User", chat_id=user_chat_id)
             user = user[0]
-            recieved_users.append(user.phone_no)
+            if hasattr(user, "phone_no"):
+                recieved_users.append(user.phone_no)
         else:
             adapter.info(f"Could not send {opp['coin']} to {user_chat_id} cause of low profit ({profit[0]:.2f}%)")
 
