@@ -163,6 +163,13 @@ async def button_press_handler(Update:Update, context:ContextTypes.DEFAULT_TYPE)
         await notify_admin(f"You have declined the payment of {txid}")
     await context.bot.edit_message_reply_markup(chat_id, message_id, reply_markup=None)
 
+async def edit_phone_number_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+    chat_id = Update.message.chat.id
+    txt = "Enter your mobile number below. Make sure the number is in the international format\n"
+    txt += "eg. 2348011112222"
+    STATES[chat_id] = "PHONE_NO"
+    await Update.message.reply_text(txt)
+
 
 # Responses
 async def handle_response(orig_text:str, chat_id) -> str:
@@ -300,6 +307,7 @@ async def send_report(opp:Dict):
 
     tasks = [send_message(chat_id, messages[chat_id]) for chat_id in messages]
     await asyncio.gather(*tasks)
+    # send_sms(recieved_users, "Hurry now, a new arbitrage opportunity is now available at Xploit cybernetics")
     # adapter.info(f"{txt} \nsent to {users_profit}")
 
 async def notify_admin(txt:str, txid:str=None, message_type:str=None):
@@ -361,6 +369,7 @@ def start_telegram():
     app.add_handler(CommandHandler("use_coupon", use_coupon_command))
     app.add_handler(CommandHandler("verify_payment", verify_payment_command))
     app.add_handler(CommandHandler("verify_coupon_payment", verify_coupon_payment_command))
+    app.add_handler(CommandHandler("edit_phone_number", edit_phone_number_command))
 
     app.add_handler(CallbackQueryHandler(button_press_handler))
 

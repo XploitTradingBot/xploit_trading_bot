@@ -1485,3 +1485,7 @@ UnboundLocalError: local variable 'verified' referenced before assignment
 2024-01-09 04:48:52,833 - WARNING - No withdrawal path found for EVER/USDT between KuCoin and Huobi
 2024-01-09 04:48:56,078 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
 2024-01-09 04:48:58,095 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-09 08:44:30,130 - WARNING - Could not send sms notification ['2349035371162'], err: {"message":"Invalid Sender id"}
+2024-01-09 11:01:06,411 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 11:01:09,964 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 11:01:12,170 - WARNING - Could not verify port3-network with cmc: The system is busy, please try again later!

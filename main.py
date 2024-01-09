@@ -30,6 +30,7 @@ def start_telegram():
     app.add_handler(CommandHandler("verify_payment", verify_payment_command))
     app.add_handler(CommandHandler("verify_coupon_payment", verify_coupon_payment_command))
     app.add_handler(CommandHandler("Not_received", not_received_command))
+    app.add_handler(CommandHandler("edit_phone_number", edit_phone_number_command))
 
     app.add_handler(CallbackQueryHandler(button_press_handler))
 
@@ -105,19 +106,20 @@ def start_telegram_bot():
     loop.run_until_complete(start_telegram())
 
 
-async def main():
+if __name__ == '__main__':
     try:
         print("starting arbitrage bot...")
         bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal,))
-        telegram_thread = threading.Thread(target=start_telegram_bot)
+        # telegram_thread = threading.Thread(target=start_telegram_bot)
         bot_thread.start()
-        telegram_thread.start()
+        start_telegram_bot()
+        # telegram_thread.start()
         print("Code reached the end")
 
         bot_thread.join()
-        telegram_thread.join()
+        # telegram_thread.join()
     except KeyboardInterrupt:
         pass
 
-if __name__ == '__main__':
-    asyncio.run(main())
+# if __name__ == '__main__':
+#     asyncio.run(main())
