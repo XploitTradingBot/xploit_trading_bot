@@ -204,6 +204,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
             user.save()
             response = f"Welcome {username} your account has been created. Here's a recovery key for you: {user.id}, \n"
             response += "please keep it safe and private. You can use it to recover your account if your lose it\n\n"
+            del STATES[chat_id]
             # return response
         elif STATES[chat_id] == "VERIFY_PAYMENT":
             txid = orig_text
@@ -213,6 +214,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
             setattr(user, "txid", orig_text)
             user.save()
             response = "Please hold on while we verify. This usually takes a few minutes"
+            del STATES[chat_id]
             # return response
         elif STATES[chat_id] == "VERIFY_COUPON_PAYMENT":
             txt = f"A user just activated a 50% coupon. Confirm the payment of {subscription_fee * 0.5} USDT with txid:\n\n{orig_text}\n\n"
@@ -221,6 +223,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
             setattr(user, "txid", orig_text)
             user.save()
             response = "Please hold on while we verify your payment, this usually takes a few minutes"
+            del STATES[chat_id]
             # return response
         elif STATES[chat_id] == "COUPON_CODE":
             if orig_text == "XXPLOIT":
@@ -234,6 +237,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
                 setattr(user, "subscribed_date", str_datetime)
                 user.save()
                 response = "Congratulations! You have activated a 100% coupon code. You are now a subscribed user"
+                del STATES[chat_id]
             else:
                 response = "You have entered an invalid/expired code"
             # return response
@@ -257,6 +261,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
                     setattr(user, "min_cap", capital)
                     user.save()
                     response = f"Setup complete, you will now receive arbitrage opportunities with {capital} USDT of starting capital\n\n"
+                    del STATES[chat_id]
             except ValueError:
                 response = "Capital must be a number or decimal"
             # return response
@@ -267,6 +272,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
                 setattr(user, "chat_id", chat_id)
                 user.save()
                 response = f"Welcome back {user.username} Your account has now been linked to this telegram account"
+                del STATES[chat_id]
             else:
                 response = "No user linked with this recovery key"
             # return response
