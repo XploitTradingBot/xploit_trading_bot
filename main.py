@@ -14,7 +14,7 @@ bot_exit_signal = threading.Event()
 app = Application.builder().token(BOT_TOKEN).build()
 
 
-def start_telegram():
+async def start_telegram():
     print("Telegram bot started")
     # app = Application.builder().token(BOT_TOKEN).build()
     global app
@@ -41,9 +41,9 @@ def start_telegram():
 
     # Polls the telegram bot
     print("Polling telegram app ...")
-    app.run_polling(poll_interval=3)
+    await app.run_polling(poll_interval=3)
     print("Telegram bot has stopped")
-    bot_exit_signal.set()
+    # bot_exit_signal.set()
     # app.stop_running
 
 async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, paper_trade=False, keys:Dict={}, exit_signal:threading.Event=None):
