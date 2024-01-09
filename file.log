@@ -1481,3 +1481,7 @@ UnboundLocalError: local variable 'verified' referenced before assignment
 2024-01-09 03:36:29,152 - WARNING - No withdrawal path found for DPET/USDT between Gate.io and KuCoin
 2024-01-09 03:36:50,206 - WARNING - Could not verify numbers-protocol-(num) with cmc: The system is busy, please try again later!
 2024-01-09 03:37:08,609 - WARNING - Could not verify rats with cmc: The system is busy, please try again later!
+2024-01-09 04:48:50,608 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-09 04:48:52,833 - WARNING - No withdrawal path found for EVER/USDT between KuCoin and Huobi
+2024-01-09 04:48:56,078 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-09 04:48:58,095 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!

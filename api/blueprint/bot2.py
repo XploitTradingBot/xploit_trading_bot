@@ -8,35 +8,34 @@ from utils.logging import adapter
 from main import start_arbitrage_bot, start_telegram_bot, app
 
 arbitrage_exit_signal = threading.Event()
+developer_token = handleEnv("developer_token")
 
 @app_views.route('/start_telegram/<admin_key>', strict_slashes=False, methods=['GET'])
 def start_telegram(admin_key):
-    if admin_key == handleEnv("admin_token"):
+    if admin_key == developer_token:
         telegram_thread = threading.Thread(target=start_telegram_bot)
         adapter.info("Telegram bot started")
         telegram_thread.start()
-        # telegram_thread.join()
         return jsonify("Telegram thread successfully started")
     else:
-        return jsonify("Sorry, your admin_token is invalid"), 403
+        return jsonify("Sorry, your developer_token is invalid"), 403
     
 
 @app_views.route('/start_arbitrage_bot/<admin_key>', strict_slashes=False)
 def start_arbitrage(admin_key):
-    if admin_key == handleEnv("admin_token"):
+    if admin_key == developer_token:
         bot_thread = threading.Thread(target=start_arbitrage_bot, args=(arbitrage_exit_signal,))
         adapter.info("Arbitrage bot started")
         bot_thread.start()
-        # bot_thread.join()
         return jsonify("You have successfully started the arbitrage bot")
     else:
-        return jsonify("Sorry, your admin_token is invalid"), 403
+        return jsonify("Sorry, your developer_token is invalid"), 403
     
 @app_views.route('/stop_telegram_bot/<admin_key>', strict_slashes=False)
 def stop_arbitrage_bot(admin_key):
-    if admin_key == handleEnv("admin_token"):
+    if admin_key == developer_token:
         app.stop_running()
         return jsonify("Telegram bot stopped successfully")
     else:
-        return jsonify("Sorry, your admin_token is invalid"), 403
+        return jsonify("Sorry, your developer_token is invalid"), 403
     
