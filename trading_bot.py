@@ -606,7 +606,7 @@ async def find_opportunity(capital:float, data:Dict):
         return sorted_verified_opps
     except ccxt.NetworkError:
         adapter.error("* Seems your network connection is inactive. Try again later *")
-        sys.exit(1)
+        return None
     except Exception as e:
         print(e.__traceback__.tb_lineno)
         adapter.warning(traceback.format_exc())
