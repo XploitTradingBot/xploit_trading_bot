@@ -1757,3 +1757,17 @@ UnboundLocalError: local variable 'verified' referenced before assignment
 2024-01-10 08:26:48,126 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
 2024-01-10 08:26:53,096 - WARNING - Could not verify ordinals with cmc: The system is busy, please try again later!
 2024-01-10 08:27:17,205 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-10 08:27:31,151 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-10 08:27:32,685 - WARNING - No withdrawal path found for COQ/USDT between Huobi and Bitget
+2024-01-10 08:32:47,011 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-10 08:32:49,011 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-10 08:32:51,103 - WARNING - No withdrawal path found for REEF/USDT between Bitget and Huobi
+2024-01-10 08:32:53,215 - WARNING - No withdrawal path found for XETA/USDT between Gate.io and KuCoin
+2024-01-10 08:33:16,046 - WARNING - No withdrawal path found for TURT/USDT between Gate.io and Huobi
+2024-01-10 08:33:19,916 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-10 08:33:25,766 - WARNING - No withdrawal path found for MYRO/USDT between KuCoin and Huobi
+2024-01-10 08:33:28,996 - WARNING - No withdrawal path found for SMT/USDT between Gate.io and Huobi
+2024-01-10 08:33:43,495 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-10 08:33:51,818 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-10 08:33:58,512 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-10 08:34:02,942 - WARNING - Could not verify ordinals with cmc: The system is busy, please try again later!

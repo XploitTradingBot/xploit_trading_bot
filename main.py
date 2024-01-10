@@ -71,12 +71,11 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     adapter.warning("No profitable coin gotten")
                     time.sleep(wait_time * 60)
                     continue
-                for opp in best_opp:
-                    url = baseurl + '/send_report/' + developer_token
-                    data = best_opp
-                    resp = requests.post(url, data=data)
-                    if resp != 200:
-                        adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
+                url = baseurl + '/send_report/' + developer_token
+                data = best_opp
+                resp = requests.post(url, data=data)
+                if resp != 200:
+                    adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
                     # from run_telegram import send_report
                     # await send_report(opp)
                 if not exit_signal.is_set():
