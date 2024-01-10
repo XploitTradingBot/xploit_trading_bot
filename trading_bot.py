@@ -6,6 +6,7 @@ import time
 import ccxt
 import asyncio
 import requests
+import threading
 import traceback
 from requests.exceptions import RequestException
 from typing import Dict, List
@@ -715,7 +716,7 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
             while True:
                 from main import bot_exit_signal
                 if bot_exit_signal.is_set():
-                    break
+                    return
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
                 adapter.info(best_opp)
@@ -728,7 +729,7 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
                     from run_telegram import send_report
                     await send_report(opp)
                 if bot_exit_signal.is_set():
-                    break
+                    return
                 else:
                     time.sleep(wait_time * 60)
         else:
@@ -744,12 +745,15 @@ async def main(capital:float, exchange_list:List=None, fetch_once=True, paper_tr
 
     except ccxt.NetworkError as e:
         adapter.error(f"Bot stopped due to a network error: {e}")
-        sys.exit(1)
     except ccxt.ExchangeError as e:
         adapter.error(f"Bot stopped due to an exchange error: {e}")
-        asyncio.run(main(capital, fetch_once=fetch_once))
     except Exception as e:
         adapter.error(f"Bot stopped due to an unexpected error: {e}, line: {e.__traceback__.tb_lineno}")
+    finally:
+        from main import start_arbitrage_bot, bot_exit_signal
+        bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal))
+        bot_thread.start()
+        adapter.info("Bot thread restarted after initial shutdown")
 
 if __name__ == '__main__':
     asyncio.run(main(100, ['binance', 'bitmex', 'huobi', 'bingx', 'bitget', 'mexc',

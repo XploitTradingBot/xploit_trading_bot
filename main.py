@@ -4,14 +4,18 @@ import threading
 import asyncio
 import ccxt
 import sys
+import requests
 from typing import Dict, List
 from trading_bot import setup, find_opportunity
 from run_telegram import *
+from utils.helper import handleEnv
 import time
 
 bot_exit_signal = threading.Event()
 
 app = Application.builder().token(BOT_TOKEN).build()
+baseurl = "Denisco.pythonanywhere.com"
+developer_token = handleEnv("developer_token")
 
 
 def start_telegram():
@@ -68,8 +72,13 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     time.sleep(wait_time * 60)
                     continue
                 for opp in best_opp:
-                    from run_telegram import send_report
-                    await send_report(opp)
+                    url = baseurl + '/send_report/' + developer_token
+                    data = best_opp
+                    resp = requests.post(url, data=data)
+                    if resp != 200:
+                        adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
+                    # from run_telegram import send_report
+                    # await send_report(opp)
                 if not exit_signal.is_set():
                     await asyncio.sleep(wait_time * 60)
                 else:
@@ -87,13 +96,17 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
 
     except ccxt.NetworkError as e:
         adapter.error(f"Bot stopped due to a network error: {e}")
-        asyncio.run(bot_handler(capital, fetch_once=fetch_once))
+        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     except ccxt.ExchangeError as e:
         adapter.error(f"Bot stopped due to an exchange error: {e}")
-        asyncio.run(bot_handler(capital, fetch_once=fetch_once))
+        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     except Exception as e:
         adapter.error(f"Bot stopped due to an unexpected error: {e}, line: {e.__traceback__.tb_lineno}")
-        asyncio.run(bot_handler(capital, fetch_once=fetch_once))
+        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
+    finally:
+        bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal))
+        bot_thread.start()
+        adapter.info("Bot thread restarted after initial shutdown")
 
 def start_arbitrage_bot(exit_signal=None):
     loop = asyncio.new_event_loop()
