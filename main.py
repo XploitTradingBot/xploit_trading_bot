@@ -14,7 +14,7 @@ import time
 bot_exit_signal = threading.Event()
 
 app = Application.builder().token(BOT_TOKEN).build()
-baseurl = "Denisco.pythonanywhere.com"
+baseurl = "https://Denisco.pythonanywhere.com"
 developer_token = handleEnv("developer_token")
 
 
