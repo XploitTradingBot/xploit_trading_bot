@@ -78,11 +78,12 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 adapter.info("Sending opportunities...")
                 # data = json.dumps(best_opp)
                 header = {"Content-Type": "application/json"}
+                from run_telegram import send_report
                 resp = requests.post(url, data={"signals": best_opp}, headers=header)
-                if resp.status_code != 200:
-                    adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
-                    # from run_telegram import send_report
-                    # await send_report(opp)
+                for opp in best_opp:
+                # if resp.status_code != 200:
+                    # adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
+                    await send_report(opp)
                 if not exit_signal.is_set():
                     await asyncio.sleep(wait_time * 60)
                 else:
