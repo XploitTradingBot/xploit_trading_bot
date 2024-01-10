@@ -78,7 +78,7 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 adapter.info("Sending opportunities...")
                 # data = json.dumps(best_opp)
                 header = {"Content-Type": "application/json"}
-                resp = requests.post(url, data=best_opp, headers=header)
+                resp = requests.post(url, data={"signals": best_opp}, headers=header)
                 if resp.status_code != 200:
                     adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
                     # from run_telegram import send_report
