@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import json
 import threading
 import asyncio
 import ccxt
@@ -14,8 +15,9 @@ import time
 bot_exit_signal = threading.Event()
 
 app = Application.builder().token(BOT_TOKEN).build()
-baseurl = "https://Denisco.pythonanywhere.com"
+baseurl = "https://Dennisco.pythonanywhere.com"
 developer_token = handleEnv("developer_token")
+# https://www.pythonanywhere.com/user/Dennisco/webapps/#id_dennisco_pythonanywhere_com
 
 
 def start_telegram():
@@ -35,6 +37,7 @@ def start_telegram():
     app.add_handler(CommandHandler("verify_coupon_payment", verify_coupon_payment_command))
     app.add_handler(CommandHandler("Not_received", not_received_command))
     app.add_handler(CommandHandler("edit_phone_number", edit_phone_number_command))
+    app.add_handler(CommandHandler("edit_min_profit_percent", edit_minimum_profit_percent_command))
 
     app.add_handler(CallbackQueryHandler(button_press_handler))
 
@@ -72,9 +75,11 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     time.sleep(wait_time * 60)
                     continue
                 url = baseurl + '/send_report/' + developer_token
-                data = best_opp
-                resp = requests.post(url, data=data)
-                if resp != 200:
+                adapter.info("Sending opportunities...")
+                # data = json.dumps(best_opp)
+                header = {"Content-Type": "application/json"}
+                resp = requests.post(url, data=best_opp, headers=header)
+                if resp.status_code != 200:
                     adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
                     # from run_telegram import send_report
                     # await send_report(opp)

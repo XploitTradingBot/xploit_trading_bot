@@ -170,6 +170,11 @@ async def edit_phone_number_command(Update:Update, context:ContextTypes.DEFAULT_
     STATES[chat_id] = "PHONE_NO"
     await Update.message.reply_text(txt)
 
+async def edit_minimum_profit_percent_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
+    chat_id = Update.message.chat_id
+    STATES[chat_id] = "SET_MIN_PROFIT"
+    await Update.message.reply_text("Enter your prefered minimum profit percent")
+
 
 # Responses
 async def handle_response(orig_text:str, chat_id) -> str:
@@ -276,6 +281,19 @@ async def handle_response(orig_text:str, chat_id) -> str:
             else:
                 response = "No user linked with this recovery key"
             # return response
+        elif STATES[chat_id] == "SET_MIN_PROFIT":
+            profit_percent = orig_text
+            try:
+                profit_percent = float(profit_percent)
+                if profit_percent >= 100 or profit_percent <= 0:
+                    response = "Please select a number between 0 and 100"
+                else:
+                    setattr(user, "min_profit_percent", profit_percent)
+                    user.save()
+                    del STATES[chat_id]
+                    response = "Thank you, your input has been saved"
+            except Exception:
+                response = "Please use a number as your profit percent"
         else:
             response = "I do not understand your command. send \"help\" for a list of all available commands"
             if chat_id == 1209605960:
@@ -303,7 +321,8 @@ async def send_report(opp:Dict):
     users_profit = fetch_eligible_users(opp)
     messages = {}
     recieved_users = []
-    for user_chat_id, profit in users_profit.items():
+    for user_id, profit in users_profit.items():
+        user = storage.get("User", user_id)
         result_string = f"Symbol      - {opp['coin']}\n"
         result_string += f"Capital     - {profit[1]} USDT\n"
         result_string += f"Buy on      - {opp['buy_exchange']}\n"
@@ -313,15 +332,15 @@ async def send_report(opp:Dict):
         result_string += f"Sell on     - {opp['sell_exchange']}\n"
         result_string += f"sell price  - {opp['sell_price']} or current market price\n"
         txt = result_string + f"\nProfit rate  - {profit[0]:.2f}%"
-        if profit[0] >= 5:
-            messages[user_chat_id] = txt
-            adapter.info(f"Result {txt} sent to {user_chat_id}")
-            user = storage.search("User", chat_id=user_chat_id)
+        if profit[0] >= user.min_profit_percent:
+            messages[user.chat_id] = txt
+            adapter.info(f"Result {txt} sent to {user.username}")
+            user = storage.search("User", chat_id=user.chat_id)
             user = user[0]
             if hasattr(user, "phone_no"):
                 recieved_users.append(user.phone_no)
         else:
-            adapter.info(f"Could not send {opp['coin']} to {user_chat_id} cause of low profit ({profit[0]:.2f}%)")
+            adapter.info(f"Could not send {opp['coin']} to {user.username} cause of low profit ({profit[0]:.2f}%)")
 
     tasks = [send_message(chat_id, messages[chat_id]) for chat_id in messages]
     await asyncio.gather(*tasks)

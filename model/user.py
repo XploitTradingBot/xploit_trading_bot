@@ -12,6 +12,7 @@ class User(BaseModel):
         self.subscribed = False
         self.min_cap = 500
         self.txid = ""
+        self.min_profit_percent = 5
         super().__init__(*args, **kwargs)
         
         # required_vals = ['name', 'email', 'password']

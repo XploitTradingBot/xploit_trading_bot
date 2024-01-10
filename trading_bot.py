@@ -603,7 +603,7 @@ async def find_opportunity(capital:float, data:Dict):
         verified_opps = [opp for opp in verified_opps if opp is not None and opp['min_cap'] <= 5000]
         sorted_verified_opps = sorted(verified_opps, key=lambda x: x['min_cap'])
         
-        adapter.info(sorted_verified_opps)
+        adapter.info(f"Best opportunities: {sorted_verified_opps}")
         return sorted_verified_opps
     except ccxt.NetworkError:
         adapter.error("* Seems your network connection is inactive. Try again later *")

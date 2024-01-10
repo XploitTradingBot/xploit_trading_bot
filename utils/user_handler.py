@@ -19,7 +19,7 @@ def fetch_eligible_users(opp:Dict)->Dict:
             if user.min_cap >= cap:
                 net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
                 profit_percent = (net_profit / user.min_cap) * 100
-                eligible_users[user.chat_id] = (profit_percent, user.min_cap)
+                eligible_users[user.id] = (profit_percent, user.min_cap)
         else:
             if user.free_trial == 'active':
                 trial_start = user.free_trial_started
@@ -31,7 +31,7 @@ def fetch_eligible_users(opp:Dict)->Dict:
                     if user.min_cap >= cap:
                         net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
                         profit_percent = (net_profit / user.min_cap) * 100
-                        eligible_users[user.chat_id] = (profit_percent, user.min_cap)
+                        eligible_users[user.id] = (profit_percent, user.min_cap)
     return eligible_users
 
 def send_sms(phones:List, text:str):
