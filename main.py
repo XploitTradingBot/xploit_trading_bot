@@ -76,13 +76,13 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     continue
                 url = baseurl + '/users'
                 adapter.info("Sending opportunities...")
-                data = json.dumps(best_opp)
                 resp = requests.get(url)
                 if resp.status_code != 200:
                     adapter.warning(f"Could not get users info from telegram server: {resp.status_code}. {resp.text}")
                 else:
                     users = resp.json()
                     storage.recreate(users)
+                    adapter.info("User info updated!")
                 from run_telegram import send_report
                 for opp in best_opp:
                     await send_report(opp)
@@ -96,8 +96,8 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 adapter.warning("No profitable coin gotten")
                 sys.exit(1)
             adapter.info(best_opp)
+            from run_telegram import send_report
             for opp in best_opp:
-                from run_telegram import send_report
                 await send_report(opp)
 
     except ccxt.NetworkError as e:
