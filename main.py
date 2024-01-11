@@ -54,7 +54,7 @@ def start_telegram():
     # bot_exit_signal.set()
     # app.stop_running
 
-async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, paper_trade=False, keys:Dict={}, exit_signal:threading.Event=None):
+async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, paper_trade=False, keys:Dict={}):
     adapter.info("You have started the bot")
     if exchange_list is None:
         exchange_list = ['binance', 'bitmex', 'huobi', 'bingx', 'bitget', 'mexc',
@@ -64,9 +64,10 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
         data = await setup(exchange_list)
 
         if not fetch_once:
-            if not exit_signal:
-                return "Include an exit_signal"
-            while not exit_signal.is_set():
+            while True:
+                global bot_exit_signal
+                if bot_exit_signal.is_set():
+                    break
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
                 if not best_opp:
@@ -85,10 +86,9 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 from run_telegram import send_report
                 for opp in best_opp:
                     await send_report(opp)
-                if not exit_signal.is_set():
-                    await asyncio.sleep(wait_time * 60)
-                else:
+                if exit_signal.is_set():
                     break
+                await asyncio.sleep(wait_time * 60)
             adapter.info("Arbitrage bot has stopped")
         else:
             best_opp = await find_opportunity(capital, data)
@@ -114,10 +114,18 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
         bot_thread.start()
         adapter.info("Bot thread restarted after initial shutdown")
 
+async def checker():
+    while True:
+        global bot_exit_signal
+        if bot_exit_signal.is_set():
+            print("Terminating thread!")
+            break
+
 def start_arbitrage_bot(exit_signal=None):
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
-    loop.run_until_complete(bot_handler(500, exchange_list=None, fetch_once=False, exit_signal=exit_signal))
+    loop.run_until_complete(bot_handler(500, exchange_list=None, fetch_once=False))
+    # loop.run_until_complete(checker())
 
 def start_telegram_bot():
     loop = asyncio.new_event_loop()

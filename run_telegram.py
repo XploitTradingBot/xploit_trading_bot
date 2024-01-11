@@ -428,12 +428,14 @@ def bot_handler():
     loop.run_until_complete(main(500, exchange_list=None, fetch_once=False))
 
 
-def my_thread(event):
-    while not event.is_set():
-        print("Thread is active...")
-        time.sleep(2)
+def my_thread():
+    # while not event.is_set():
+    #     print("Thread is active...")
+    #     time.sleep(2)
 
-    print("Thread received exit signal and is terminating.")
+    # print("Thread received exit signal and is terminating.")
+    from main import bot_exit_signal
+    bot_exit_signal.set()
 
 
 
@@ -441,16 +443,17 @@ if __name__ == '__main__':
     # telegram_thread = threading.Thread(target=start_telegram)
     # bot_thread = threading.Thread(target=bot_handler)
     # bot_thread.start()
-    # start_telegram()
+    start_telegram()
 
     # telegram_thread.join()
     # bot_thread.join()
     
-    exit_event = threading.Event()
-    my_thread_thread = threading.Thread(target=my_thread, args=(exit_event,))
-    my_thread_thread.start()
-    time.sleep(5)
-    exit_event.set()
-    my_thread_thread.join()
+    # my_thread()
+    # exit_event = threading.Event()
+    # my_thread_thread = threading.Thread(target=my_thread)
+    # my_thread_thread.start()
+    # time.sleep(5)
+    # exit_event.set()
+    # my_thread_thread.join()
 
     print("Main program completed.")
