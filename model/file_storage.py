@@ -8,6 +8,7 @@ from model.keys import Key
 from model.bot import Bot
 from model.user import User
 from model.coin import Coin
+from typing import List
 # from model.thread import Thread
 from model.notif import Notification
 from model.usersession import UserSession
@@ -60,6 +61,13 @@ class Storage():
             pass
         except Exception as e:
             print(e)
+
+    def recreate(self, objs:List):
+        """This recreates all the objects in the argument into storage"""
+        for obj in objs:
+            key = f"{obj['__class__']}.{obj['id']}"
+            self.__objects[key] = classes[obj['__class__']](**obj)
+        self.save()
 
     def delete(self, obj=None):
         """delete obj from __objects if its inside"""

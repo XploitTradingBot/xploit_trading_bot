@@ -69,20 +69,21 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
             while not exit_signal.is_set():
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
-                # adapter.info(best_opp)
                 if not best_opp:
                     adapter.warning("No profitable coin gotten")
                     time.sleep(wait_time * 60)
                     continue
-                url = baseurl + '/send_report/' + developer_token
+                url = baseurl + '/users'
                 adapter.info("Sending opportunities...")
-                # data = json.dumps(best_opp)
-                header = {"Content-Type": "application/json"}
+                data = json.dumps(best_opp)
+                resp = requests.get(url)
+                if resp.status_code != 200:
+                    adapter.warning(f"Could not get users info from telegram server: {resp.status_code}. {resp.text}")
+                else:
+                    users = resp.json()
+                    storage.recreate(users)
                 from run_telegram import send_report
-                resp = requests.post(url, data={"signals": best_opp}, headers=header)
                 for opp in best_opp:
-                # if resp.status_code != 200:
-                    # adapter.info(f"Error sending trade report: {resp.status_code}, {resp.text}")
                     await send_report(opp)
                 if not exit_signal.is_set():
                     await asyncio.sleep(wait_time * 60)
@@ -127,14 +128,15 @@ def start_telegram_bot():
 if __name__ == '__main__':
     try:
         print("starting arbitrage bot...")
-        bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal,))
+        # bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal,))
         # telegram_thread = threading.Thread(target=start_telegram_bot)
-        bot_thread.start()
-        start_telegram_bot()
+        # bot_thread.start()
+        # start_telegram_bot()
         # telegram_thread.start()
+        start_arbitrage_bot(bot_exit_signal)
         print("Code reached the end")
 
-        bot_thread.join()
+        # bot_thread.join()
         # telegram_thread.join()
     except KeyboardInterrupt:
         pass
