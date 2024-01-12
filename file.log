@@ -2034,3 +2034,152 @@ UnboundLocalError: local variable 'verified' referenced before assignment
 2024-01-11 21:13:25,817 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
 2024-01-11 21:14:02,921 - WARNING - No withdrawal path found for DC/USDT between KuCoin and Gate.io
 2024-01-11 21:14:04,469 - ERROR - Bot stopped due to an unexpected error: local variable 'send_report' referenced before assignment, line: 86
+2024-01-12 14:15:58,223 - WARNING - Could not verify meta-merge-mana with cmc: The system is busy, please try again later!
+2024-01-12 14:16:08,685 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 14:16:14,766 - WARNING - Could not verify bitgert with cmc: The system is busy, please try again later!
+2024-01-12 14:16:25,068 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-12 14:16:26,279 - WARNING - Could not verify sharering with cmc: The system is busy, please try again later!
+2024-01-12 14:16:28,237 - WARNING - Could not verify wingoal with cmc: The system is busy, please try again later!
+2024-01-12 14:16:46,834 - WARNING - Could not verify league-of-kingdoms-arena with cmc: The system is busy, please try again later!
+2024-01-12 14:16:46,873 - WARNING - Traceback (most recent call last):
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 602, in find_opportunity
+    verified_opps = await asyncio.gather(*tasks)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 568, in verify_opp
+    status = await executor(capital, opp, exchanges)
+  File "C:\Users\HP\Documents\xploit\xploit_trading_bot-1\trading_bot.py", line 654, in executor
+    actual_buy_amount = buy_amount - buy_fee
+TypeError: unsupported operand type(s) for -: 'float' and 'coroutine'
+
+2024-01-12 14:16:46,876 - WARNING - unsupported operand type(s) for -: 'float' and 'coroutine'
+2024-01-12 14:16:46,877 - WARNING - No profitable coin gotten
+2024-01-12 14:21:21,345 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-12 14:21:34,042 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-12 14:21:43,136 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and Gate.io
+2024-01-12 14:21:45,158 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-12 14:21:51,429 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-12 14:22:08,901 - WARNING - Could not verify lithium-finance with cmc: The system is busy, please try again later!
+2024-01-12 14:22:22,288 - WARNING - No withdrawal path found for RACA/USDT between Gate.io and Huobi
+2024-01-12 14:22:44,299 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-12 14:22:47,916 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-12 14:22:49,613 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 14:24:11,483 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-12 14:24:18,019 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-12 14:25:20,714 - WARNING - No withdrawal path found for IZI/USDT between Gate.io and KuCoin
+2024-01-12 14:25:34,865 - WARNING - Could not verify route with cmc: The system is busy, please try again later!
+2024-01-12 14:25:45,470 - WARNING - No withdrawal path found for DC/USDT between Gate.io and Huobi
+2024-01-12 14:26:12,830 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-12 14:27:11,114 - WARNING - No withdrawal path found for FDT/USDT between Gate.io and Huobi
+2024-01-12 14:27:21,824 - WARNING - No withdrawal path found for WEST/USDT between Gate.io and KuCoin
+2024-01-12 14:28:27,953 - WARNING - No withdrawal path found for MYRO/USDT between Huobi and Bitget
+2024-01-12 14:28:31,219 - WARNING - No withdrawal path found for ELA/USDT between Huobi and Bitget
+2024-01-12 14:30:55,661 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-12 14:50:48,544 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-12 14:50:56,529 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-12 14:50:57,104 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and KuCoin
+2024-01-12 14:50:59,127 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-12 14:51:30,341 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-12 14:52:04,522 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-12 14:52:07,022 - WARNING - No withdrawal path found for ZKF/USDT between Bitget and KuCoin
+2024-01-12 14:52:18,906 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-12 14:52:20,125 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 14:52:23,322 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-12 14:52:42,025 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-12 14:53:34,873 - WARNING - No withdrawal path found for IZI/USDT between Gate.io and KuCoin
+2024-01-12 14:53:36,046 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-12 14:53:51,835 - WARNING - No withdrawal path found for WEST/USDT between Gate.io and KuCoin
+2024-01-12 14:57:40,272 - WARNING - No withdrawal path found for HOTCROSS/USDT between Gate.io and KuCoin
+2024-01-12 15:00:23,954 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-12 15:00:28,882 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-12 15:00:39,970 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and Gate.io
+2024-01-12 15:00:41,082 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-12 15:00:59,219 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-12 15:01:18,320 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-12 15:01:19,503 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 15:01:48,021 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-12 15:02:08,398 - WARNING - No withdrawal path found for RACA/USDT between Gate.io and Huobi
+2024-01-12 15:02:10,729 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-12 15:03:29,939 - WARNING - No withdrawal path found for BRISE/USDT between Bitget and Huobi
+2024-01-12 15:04:08,821 - WARNING - No withdrawal path found for IZI/USDT between Gate.io and KuCoin
+2024-01-12 15:05:46,624 - WARNING - No withdrawal path found for XPR/USDT between KuCoin and Bitget
+2024-01-12 15:05:55,295 - WARNING - No withdrawal path found for ZKF/USDT between Bitget and KuCoin
+2024-01-12 15:06:05,443 - WARNING - No withdrawal path found for WEST/USDT between Gate.io and KuCoin
+2024-01-12 15:06:05,984 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-12 15:06:29,701 - WARNING - No withdrawal path found for BSV/USDT between Bitget and KuCoin
+2024-01-12 15:06:30,673 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-12 15:07:56,243 - WARNING - Could not verify league-of-kingdoms-arena with cmc: The system is busy, please try again later!
+2024-01-12 15:08:19,286 - WARNING - No withdrawal path found for FRONT/USDT between Bitget and KuCoin
+2024-01-12 15:08:43,626 - WARNING - No withdrawal path found for FRM/USDT between KuCoin and Gate.io
+2024-01-12 15:09:39,299 - WARNING - No withdrawal path found for HOTCROSS/USDT between Gate.io and KuCoin
+2024-01-12 15:10:01,407 - WARNING - Could not verify flare-network with cmc: The system is busy, please try again later!
+2024-01-12 15:10:03,511 - WARNING - Could not verify nakamoto.games with cmc: The system is busy, please try again later!
+2024-01-12 15:10:04,624 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-12 15:10:06,856 - WARNING - No profitable coin gotten
+2024-01-12 15:15:21,650 - ERROR - * Seems your network connection is inactive. Try again later *
+2024-01-12 15:15:21,651 - WARNING - No profitable coin gotten
+2024-01-12 15:22:29,536 - WARNING - No withdrawal path found for GST/USDT between Gate.io and KuCoin
+2024-01-12 15:22:34,803 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-12 15:22:42,224 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and Gate.io
+2024-01-12 15:22:43,321 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-12 15:22:49,425 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-12 15:23:22,576 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 15:23:37,458 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-12 15:23:56,083 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and Huobi
+2024-01-12 15:24:07,265 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-12 15:24:14,927 - WARNING - No withdrawal path found for WEST/USDT between Gate.io and KuCoin
+2024-01-12 15:24:48,009 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-12 15:25:11,914 - WARNING - No withdrawal path found for PSL/USDT between Gate.io and KuCoin
+2024-01-12 15:25:22,635 - WARNING - No withdrawal path found for XPR/USDT between KuCoin and Bitget
+2024-01-12 15:47:24,617 - ERROR - Bot stopped due to a network error: gate GET https://api.gateio.ws/api/v4/futures/usdt/contracts
+2024-01-12 15:49:12,624 - ERROR - An unexpected error occured in trading_bot.py: find_opportunity.<locals>.verify_opp() missing 1 required positional argument: 'opp', line 616
+2024-01-12 15:51:39,336 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-12 15:51:41,927 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and KuCoin
+2024-01-12 15:51:44,533 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-12 15:51:58,748 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-12 15:52:00,818 - WARNING - Could not verify bit.store with cmc: The system is busy, please try again later!
+2024-01-12 15:52:38,944 - WARNING - No withdrawal path found for MUBI/USDT between Gate.io and Huobi
+2024-01-12 15:52:39,959 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-12 15:53:05,274 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Bitget
+2024-01-12 15:53:43,488 - WARNING - No withdrawal path found for RACA/USDT between Gate.io and Huobi
+2024-01-12 15:53:50,760 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:53:51,896 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:54:08,648 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:54:09,642 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:54:18,165 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:54:25,619 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:54:33,857 - WARNING - No withdrawal path found for NPT/USDT between Gate.io and Bitget
+2024-01-12 15:54:42,554 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:04,813 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:20,759 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:21,352 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:22,208 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:39,093 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:55:40,202 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:07,074 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:16,816 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:17,966 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:19,805 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:37,447 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:44,724 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:45,844 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:56:55,340 - WARNING - No withdrawal path found for TURT/USDT between Gate.io and Huobi
+2024-01-12 15:56:55,931 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:57:13,046 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-12 15:57:20,336 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:57:21,529 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-12 15:57:56,516 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:58:05,270 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:58:21,192 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:58:32,964 - WARNING - No withdrawal path found for WEST/USDT between Gate.io and KuCoin
+2024-01-12 15:58:55,075 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:59:02,350 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:59:02,990 - WARNING - No withdrawal path found for HT/USDT between Huobi and KuCoin
+2024-01-12 15:59:05,194 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:59:14,115 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:59:15,195 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-12 15:59:33,864 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 15:59:55,836 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 16:00:14,817 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 16:00:15,456 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 16:00:26,760 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 16:00:31,016 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-12 16:00:40,788 - WARNING - Timeout! verify_opps stopped after timeout

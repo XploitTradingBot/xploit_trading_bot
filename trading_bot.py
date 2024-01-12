@@ -3,11 +3,12 @@
 import sys
 import json
 import time
-import ccxt
+# import ccxt
+import ccxt.async_support as ccxt
 import asyncio
 import requests
 import threading
-import traceback
+from datetime import datetime, timedelta
 from requests.exceptions import RequestException
 from typing import Dict, List
 from utils.logging import adapter
@@ -97,7 +98,7 @@ async def setup(exchange_list:List[str]):
                 exchange_coins[exchange] = [f"{coin}/USDT"]
     return {"exchanges": exchanges, "exchange_coins": exchange_coins, "coins": coins}
 
-def get_trading_fee(coin:str, exchange:ccxt.Exchange, type:str, amount:float) -> float:
+async def get_trading_fee(coin:str, exchange:ccxt.Exchange, type:str, amount:float) -> float:
     """This returns the trading fee from a trade
     Args:
         coin: The coin symbol to trade eg. 'IOST/USDT'
@@ -119,7 +120,7 @@ def get_trading_fee(coin:str, exchange:ccxt.Exchange, type:str, amount:float) ->
             fee = fee_struct['maker']
     return fee
 
-def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:str, amount:float):
+async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, code:str, amount:float):
     """The obtains info about a withdraw request
     Args:
         from_exchange: the ccxt instance of the exchange which fund is to be withdrawn
@@ -535,6 +536,9 @@ async def find_opportunity(capital:float, data:Dict):
         except FileNotFoundError:
             symbols = {'whitelist': {}, 'blacklist': {}}
 
+        current_time = datetime.now()
+        valid_till = current_time + timedelta(minutes=3)
+
         async def verify_opp(opp:Dict):
             """This verifies an opportunity. Returns the opp if verified else return None"""
             if "coin" not in opp or opp['profit'] <= 0:
@@ -572,7 +576,6 @@ async def find_opportunity(capital:float, data:Dict):
                     min_capital = (capital * gross_profit) / opp['profit']
                     opp['min_cap'] = min_capital
                     adapter.info(f"opportunity verified: {opp}")
-                    # return opp
                 else:
                     opp['min_cap'] = capital
                     adapter.info(f"opportunity verified: {opp}")
@@ -585,7 +588,13 @@ async def find_opportunity(capital:float, data:Dict):
                         symbols['whitelist'][coin] = [exchange_1, exchange_2]
                     with open(filename, 'w', encoding='utf-8') as f:
                         json.dump(symbols, f)
-                return opp
+                from run_telegram import send_report
+                if datetime.now() <= valid_till:
+                    await send_report(opp)
+                else:
+                    adapter.warning("Timeout! verify_opps stopped after timeout")
+                    return None
+                # return opp
             else:
                 if update_status is True:
                     if coin in symbols['blacklist']:
@@ -598,20 +607,27 @@ async def find_opportunity(capital:float, data:Dict):
                         json.dump(symbols, f)
                     return None
 
+        # try:
+            
+        #     print("Tasks have been gathered in a list")
+        #     verified_opps = await asyncio.wait_for(asyncio.gather(*tasks), timeout=timeout)
+        # except asyncio.CancelledError:
+        #     adapter.warning("Timeout, verify_opps stopped cause of timeout")
         tasks = [verify_opp(opp) for opp in opps]
-        verified_opps = await asyncio.gather(*tasks)
-        verified_opps = [opp for opp in verified_opps if opp is not None and opp['min_cap'] <= 5000]
-        sorted_verified_opps = sorted(verified_opps, key=lambda x: x['min_cap'])
+        adapter.info("Tasks have been gathered in a list")
+        await asyncio.gather(*tasks)
+        adapter.info("Loop completed, Now returning")
+        # verified_opps = [opp for opp in verified_opps if opp is not None and opp['min_cap'] <= 5000]
+        # sorted_verified_opps = sorted(verified_opps, key=lambda x: x['min_cap'])
         
-        adapter.info(f"Best opportunities: {sorted_verified_opps}")
-        return sorted_verified_opps
+        # adapter.info(f"Best opportunities: {sorted_verified_opps}")
+        # return sorted_verified_opps
     except ccxt.NetworkError:
         adapter.error("* Seems your network connection is inactive. Try again later *")
         return None
     except Exception as e:
-        print(e.__traceback__.tb_lineno)
-        adapter.warning(traceback.format_exc())
-        adapter.warning(e)
+        # print(e.__traceback__.tb_lineno)
+        adapter.error(f"An unexpected error occured in trading_bot.py: {e}, line {e.__traceback__.tb_lineno}")
         return None
 
     # return best_opps
@@ -650,11 +666,11 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     # calculate the total gas fee paid
     buy_amount = capital / buy_price
     buy_amount = float(exchange_1.amount_to_precision(symbol, buy_amount))
-    buy_fee = get_trading_fee(symbol, exchange_1, 'taker', buy_amount) # in trade currency
+    buy_fee = await get_trading_fee(symbol, exchange_1, 'taker', buy_amount) # in trade currency
     actual_buy_amount = buy_amount - buy_fee
     # adapter.info("Obtained taker trading fee")
     try:
-        withdraw_detail = get_withdrawal_detail(exchange_1, exchange_2, symbol.split("/")[0], actual_buy_amount)
+        withdraw_detail = await get_withdrawal_detail(exchange_1, exchange_2, symbol.split("/")[0], actual_buy_amount)
     except Exception:
         return False
     # adapter.info("Withdrawal details obtained")
@@ -666,7 +682,7 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     else:
         withdraw_fee = 0
     sell_amount = actual_buy_amount - withdraw_fee
-    sell_fee = get_trading_fee(symbol, exchange_2, 'maker', sell_amount) # in usdt
+    sell_fee = await get_trading_fee(symbol, exchange_2, 'maker', sell_amount) # in usdt
     total_fee = (buy_fee * buy_price) + sell_fee + withdraw_fee
     # if opportunity['profit'] < total_fee:
     #     adapter.warning("Total gas fee for execution greater than profit.")

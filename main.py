@@ -61,6 +61,7 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                            'bybit', 'gate', 'okx', 'kucoin']
     wait_time = 5   # minutes
     try:
+        # set up all exchanges
         data = await setup(exchange_list)
 
         if not fetch_once:
@@ -68,14 +69,7 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 global bot_exit_signal
                 if bot_exit_signal.is_set():
                     break
-                adapter.info("Fetching opportunities")
-                best_opp = await find_opportunity(capital, data)
-                if not best_opp:
-                    adapter.warning("No profitable coin gotten")
-                    time.sleep(wait_time * 60)
-                    continue
                 url = baseurl + '/users'
-                adapter.info("Sending opportunities...")
                 resp = requests.get(url)
                 if resp.status_code != 200:
                     adapter.warning(f"Could not get users info from telegram server: {resp.status_code}. {resp.text}")
@@ -83,9 +77,16 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     users = resp.json()
                     storage.recreate(users)
                     adapter.info("User info updated!")
-                from run_telegram import send_report
-                for opp in best_opp:
-                    await send_report(opp)
+                adapter.info("Fetching opportunities")
+                best_opp = await find_opportunity(capital, data)
+                # if not best_opp:
+                #     adapter.warning("No profitable coin gotten")
+                #     time.sleep(wait_time * 60)
+                #     continue
+                # adapter.info("Sending opportunities...")
+                # from run_telegram import send_report
+                # for opp in best_opp:
+                #     await send_report(opp)
                 if exit_signal.is_set():
                     break
                 await asyncio.sleep(wait_time * 60)
