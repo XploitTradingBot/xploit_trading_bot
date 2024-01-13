@@ -299,7 +299,9 @@ async def send_message(chat_id:int, text:str, reply_markup=None):
     return message_id
 
 async def send_report(opp:Dict):
-    users_profit = fetch_eligible_users(opp)
+    # adapter.info("Fetching eligible users...")
+    users_profit = await fetch_eligible_users(opp)
+    # print(users_profit)
     messages = {}
     recieved_users = []
     for user_id, profit in users_profit.items():

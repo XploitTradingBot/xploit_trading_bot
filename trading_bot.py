@@ -588,8 +588,11 @@ async def find_opportunity(capital:float, data:Dict):
                         symbols['whitelist'][coin] = [exchange_1, exchange_2]
                     with open(filename, 'w', encoding='utf-8') as f:
                         json.dump(symbols, f)
+                    # adapter.info("File updated completely")
+                # adapter.info("Sending all trade reports")
                 from run_telegram import send_report
                 if datetime.now() <= valid_till:
+                    # adapter.info("sending...")
                     await send_report(opp)
                 else:
                     adapter.warning("Timeout! verify_opps stopped after timeout")

@@ -10,7 +10,6 @@ from trading_bot import setup, find_opportunity
 from run_telegram import *
 from utils.helper import handleEnv
 
-bot_exit_signal = threading.Event()
 
 app = Application.builder().token(BOT_TOKEN).build()
 baseurl = "https://Dennisco.pythonanywhere.com"
@@ -63,9 +62,6 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
 
         if not fetch_once:
             while True:
-                global bot_exit_signal
-                if bot_exit_signal.is_set():
-                    break
                 url = baseurl + '/users'
                 resp = requests.get(url)
                 if resp.status_code != 200:
@@ -77,7 +73,7 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
                 await asyncio.sleep(wait_time * 60)
-            adapter.info("Arbitrage bot has stopped")
+            # adapter.info("Arbitrage bot has stopped")
         else:
             best_opp = await find_opportunity(capital, data)
             if not best_opp:
@@ -125,7 +121,7 @@ if __name__ == '__main__':
         # bot_thread.start()
         # start_telegram_bot()
         # telegram_thread.start()
-        start_arbitrage_bot(bot_exit_signal)
+        start_arbitrage_bot()
         print("Code reached the end")
 
         # bot_thread.join()
