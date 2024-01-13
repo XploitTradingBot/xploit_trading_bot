@@ -58,6 +58,7 @@ class Storage():
                 for attr in ['alerted', 'trial_alerted']:
                     if hasattr(model, attr):
                         obj[attr] = getattr(model, attr)
+            # print("Setting new user")
 
             self.__objects[key] = classes[obj['__class__']](**obj)
         self.save()

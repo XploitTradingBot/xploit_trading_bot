@@ -2431,3 +2431,27 @@ TypeError: unsupported operand type(s) for -: 'float' and 'coroutine'
 2024-01-13 08:47:37,574 - WARNING - Timeout! verify_opps stopped after timeout
 2024-01-13 08:47:43,341 - WARNING - Timeout! verify_opps stopped after timeout
 2024-01-13 08:47:43,909 - WARNING - Timeout! verify_opps stopped after timeout
+2024-01-13 15:39:58,662 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-13 15:40:00,341 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and Bitget
+2024-01-13 15:40:01,637 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-13 15:40:06,935 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-13 15:40:32,105 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-13 15:40:41,393 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-13 15:40:45,104 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-13 15:40:51,534 - WARNING - No withdrawal path found for ATEM/USDT between Gate.io and KuCoin
+2024-01-13 15:40:54,678 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-13 15:40:56,785 - WARNING - No withdrawal path found for RACA/USDT between KuCoin and Huobi
+2024-01-13 15:41:04,041 - WARNING - No withdrawal path found for DC/USDT between Gate.io and Huobi
+2024-01-13 15:45:22,041 - WARNING - No withdrawal path found for QI/USDT between KuCoin and Gate.io
+2024-01-13 15:45:22,741 - WARNING - No withdrawal path found for BABYDOGE/USDT between Huobi and KuCoin
+2024-01-13 15:45:23,865 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-13 15:45:25,012 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-13 15:45:29,516 - WARNING - No withdrawal path found for ZKF/USDT between Bitget and Huobi
+2024-01-13 15:45:32,114 - WARNING - No withdrawal path found for ATEM/USDT between Gate.io and KuCoin
+2024-01-13 15:45:38,061 - WARNING - No withdrawal path found for COTI/USDT between Huobi and Gate.io
+2024-01-13 15:45:39,054 - WARNING - Could not verify terra-classic with cmc: The system is busy, please try again later!
+2024-01-13 15:45:42,926 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-13 15:45:50,615 - WARNING - No withdrawal path found for RACA/USDT between Gate.io and Huobi
+2024-01-13 15:45:56,594 - WARNING - No withdrawal path found for QKC/USDT between KuCoin and Bitget
+2024-01-13 15:46:01,070 - WARNING - No withdrawal path found for BSV/USDT between Gate.io and KuCoin
+2024-01-13 15:46:05,927 - WARNING - No withdrawal path found for NUM/USDT between KuCoin and Huobi
