@@ -53,10 +53,11 @@ class Storage():
         """This recreates all the objects in the argument into storage"""
         for obj in objs:
             key = f"{obj['__class__']}.{obj['id']}"
-            model = self.__objects[key]
-            for attr in ['alerted', 'trial_alerted']:
-                if hasattr(model, attr):
-                    obj[attr] = getattr(model, attr)
+            if key in self.__objects:
+                model = self.__objects[key]
+                for attr in ['alerted', 'trial_alerted']:
+                    if hasattr(model, attr):
+                        obj[attr] = getattr(model, attr)
 
             self.__objects[key] = classes[obj['__class__']](**obj)
         self.save()
