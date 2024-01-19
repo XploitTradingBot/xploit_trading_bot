@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import asyncio
-import threading
 from utils.logging import adapter
 from utils.helper import handleEnv
 from typing import Final, Dict
@@ -294,9 +293,12 @@ async def handle_response(orig_text:str, chat_id) -> str:
 
 # send messages
 async def send_message(chat_id:int, text:str, reply_markup=None):
-    app = Application.builder().token(BOT_TOKEN).build()
-    message_id = await app.bot.send_message(chat_id, text, reply_markup=reply_markup)
-    return message_id
+    try:
+        app = Application.builder().token(BOT_TOKEN).build()
+        message_id = await app.bot.send_message(chat_id, text, reply_markup=reply_markup)
+        return message_id
+    except:
+        pass
 
 async def send_report(opp:Dict):
     # adapter.info("Fetching eligible users...")

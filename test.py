@@ -40,8 +40,6 @@ def main(exchanges:List[ccxt.Exchange]):
     cleared_exchanges = load_markets(exchanges)
     return cleared_exchanges
 
-# print([exchange.id for exchange in exchanges])
-
 # Balance check
 def balance_check(exchange):            # checked
     balance = exchange.fetchBalance(params={})
@@ -420,13 +418,21 @@ def test_threading(stop_event):
         print("thread is running")
         time.sleep(1)
 
+def test_peregrine():
+    from peregrinearb import load_exchange_graph, print_profit_opportunity_for_path, bellman_ford
+    graph = asyncio.get_event_loop().run_until_complete(load_exchange_graph('gate'))
+    paths = bellman_ford(graph, depth=True)
+    for path, starting_amount in paths:
+        print_profit_opportunity_for_path(graph, path, depth=True, starting_amount=100)
+
 if __name__ == '__main__':
-    stop_event = threading.Event()
-    func_thread = threading.Thread(target=test_threading, args=(stop_event,))
-    func_thread.start()
-    time.sleep(5)
-    stop_event.set()
-    func_thread.join()
+    test_peregrine()
+    # stop_event = threading.Event()
+    # func_thread = threading.Thread(target=test_threading, args=(stop_event,))
+    # func_thread.start()
+    # time.sleep(5)
+    # stop_event.set()
+    # func_thread.join()
 
     # try:
     #     # exchanges = []

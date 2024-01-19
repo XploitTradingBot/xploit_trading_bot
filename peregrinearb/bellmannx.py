@@ -152,7 +152,9 @@ class NegativeWeightDepthFinder(NegativeWeightFinder):
         """
         arbitrage_loop = [start]
         prior_node = self.predecessor_to[arbitrage_loop[0]]
+        print("Prior node:", prior_node)
         # the minimum weight which can be transferred without being limited by edge depths
+        # print(self.graph[prior_node])[arbitrage_loop[0]]
         minimum = self.graph[prior_node][arbitrage_loop[0]]['depth']
         arbitrage_loop.insert(0, prior_node)
         while True:

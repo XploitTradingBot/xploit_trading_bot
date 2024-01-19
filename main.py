@@ -72,7 +72,10 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     adapter.info("User info updated!")
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
-                await asyncio.sleep(wait_time * 60)
+                if best_opp == "error":
+                    await asyncio.sleep(2 * 60)
+                else:
+                    await asyncio.sleep(wait_time * 60)
             # adapter.info("Arbitrage bot has stopped")
         else:
             best_opp = await find_opportunity(capital, data)
