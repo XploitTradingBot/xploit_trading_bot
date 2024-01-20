@@ -489,8 +489,8 @@ async def verify_with_fullName(symbol:str, exchange_1:str, exchange_2:str)->bool
     return False
 
 async def verify_with_cmc(coinName:str, exchange_1:str, exchange_2:str) ->bool:
-    # coinName = "-".join(coinName.split())
-    # coinName = coinName.lower()
+    coinName = "-".join(coinName.split())
+    coinName = coinName.lower()
     baseurl = f"https://api.coinmarketcap.com"
     endpoint = f"/data-api/v3/cryptocurrency/market-pairs/latest"
     query_string = f"?slug={coinName}&start=1&limit=20&quoteCurrencyId=825&category=spot&centerType=cex&sort=cmc_rank_advanced&direction=desc&spotUntracked=true"
@@ -518,20 +518,17 @@ async def verify_with_cmc(coinName:str, exchange_1:str, exchange_2:str) ->bool:
         return False
 
 async def verify_with_cmc_slug(coinName:str, exchange_1:str, exchange_2:str, opp_coins:str):
-    # print(opp_coins)
     header = {"X-CMC_PRO_API_KEY": "732d2a00-8d7a-4eff-b04a-72b2b43b218b"}
     base_url = "https://pro-api.coinmarketcap.com/v2/cryptocurrency/info"
     url = base_url + "?symbol={}".format(opp_coins)
     resp = requests.get(url, headers=header)
     if resp.status_code == 400:
-        print(resp.status_code)
         resp = resp.json()
-        print("Error encountered while fetching slugs:", resp)
+        adapter.warning(f"Error encountered while fetching slugs: {resp}")
         coins_list = opp_coins.split(",")
         new_coin_list = coins_list
         bad_symbols = resp['status']['error_message'].split(":")[1][2:-1]
         bad_symbols = bad_symbols.split(",")
-        print(bad_symbols)
         for coin in coins_list:
             if coin in bad_symbols:
                 try:
@@ -545,10 +542,8 @@ async def verify_with_cmc_slug(coinName:str, exchange_1:str, exchange_2:str, opp
         resp = resp.json()
         slugs = {}
         for key, val in resp['data'].items():
-            # print(key, "->", val)
             slugName = val[0]['slug']
             slugs[key] = slugName
-            # break
         return slugs
 
 async def find_opportunity(capital:float, data:Dict):
@@ -658,9 +653,9 @@ async def find_opportunity(capital:float, data:Dict):
             if datetime.now() <= search_till:
                 resp = await verify_opp(opp, slugNames)
                 if resp is None:
-                    adapter.info("Opp failed verification")
+                    adapter.info(f"Opp {opp['coin']} failed verification")
             else:
-                print("Timeout!")
+                adapter.info("Timeout!")
                 break
         adapter.info("Loop completed, Now returning")
     except ccxt.NetworkError as e:

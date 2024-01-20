@@ -3044,3 +3044,365 @@ TypeError: unsupported operand type(s) for -: 'float' and 'coroutine'
 2024-01-19 19:53:17,905 - WARNING - Could not determine the withdrawal fee for PANDO in gate through ERC20
 2024-01-19 19:53:31,052 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
 2024-01-19 19:53:43,043 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:15:05,868 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:15:05,877 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:15:06,404 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:15:06,496 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:15:09,549 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:15:09,549 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:15:10,288 - WARNING - Could not determine the withdrawal fee for MINE in gate through BEP20
+2024-01-20 06:15:12,047 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 06:15:13,911 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:15:16,469 - WARNING - Could not verify Islamic Coin with cmc: The system is busy, please try again later!
+2024-01-20 06:15:16,602 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:15:17,506 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:15:17,506 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:15:18,529 - WARNING - No withdrawal path found for COQ/USDT between Bitget and KuCoin
+2024-01-20 06:15:18,657 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:15:18,658 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:15:19,999 - WARNING - Could not determine the withdrawal fee for MUSIC in gate through ERC20
+2024-01-20 06:15:21,844 - WARNING - Could not verify Huobi Token with cmc: The system is busy, please try again later!
+2024-01-20 06:15:22,047 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:15:27,488 - WARNING - Could not verify Neon EVM with cmc: The system is busy, please try again later!
+2024-01-20 06:15:27,693 - WARNING - Could not determine the withdrawal fee for WOOP in gate through BEP20
+2024-01-20 06:15:29,726 - WARNING - Could not verify Bitcoin SV with cmc: The system is busy, please try again later!
+2024-01-20 06:15:31,298 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:15:31,445 - WARNING - Could not determine the withdrawal fee for WEST in gate through WEST
+2024-01-20 06:15:33,569 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:15:33,751 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 06:15:34,386 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:15:35,022 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:15:35,656 - WARNING - Could not determine the withdrawal fee for FDT in gate through BEP20
+2024-01-20 06:15:37,478 - WARNING - Could not verify LOVELY INU with cmc: The system is busy, please try again later!
+2024-01-20 06:15:38,252 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-20 06:15:39,428 - WARNING - Could not verify Terra Classic with cmc: The system is busy, please try again later!
+2024-01-20 06:15:40,875 - WARNING - No withdrawal path found for RMRK/USDT between KuCoin and Gate.io
+2024-01-20 06:15:45,814 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-20 06:15:47,388 - WARNING - Could not determine the withdrawal fee for NIM in gate through NIM
+2024-01-20 06:15:48,331 - WARNING - Could not determine the withdrawal fee for DCK in gate through BEP20
+2024-01-20 06:15:49,521 - WARNING - No withdrawal path found for ORDI/USDT between Bitget and KuCoin
+2024-01-20 06:15:50,974 - WARNING - Could not verify Camelot with cmc: The system is busy, please try again later!
+2024-01-20 06:15:51,116 - WARNING - Could not determine the withdrawal fee for BNC in gate through BNC
+2024-01-20 06:15:53,624 - WARNING - Could not verify ISSP.io with cmc: The system is busy, please try again later!
+2024-01-20 06:15:55,078 - WARNING - Could not verify Trust Wallet Token with cmc: The system is busy, please try again later!
+2024-01-20 06:15:55,206 - WARNING - Could not determine the withdrawal fee for TT in gate through TT
+2024-01-20 06:15:58,735 - WARNING - Could not verify RepubliK (RPK) with cmc: The system is busy, please try again later!
+2024-01-20 06:16:00,025 - WARNING - Could not verify XEN Crypto with cmc: The system is busy, please try again later!
+2024-01-20 06:16:00,143 - WARNING - Could not determine the withdrawal fee for SENSO in gate through ERC20
+2024-01-20 06:16:00,784 - WARNING - Could not determine the withdrawal fee for WIFI in gate through POLYGON
+2024-01-20 06:16:03,002 - WARNING - Could not verify Manta Network with cmc: The system is busy, please try again later!
+2024-01-20 06:16:04,286 - WARNING - Could not verify Nakamoto.Games with cmc: The system is busy, please try again later!
+2024-01-20 06:16:05,104 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-20 06:16:06,618 - WARNING - Could not determine the withdrawal fee for PSL in gate through PSL
+2024-01-20 06:16:07,375 - WARNING - Could not determine the withdrawal fee for HERO in gate through BEP20
+2024-01-20 06:16:08,019 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:16:08,021 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:16:10,216 - WARNING - Could not verify Skeb Coin with cmc: The system is busy, please try again later!
+2024-01-20 06:21:08,366 - WARNING - Could not verify Meta Merge Mana with cmc: The system is busy, please try again later!
+2024-01-20 06:21:12,840 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:21:12,841 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:21:13,382 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:21:16,250 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:21:20,356 - WARNING - Could not verify vEmpire DDAO with cmc: The system is busy, please try again later!
+2024-01-20 06:21:22,904 - WARNING - Could not determine the withdrawal fee for TURT in gate through BTC
+2024-01-20 06:21:22,905 - WARNING - Could not determine the withdrawal fee for TURT in gate through ERC20
+2024-01-20 06:21:23,393 - WARNING - No withdrawal path found for TURT/USDT between Gate.io and Huobi
+2024-01-20 06:21:26,766 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:21:26,766 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:21:29,375 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:21:31,025 - WARNING - Could not verify Islamic Coin with cmc: The system is busy, please try again later!
+2024-01-20 06:21:32,702 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:21:34,914 - WARNING - Could not verify MetaVisa with cmc: The system is busy, please try again later!
+2024-01-20 06:21:36,520 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:21:36,521 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:21:38,844 - WARNING - Could not verify Neon EVM with cmc: The system is busy, please try again later!
+2024-01-20 06:21:41,259 - WARNING - Could not verify Nsure Network with cmc: The system is busy, please try again later!
+2024-01-20 06:21:42,807 - WARNING - Could not verify Bitgert with cmc: The system is busy, please try again later!
+2024-01-20 06:21:45,190 - WARNING - Could not verify Trace Network Labs with cmc: The system is busy, please try again later!
+2024-01-20 06:21:47,603 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:21:47,603 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:21:50,464 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:21:52,664 - WARNING - Could not verify Huobi Token with cmc: The system is busy, please try again later!
+2024-01-20 06:21:54,051 - WARNING - Could not verify LOVELY INU with cmc: The system is busy, please try again later!
+2024-01-20 06:21:55,592 - WARNING - Could not verify Adappter Token with cmc: The system is busy, please try again later!
+2024-01-20 06:21:59,651 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-20 06:22:01,126 - WARNING - Could not determine the withdrawal fee for MINE in gate through BEP20
+2024-01-20 06:22:03,132 - WARNING - Could not verify DeepBrainChain with cmc: The system is busy, please try again later!
+2024-01-20 06:22:04,997 - WARNING - Could not verify Bitcoin SV with cmc: The system is busy, please try again later!
+2024-01-20 06:22:06,345 - WARNING - Could not verify ShareRing with cmc: The system is busy, please try again later!
+2024-01-20 06:22:09,001 - WARNING - Could not verify yfii finance with cmc: The system is busy, please try again later!
+2024-01-20 06:22:10,282 - WARNING - Could not verify Terra Classic USD with cmc: The system is busy, please try again later!
+2024-01-20 06:22:12,978 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:22:17,160 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:22:19,120 - WARNING - Could not verify MiL.k  with cmc: The system is busy, please try again later!
+2024-01-20 06:22:20,632 - WARNING - Could not verify Frutti Dino with cmc: The system is busy, please try again later!
+2024-01-20 06:22:22,156 - WARNING - Could not verify Waves Enterprise with cmc: The system is busy, please try again later!
+2024-01-20 06:22:23,912 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:22:26,105 - WARNING - Could not verify iExec with cmc: The system is busy, please try again later!
+2024-01-20 06:22:27,487 - WARNING - Could not verify AscendEX token with cmc: The system is busy, please try again later!
+2024-01-20 06:22:33,915 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 06:22:38,799 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:22:42,061 - WARNING - Could not verify SQUAD with cmc: The system is busy, please try again later!
+2024-01-20 06:22:43,786 - WARNING - 'marketPairs'
+2024-01-20 06:22:47,507 - WARNING - Could not determine the withdrawal fee for CQT in gate through ERC20
+2024-01-20 06:22:49,910 - WARNING - Could not verify Cult DAO with cmc: The system is busy, please try again later!
+2024-01-20 06:22:56,919 - WARNING - Could not determine the withdrawal fee for OLAND in gate through BEP20
+2024-01-20 06:22:58,894 - WARNING - Could not verify Terra Classic with cmc: The system is busy, please try again later!
+2024-01-20 06:23:03,577 - WARNING - Could not verify Pocket Network with cmc: The system is busy, please try again later!
+2024-01-20 06:23:05,256 - WARNING - Could not verify Ispolink Token with cmc: The system is busy, please try again later!
+2024-01-20 06:28:51,565 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:28:51,569 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:28:52,166 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:28:52,268 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:28:53,734 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 06:28:55,253 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:28:56,681 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:28:56,683 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:28:57,367 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:28:59,649 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:28:59,654 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:29:01,563 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:29:02,902 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:29:03,027 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:29:05,507 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-20 06:29:07,122 - WARNING - Could not verify gensokishi-metaverse with cmc: The system is busy, please try again later!
+2024-01-20 06:29:08,066 - WARNING - Could not verify iexec-rlc with cmc: The system is busy, please try again later!
+2024-01-20 06:29:08,259 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:29:09,018 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:29:12,732 - WARNING - Could not verify mxctoken with cmc: The system is busy, please try again later!
+2024-01-20 06:29:15,783 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:29:15,784 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:29:19,574 - WARNING - Could not verify tomtom-coin with cmc: The system is busy, please try again later!
+2024-01-20 06:29:22,831 - WARNING - No withdrawal path found for ORDI/USDT between Bitget and KuCoin
+2024-01-20 06:29:30,889 - WARNING - Could not verify morpheus.network with cmc: The system is busy, please try again later!
+2024-01-20 06:29:32,281 - WARNING - Could not determine the withdrawal fee for NIM in gate through NIM
+2024-01-20 06:29:36,111 - WARNING - Could not verify karate with cmc: The system is busy, please try again later!
+2024-01-20 06:29:37,719 - WARNING - Could not verify camelot with cmc: The system is busy, please try again later!
+2024-01-20 06:29:39,183 - WARNING - Could not verify iron with cmc: The system is busy, please try again later!
+2024-01-20 06:29:41,141 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-20 06:29:43,930 - WARNING - Could not verify rats-(rats) with cmc: The system is busy, please try again later!
+2024-01-20 06:29:45,510 - WARNING - Could not verify push-protocol with cmc: The system is busy, please try again later!
+2024-01-20 06:29:46,857 - WARNING - Could not verify issp.io with cmc: The system is busy, please try again later!
+2024-01-20 06:29:49,444 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:29:49,445 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:29:53,928 - WARNING - Could not determine the withdrawal fee for BNC in gate through BNC
+2024-01-20 06:29:55,715 - WARNING - No withdrawal path found for POKT/USDT between KuCoin and Bitget
+2024-01-20 06:29:57,488 - WARNING - Could not verify darkshield-games-studio with cmc: The system is busy, please try again later!
+2024-01-20 06:29:59,083 - WARNING - Could not determine the withdrawal fee for CQT in gate through ERC20
+2024-01-20 06:30:00,976 - WARNING - Could not verify xen with cmc: The system is busy, please try again later!
+2024-01-20 06:30:02,209 - WARNING - Could not verify xpet.tech with cmc: The system is busy, please try again later!
+2024-01-20 06:30:06,034 - WARNING - Could not determine the withdrawal fee for WIFI in gate through POLYGON
+2024-01-20 06:30:13,950 - WARNING - No withdrawal path found for FRM/USDT between KuCoin and Gate.io
+2024-01-20 06:30:15,400 - WARNING - Could not verify captain-tsubasa--rivals with cmc: The system is busy, please try again later!
+2024-01-20 06:30:16,613 - WARNING - Could not determine the withdrawal fee for HERO in gate through BEP20
+2024-01-20 06:30:18,708 - WARNING - Could not determine the withdrawal fee for AXS in gate through ERC20
+2024-01-20 06:30:20,805 - WARNING - Could not determine the withdrawal fee for SKEB in gate through ERC20
+2024-01-20 06:35:32,975 - WARNING - Error encountered while fetching slugs: {'status': {'timestamp': '2024-01-20T05:35:37.719Z', 'error_code': 400, 'error_message': 'Invalid value for "symbol": "PONKE"', 'elapsed': 0, 'credit_count': 0, 'notice': None}}
+2024-01-20 06:35:37,173 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:35:37,174 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:35:37,696 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:35:37,838 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:35:40,255 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 06:35:41,544 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:35:41,638 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:35:41,640 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:35:43,445 - WARNING - Could not verify cobak with cmc: The system is busy, please try again later!
+2024-01-20 06:35:44,735 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:35:44,736 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:35:55,302 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:35:57,205 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:35:57,206 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:36:07,219 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:36:09,197 - WARNING - Could not verify orbit-chain-(orc) with cmc: The system is busy, please try again later!
+2024-01-20 06:36:10,580 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:36:11,213 - WARNING - Could not determine the withdrawal fee for USTC in huobi through USTC
+2024-01-20 06:36:13,336 - WARNING - No withdrawal path found for USTC/USDT between Huobi and KuCoin
+2024-01-20 06:36:13,422 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:36:16,182 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:36:17,576 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:36:20,945 - WARNING - No withdrawal path found for COQ/USDT between Bitget and KuCoin
+2024-01-20 06:36:22,340 - WARNING - Could not determine the withdrawal fee for PBR in gate through ERC20
+2024-01-20 06:36:22,340 - WARNING - Could not determine the withdrawal fee for PBR in gate through BEP20
+2024-01-20 06:36:26,921 - WARNING - Could not determine the withdrawal fee for SUIA in gate through SUI
+2024-01-20 06:36:34,257 - WARNING - Could not determine the withdrawal fee for TIDAL in gate through ERC20
+2024-01-20 06:36:36,822 - WARNING - Could not verify brc20.com with cmc: The system is busy, please try again later!
+2024-01-20 06:36:38,175 - WARNING - No withdrawal path found for MICE/USDT between Huobi and Gate.io
+2024-01-20 06:36:40,026 - WARNING - Could not determine the withdrawal fee for NIM in gate through NIM
+2024-01-20 06:36:40,718 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:36:40,720 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:36:57,894 - WARNING - Could not verify new-kind-of-network with cmc: The system is busy, please try again later!
+2024-01-20 06:37:02,448 - WARNING - Could not determine the withdrawal fee for TIA in gate through TIA
+2024-01-20 06:37:03,609 - WARNING - No withdrawal path found for DOVI/USDT between KuCoin and Huobi
+2024-01-20 06:37:06,700 - WARNING - Could not determine the withdrawal fee for WIFI in gate through POLYGON
+2024-01-20 06:37:07,623 - WARNING - 'PONKE'
+2024-01-20 06:37:09,014 - WARNING - Could not determine the withdrawal fee for UNFI in gate through ERC20
+2024-01-20 06:37:14,239 - WARNING - No withdrawal path found for DC/USDT between Huobi and Gate.io
+2024-01-20 06:37:16,012 - WARNING - 'marketPairs'
+2024-01-20 06:37:18,063 - WARNING - Could not verify synapse with cmc: The system is busy, please try again later!
+2024-01-20 06:37:23,115 - WARNING - Could not determine the withdrawal fee for FTT in gate through ERC20
+2024-01-20 06:37:23,841 - WARNING - Could not determine the withdrawal fee for HERO in gate through BEP20
+2024-01-20 06:37:24,491 - WARNING - Could not determine the withdrawal fee for SKEB in gate through ERC20
+2024-01-20 06:42:40,140 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:42:40,142 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:42:40,710 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:42:40,809 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:42:43,554 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 06:42:45,041 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:42:45,198 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:42:45,985 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:42:45,985 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:42:46,663 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:42:51,711 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:42:51,713 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:42:52,509 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:42:55,134 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:42:58,174 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-20 06:43:00,146 - WARNING - Could not verify iexec with cmc: The system is busy, please try again later!
+2024-01-20 06:43:02,559 - WARNING - Could not verify wirex with cmc: The system is busy, please try again later!
+2024-01-20 06:43:02,865 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:43:02,867 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:43:04,758 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:43:06,066 - WARNING - Could not determine the withdrawal fee for WOOP in gate through BEP20
+2024-01-20 06:43:06,761 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:43:07,822 - WARNING - Could not determine the withdrawal fee for SUIA in gate through SUI
+2024-01-20 06:43:11,402 - WARNING - No withdrawal path found for COQ/USDT between Bitget and KuCoin
+2024-01-20 06:43:19,762 - WARNING - Could not determine the withdrawal fee for EGAME in gate through ERC20
+2024-01-20 06:43:21,698 - WARNING - Could not verify nakamoto.games with cmc: The system is busy, please try again later!
+2024-01-20 06:43:21,854 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:43:21,859 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:43:22,963 - WARNING - Could not determine the withdrawal fee for USTC in huobi through USTC
+2024-01-20 06:43:25,141 - WARNING - No withdrawal path found for USTC/USDT between Huobi and KuCoin
+2024-01-20 06:43:28,295 - WARNING - No withdrawal path found for DC/USDT between KuCoin and Gate.io
+2024-01-20 06:43:33,617 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-20 06:43:38,426 - WARNING - 'marketPairs'
+2024-01-20 06:43:40,178 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 06:43:43,501 - WARNING - Could not determine the withdrawal fee for ARKM in gate through ERC20
+2024-01-20 06:43:49,567 - WARNING - No withdrawal path found for NEXT/USDT between Huobi and Gate.io
+2024-01-20 06:43:56,489 - WARNING - Could not determine the withdrawal fee for HERO in gate through BEP20
+2024-01-20 06:43:57,191 - WARNING - Could not determine the withdrawal fee for SKEB in gate through ERC20
+2024-01-20 06:49:12,891 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:49:12,891 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:49:13,467 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:49:13,567 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:49:15,751 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:49:17,343 - WARNING - Could not determine the withdrawal fee for TURT in gate through BTC
+2024-01-20 06:49:17,344 - WARNING - Could not determine the withdrawal fee for TURT in gate through ERC20
+2024-01-20 06:49:17,873 - WARNING - No withdrawal path found for TURT/USDT between Gate.io and Huobi
+2024-01-20 06:49:21,178 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:49:21,420 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:49:22,096 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:49:22,098 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:49:24,126 - WARNING - Could not determine the withdrawal fee for USTC in huobi through USTC
+2024-01-20 06:49:26,326 - WARNING - No withdrawal path found for USTC/USDT between Huobi and KuCoin
+2024-01-20 06:49:26,424 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:49:27,590 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:49:30,416 - WARNING - 'marketPairs'
+2024-01-20 06:49:30,534 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:49:31,273 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:49:31,274 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:49:33,206 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:49:37,751 - WARNING - Could not verify ordinals with cmc: The system is busy, please try again later!
+2024-01-20 06:49:39,286 - WARNING - No withdrawal path found for MUBI/USDT between Bitget and Huobi
+2024-01-20 06:49:43,447 - WARNING - Could not determine the withdrawal fee for PBR in gate through ERC20
+2024-01-20 06:49:43,447 - WARNING - Could not determine the withdrawal fee for PBR in gate through BEP20
+2024-01-20 06:49:45,484 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:49:45,492 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:49:47,434 - WARNING - Could not verify pax-dollar with cmc: The system is busy, please try again later!
+2024-01-20 06:49:48,928 - WARNING - Could not verify grovecoin with cmc: The system is busy, please try again later!
+2024-01-20 06:49:50,504 - WARNING - Could not verify space-falcon with cmc: The system is busy, please try again later!
+2024-01-20 06:49:53,488 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:49:53,490 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:49:54,554 - WARNING - 'marketPairs'
+2024-01-20 06:50:01,599 - WARNING - Could not determine the withdrawal fee for CQT in gate through ERC20
+2024-01-20 06:50:03,462 - WARNING - Could not verify graphlinq with cmc: The system is busy, please try again later!
+2024-01-20 06:50:04,787 - WARNING - Could not verify galactic-quadrant with cmc: The system is busy, please try again later!
+2024-01-20 06:50:06,077 - WARNING - Could not determine the withdrawal fee for VR in gate through ERC20
+2024-01-20 06:50:07,913 - WARNING - Could not verify dtravel with cmc: The system is busy, please try again later!
+2024-01-20 06:50:09,418 - WARNING - No withdrawal path found for FITFI/USDT between KuCoin and Gate.io
+2024-01-20 06:50:09,555 - WARNING - Could not determine the withdrawal fee for EGAME in gate through ERC20
+2024-01-20 06:50:10,190 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 06:50:12,476 - WARNING - Could not determine the withdrawal fee for SKEB in gate through ERC20
+2024-01-20 06:50:14,844 - WARNING - 'marketPairs'
+2024-01-20 06:55:24,898 - WARNING - Error encountered while fetching slugs: {'status': {'timestamp': '2024-01-20T05:55:29.600Z', 'error_code': 400, 'error_message': 'Invalid value for "symbol": "VAIOT"', 'elapsed': 0, 'credit_count': 0, 'notice': None}}
+2024-01-20 06:55:31,300 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 06:55:31,302 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 06:55:31,852 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 06:55:32,006 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 06:55:34,254 - WARNING - Could not verify huobi-token with cmc: The system is busy, please try again later!
+2024-01-20 06:55:35,706 - WARNING - No withdrawal path found for FNSA/USDT between Bitget and Huobi
+2024-01-20 06:55:36,469 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 06:55:37,915 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 06:55:38,337 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 06:55:39,234 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 06:55:39,239 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 06:55:43,336 - WARNING - Could not verify bitgert with cmc: The system is busy, please try again later!
+2024-01-20 06:55:43,452 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 06:55:43,974 - WARNING - 'VAIOT'
+2024-01-20 06:55:44,270 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 06:55:44,274 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 06:55:45,249 - WARNING - 'marketPairs'
+2024-01-20 06:55:45,350 - WARNING - Could not determine the withdrawal fee for WICC in gate through WICC
+2024-01-20 06:55:47,280 - WARNING - 'marketPairs'
+2024-01-20 06:55:47,449 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 06:55:47,450 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 06:55:49,263 - WARNING - No withdrawal path found for COQ/USDT between Bitget and KuCoin
+2024-01-20 06:55:49,778 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-20 06:55:53,517 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 06:55:53,809 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 06:55:53,811 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 06:55:54,431 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 06:56:00,718 - WARNING - Could not determine the withdrawal fee for RMRK in gate through KUSAMA
+2024-01-20 06:56:01,244 - WARNING - No withdrawal path found for RMRK/USDT between Gate.io and KuCoin
+2024-01-20 06:56:03,517 - WARNING - No withdrawal path found for PHA/USDT between Huobi and KuCoin
+2024-01-20 06:56:05,142 - WARNING - Could not verify sensorium with cmc: The system is busy, please try again later!
+2024-01-20 06:56:07,005 - WARNING - 'marketPairs'
+2024-01-20 06:56:08,894 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 06:56:10,850 - WARNING - Could not determine the withdrawal fee for USDD in gate through ERC20
+2024-01-20 06:56:10,851 - WARNING - Could not determine the withdrawal fee for USDD in gate through BEP20
+2024-01-20 06:56:10,852 - WARNING - Could not determine the withdrawal fee for USDD in gate through TRC20
+2024-01-20 06:56:13,189 - WARNING - Could not verify redfox with cmc: The system is busy, please try again later!
+2024-01-20 06:56:14,805 - WARNING - Could not determine the withdrawal fee for XCH in gate through XCH
+2024-01-20 06:56:19,755 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-20 06:56:21,866 - WARNING - 'marketPairs'
+2024-01-20 07:01:33,579 - WARNING - Error encountered while fetching slugs: {'status': {'timestamp': '2024-01-20T06:01:38.296Z', 'error_code': 400, 'error_message': 'Invalid values for "symbol": "MONG,VAIOT"', 'elapsed': 0, 'credit_count': 0, 'notice': None}}
+2024-01-20 07:01:38,117 - WARNING - Could not determine the withdrawal fee for KAI in gate through KAI
+2024-01-20 07:01:38,125 - WARNING - Could not determine the withdrawal fee for KAI in gate through ERC20
+2024-01-20 07:01:38,645 - WARNING - No withdrawal path found for KAI/USDT between Gate.io and Huobi
+2024-01-20 07:01:38,740 - WARNING - Could not determine the withdrawal fee for MOOV in gate through ERC20
+2024-01-20 07:01:41,792 - WARNING - No withdrawal path found for TURT/USDT between KuCoin and Huobi
+2024-01-20 07:01:44,223 - WARNING - Could not determine the withdrawal fee for HT in gate through ERC20
+2024-01-20 07:01:46,269 - WARNING - No withdrawal path found for COTI/USDT between KuCoin and Gate.io
+2024-01-20 07:01:46,376 - WARNING - Could not determine the withdrawal fee for BDX in gate through BDX
+2024-01-20 07:01:47,029 - WARNING - Could not determine the withdrawal fee for SMT in gate through SMT
+2024-01-20 07:01:47,034 - WARNING - Could not determine the withdrawal fee for SMT in gate through ERC20
+2024-01-20 07:01:49,067 - WARNING - Could not determine the withdrawal fee for CRTS in gate through ERC20
+2024-01-20 07:01:49,670 - WARNING - Could not determine the withdrawal fee for HAO in gate through ERC20
+2024-01-20 07:01:49,672 - WARNING - Could not determine the withdrawal fee for HAO in gate through BEP20
+2024-01-20 07:01:50,370 - WARNING - Could not determine the withdrawal fee for SWAP in gate through ERC20
+2024-01-20 07:01:51,060 - WARNING - 'VAIOT'
+2024-01-20 07:01:54,041 - WARNING - No withdrawal path found for MUBI/USDT between KuCoin and Huobi
+2024-01-20 07:01:55,371 - WARNING - 'MONG'
+2024-01-20 07:01:56,955 - WARNING - Could not verify numbers-protocol-(num) with cmc: The system is busy, please try again later!
+2024-01-20 07:02:00,580 - WARNING - Could not determine the withdrawal fee for WMT in gate through ADA
+2024-01-20 07:02:02,757 - WARNING - No withdrawal path found for COQ/USDT between Bitget and KuCoin
+2024-01-20 07:02:04,934 - WARNING - 'marketPairs'
+2024-01-20 07:02:05,693 - WARNING - 'marketPairs'
+2024-01-20 07:02:05,891 - WARNING - Could not determine the withdrawal fee for FORT in gate through ERC20
+2024-01-20 07:02:05,892 - WARNING - Could not determine the withdrawal fee for FORT in gate through POLYGON
+2024-01-20 07:02:06,749 - WARNING - Could not determine the withdrawal fee for XPLA in gate through XPLA
+2024-01-20 07:02:12,841 - WARNING - No withdrawal path found for ORDI/USDT between Bitget and KuCoin
+2024-01-20 07:02:13,166 - WARNING - Could not determine the withdrawal fee for IDEA in gate through POLYGON
+2024-01-20 07:02:13,167 - WARNING - Could not determine the withdrawal fee for IDEA in gate through ERC20
+2024-01-20 07:02:16,250 - WARNING - No withdrawal path found for XYM/USDT between Bitget and KuCoin
+2024-01-20 07:02:19,266 - WARNING - Could not verify clover-finance with cmc: The system is busy, please try again later!
+2024-01-20 07:02:20,683 - WARNING - Could not determine the withdrawal fee for RMRK in gate through KUSAMA
+2024-01-20 07:02:21,189 - WARNING - No withdrawal path found for RMRK/USDT between Gate.io and KuCoin
+2024-01-20 07:02:21,279 - WARNING - Could not determine the withdrawal fee for VR in gate through ERC20
+2024-01-20 07:02:24,312 - WARNING - Could not verify republik-(rpk) with cmc: The system is busy, please try again later!
+2024-01-20 07:02:28,875 - WARNING - 'marketPairs'
+2024-01-20 07:02:31,132 - WARNING - Could not determine the withdrawal fee for ARV in gate through BEP20
+2024-01-20 07:02:31,777 - WARNING - Could not determine the withdrawal fee for FTT in gate through ERC20
+2024-01-20 07:02:34,301 - WARNING - Could not verify nodle with cmc: The system is busy, please try again later!
+2024-01-20 07:02:34,424 - WARNING - Could not determine the withdrawal fee for XCH in gate through XCH
+2024-01-20 07:02:37,233 - WARNING - 'marketPairs'
+2024-01-20 07:02:38,487 - WARNING - No withdrawal path found for SILLY/USDT between Bitget and Huobi
