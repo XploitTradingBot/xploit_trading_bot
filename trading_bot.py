@@ -135,11 +135,15 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
     
     if from_exchange == to_exchange:
         return {"trade_network":None, "fee":0, "address":None, "tag": None}
+    if from_exchange.currencies[code]['active'] is False:
+        return 1
+    if to_exchange.currencies[code]['active'] is False:
+        return 0
 
     from_ntwks = from_exchange.currencies[code].get('networks', None)
     if from_ntwks is not None:
         from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
-                        if from_ntwks[network]['withdraw'] is True}
+                        if from_ntwks[network]['active'] is True}
     not_nullable_fee = {}
     for network, fee in from_networks.items():
         if fee is not None:
@@ -198,7 +202,7 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
     # adapter.info(f"Available networks in {from_exchange.id}: {from_networks}")
     to_nets = to_exchange.currencies[code].get('networks', None)
     if to_nets is not None:
-        to_nets = [net for net in to_nets if to_nets[net]['deposit'] is True]
+        to_nets = [net for net in to_nets if to_nets[net]['active'] is True]
     else:
         try:
             to_nets = list((to_exchange.fetchDepositWithdrawFee(code, params={}))['networks'].keys())
@@ -577,7 +581,6 @@ async def find_opportunity(capital:float, data:Dict):
                 symbols = json.load(fp)
         except FileNotFoundError:
             symbols = {'whitelist': {}, 'blacklist': {}}
-
 
         async def verify_opp(opp:Dict, slugNames:Dict):
             """This verifies an opportunity. Returns the opp if verified else return None"""
