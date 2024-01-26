@@ -22,7 +22,6 @@ exchanges = {"binance": binance, "bingx": bingx, "bitmart": bitmart,
              "huobi": huobi, "mexc": mexc, "okx": okx, "kucoin": kucoin, "gate": gate}
 
 
-
 async def load_market(exchange:ccxt.Exchange):
     exchange.load_markets()
 
@@ -136,9 +135,9 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
     if from_exchange == to_exchange:
         return {"trade_network":None, "fee":0, "address":None, "tag": None}
     if from_exchange.currencies[code]['active'] is False:
-        return 1
+        return None
     if to_exchange.currencies[code]['active'] is False:
-        return 0
+        return None
 
     from_ntwks = from_exchange.currencies[code].get('networks', None)
     if from_ntwks is not None:
@@ -163,7 +162,7 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
                         fee = fee * amount
                     from_networks[network] = fee
             else:
-                return 1
+                return None
         elif from_exchange.has.get('fetchDepositWithdrawalFees', None) or from_exchange.has.get('fetchDepositWithdrawFees'):
             try:
                 from_networks = {}
@@ -186,18 +185,6 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
             from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
                             if from_ntwks[network]['active'] is True}
             
-    # if len(from_networks) == 0:
-    #     if from_exchange.id == 'gate':
-    #         from_ntwks = from_exchange.fetchDepositWithdrawFee(code)
-    #         from_ntwks = from_ntwks.get("networks", None)
-    #         if from_ntwks:
-    #             from_networks = {network: from_ntwks[network]['withdraw']['fee'] for network in from_ntwks.keys()}
-    #         else:
-    #             return 1
-    #     else:
-    #         from_ntwks = from_exchange.currencies[code]['networks']
-    #         from_networks = {network: from_ntwks[network]['fee'] for network in from_ntwks
-    #                         if from_ntwks[network]['active'] is True}
     from_networks = dict(sorted(from_networks.items(), key=lambda x: x[1]))
     # adapter.info(f"Available networks in {from_exchange.id}: {from_networks}")
     to_nets = to_exchange.currencies[code].get('networks', None)
@@ -207,7 +194,7 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
         try:
             to_nets = list((to_exchange.fetchDepositWithdrawFee(code, params={}))['networks'].keys())
         except Exception:
-            return 1
+            return None
     # adapter.info(f"Available networks in {to_exchange.id}: {to_nets}")
 
     sim_addr = {"BEP20": "BSC", "BSC": "BEP20", "ETH": "ERC20", "ERC20": "ETH", "TRX": "TRC20", "TRC20": "TRX",
@@ -215,7 +202,6 @@ async def get_withdrawal_detail(from_exchange:ccxt.Exchange, to_exchange:ccxt, c
                 "ADA": "CARDANO", "CARDANO": "ADA"}
     network = None
     for net in from_networks:
-        # print("Finding matching network for", net)
         for to_net in to_nets:
             if net.lower() in to_net.lower() or to_net.lower() in net.lower():
                 if (net == "BEP2" and to_net == "BEP20") or (net == "BEP20" and to_net == "BEP2"):
@@ -668,7 +654,6 @@ async def find_opportunity(capital:float, data:Dict):
         adapter.error(f"An unexpected error occured in trading_bot.py: {e}, line {e.__traceback__.tb_lineno}")
         return "error"
 
-
 async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}, execute:bool=False):
     """This executes the trade on both exchanges
     Args:
@@ -721,9 +706,6 @@ async def executor(capital:float, opportunity:Dict, exchanges:Dict, keys:Dict={}
     sell_amount = actual_buy_amount - withdraw_fee
     sell_fee = await get_trading_fee(symbol, exchange_2, 'maker', sell_amount) # in usdt
     total_fee = (buy_fee * buy_price) + sell_fee + withdraw_fee
-    # if opportunity['profit'] < total_fee:
-    #     adapter.warning("Total gas fee for execution greater than profit.")
-    #     return False
 
     # opportunity['profit'] = opportunity['profit'] - total_fee
     opportunity['total_fee'] = total_fee
