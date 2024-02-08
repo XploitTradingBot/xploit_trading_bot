@@ -7,7 +7,6 @@ from utils.helper import handleEnv
 from utils.logging import adapter
 from main import start_arbitrage_bot, start_telegram_bot, app
 
-arbitrage_exit_signal = threading.Event()
 developer_token = handleEnv("developer_token")
 
 @app_views.route('/start_telegram/<admin_key>', strict_slashes=False, methods=['GET'])
@@ -24,7 +23,7 @@ def start_telegram(admin_key):
 @app_views.route('/start_arbitrage_bot/<admin_key>', strict_slashes=False)
 def start_arbitrage(admin_key):
     if admin_key == developer_token:
-        bot_thread = threading.Thread(target=start_arbitrage_bot, args=(arbitrage_exit_signal,))
+        bot_thread = threading.Thread(target=start_arbitrage_bot)
         adapter.info("Arbitrage bot started")
         bot_thread.start()
         return jsonify("You have successfully started the arbitrage bot")

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import time
 import asyncio
 import threading
 from utils.logging import adapter
@@ -9,8 +8,8 @@ from typing import Final, Dict
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from model import storage
 from model.user import User
-from utils.user_handler import fetch_eligible_users, check_user_subscribe_status, send_sms
-from datetime import datetime, timedelta
+from utils.user_handler import fetch_eligible_users, check_user_subscribe_status, send_sms, check_user_free_trial_status
+from datetime import datetime
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 
 
@@ -18,7 +17,6 @@ BOT_TOKEN: Final = handleEnv("BOT_TOKEN")
 BOT_USERNAME: Final = "@Xploit_trading_bot"
 timefmt = "%Y-%m-%d %H:%M:%S"
 
-exit_signal = threading.Event()
 STATES = {}
 admin_key = handleEnv("admin_key")
 subscription_fee = 50
@@ -84,15 +82,11 @@ async def start_free_trial_command(Update:Update, context:ContextTypes.DEFAULT_T
         if subscribed:
             await Update.message.reply_text("You have already subscribed for this service")
             return
-        if getattr(user, "free_trial") == "active":
+        active_trial = check_user_free_trial_status(user)
+        if active_trial is True:
             await Update.message.reply_text("You are already using free trial!")
             return
-        if hasattr(user, 'free_trial_started'):
-            free_trial_created_at = user.free_trial_started
-            trial_created_at = datetime.strptime(free_trial_created_at, timefmt) + timedelta(days=7)
-        if trial_created_at and datetime.now() > trial_created_at:
-            setattr(user, "free_trial", "used")
-            user.save()
+        elif active_trial == "used":
             await Update.message.reply_text("You have already used your free trial, Please subscribe!")
         else:
             setattr(user, "free_trial", "active")
@@ -129,10 +123,6 @@ async def edit_capital_command(Update:Update, context:ContextTypes.DEFAULT_TYPE)
         ret += "Minimum starting capital is 500"
         STATES[chat_id] = "CAPITAL"
         await Update.message.reply_text(ret)
-
-async def not_received_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
-    await Update.message.reply_text("Thank you for your response. The user has been notified")
-    # pass
 
 async def verify_coupon_payment_command(Update:Update, context:ContextTypes.DEFAULT_TYPE):
     chat_id = Update.message.chat.id
@@ -191,6 +181,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
         response = "Here is a list of all the available commands:\n\n"
         response += "/edit_capital - Set your capital to receive signals according to your budget\n"
         response += "/edit_phone_number - Edit your mobile number to receive sms notification\n"
+        response += "/edit_min_profit_percent - Edit the minimum profit percent you want to be notified for\n"
         response += "/recover_account - Recover your account on another telegram account\n"
         response += "/register - Create a new account\n"
         response += "/start_free_trial - Start free trial for 24 hours\n"
@@ -208,7 +199,7 @@ async def handle_response(orig_text:str, chat_id) -> str:
             user = User(username=username, chat_id=chat_id)
             user.save()
             response = f"Welcome {username} your account has been created. Here's a recovery key for you: {user.id}, \n"
-            response += "please keep it safe and private. You can use it to recover your account if your lose it\n\n"
+            response += "please keep it safe and private. You can use it to recover your account if your lose/change your device\n\n"
             del STATES[chat_id]
             # return response
         elif STATES[chat_id] == "VERIFY_PAYMENT":
@@ -296,18 +287,8 @@ async def handle_response(orig_text:str, chat_id) -> str:
                 response = "Please use a number as your profit percent"
         else:
             response = "I do not understand your command. send \"help\" for a list of all available commands"
-            if chat_id == 1209605960:
-                if orig_text == "admin start":
-                    from main import start_arbitrage_bot, bot_exit_signal
-                    asyncio.run(start_arbitrage_bot(bot_exit_signal))
-                    return "You have successfully started the arbitrage bot"
         return response
     else:
-        if chat_id == 1209605960:
-            if orig_text == "admin start":
-                from main import start_arbitrage_bot, bot_exit_signal
-                asyncio.run(start_arbitrage_bot(bot_exit_signal))
-                return "You have successfully started the arbitrage bot"
         return "I do not understand your command, send \"help\" to view a list of all available commands"
 
 
@@ -381,7 +362,7 @@ async def error(update: Update, context:ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} caused error: {context.error}')
 
 
-async def coupon_payment(chat_id):
+async def coupon_payment(chat_id:int):
     txt = f"Please complete your payment by sending {subscription_fee * 0.5} USDT to any of the following addresses\n\n"
     txt += "0x4a25bf5ffb9083d894faca43e29407a6c99f03dd\n"
     txt += "BEP20\n\n"
@@ -426,17 +407,6 @@ def bot_handler():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(main(500, exchange_list=None, fetch_once=False))
-
-
-def my_thread():
-    # while not event.is_set():
-    #     print("Thread is active...")
-    #     time.sleep(2)
-
-    # print("Thread received exit signal and is terminating.")
-    from main import bot_exit_signal
-    bot_exit_signal.set()
-
 
 
 if __name__ == '__main__':

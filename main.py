@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import json
 import threading
 import asyncio
 import ccxt
@@ -10,7 +9,6 @@ from typing import Dict, List
 from trading_bot import setup, find_opportunity
 from run_telegram import *
 from utils.helper import handleEnv
-import time
 
 bot_exit_signal = threading.Event()
 
@@ -35,7 +33,6 @@ def start_telegram():
     app.add_handler(CommandHandler("use_coupon", use_coupon_command))
     app.add_handler(CommandHandler("verify_payment", verify_payment_command))
     app.add_handler(CommandHandler("verify_coupon_payment", verify_coupon_payment_command))
-    app.add_handler(CommandHandler("Not_received", not_received_command))
     app.add_handler(CommandHandler("edit_phone_number", edit_phone_number_command))
     app.add_handler(CommandHandler("edit_min_profit_percent", edit_minimum_profit_percent_command))
 
@@ -79,16 +76,6 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
                     adapter.info("User info updated!")
                 adapter.info("Fetching opportunities")
                 best_opp = await find_opportunity(capital, data)
-                # if not best_opp:
-                #     adapter.warning("No profitable coin gotten")
-                #     time.sleep(wait_time * 60)
-                #     continue
-                # adapter.info("Sending opportunities...")
-                # from run_telegram import send_report
-                # for opp in best_opp:
-                #     await send_report(opp)
-                if exit_signal.is_set():
-                    break
                 await asyncio.sleep(wait_time * 60)
             adapter.info("Arbitrage bot has stopped")
         else:
@@ -103,16 +90,12 @@ async def bot_handler(capital:float, exchange_list:List=None, fetch_once=True, p
 
     except ccxt.NetworkError as e:
         adapter.error(f"Bot stopped due to a network error: {e}")
-        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     except ccxt.ExchangeError as e:
         adapter.error(f"Bot stopped due to an exchange error: {e}")
-        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     except Exception as e:
         adapter.error(f"Bot stopped due to an unexpected error: {e}, line: {e.__traceback__.tb_lineno}")
-        # asyncio.run(bot_handler(capital, fetch_once=fetch_once))
     finally:
-        bot_thread = threading.Thread(target=start_arbitrage_bot, args=(bot_exit_signal))
-        bot_thread.start()
+        start_arbitrage_bot()
         adapter.info("Bot thread restarted after initial shutdown")
 
 async def checker():
@@ -122,7 +105,7 @@ async def checker():
             print("Terminating thread!")
             break
 
-def start_arbitrage_bot(exit_signal=None):
+def start_arbitrage_bot():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     loop.run_until_complete(bot_handler(500, exchange_list=None, fetch_once=False))

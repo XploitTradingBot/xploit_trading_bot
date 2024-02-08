@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import asyncio
 import requests
 from typing import Dict, List
 from utils.logging import adapter
@@ -8,31 +9,23 @@ from model.user import User
 from utils.helper import handleEnv
 from datetime import datetime, timedelta
 
-time = "%Y-%m-%d %H:%M:%S"
+timefmt = "%Y-%m-%d %H:%M:%S"
 
-def fetch_eligible_users(opp:Dict)->Dict:
+async def fetch_eligible_users_for_opp(opp:Dict)->Dict:
     cap = opp['min_cap']
     eligible_users = {}
     users = storage.all("User")
     for _, user in users.items():
-        if check_user_subscribe_status(user) is True:
+        if check_user_subscribe_status(user) is True or check_user_free_trial_status(user) is True:
             if user.min_cap >= cap:
                 net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
                 profit_percent = (net_profit / user.min_cap) * 100
                 eligible_users[user.id] = (profit_percent, user.min_cap)
-        else:
-            if user.free_trial == 'active':
-                trial_start = user.free_trial_started
-                trial_start = datetime.strptime(trial_start, time)
-                if datetime.now() > trial_start + timedelta(days=7):
-                    user.free_trial = 'used'
-                    user.save()
-                else:
-                    if user.min_cap >= cap:
-                        net_profit = ((user.min_cap / opp['buy_price']) * opp['sell_price']) - opp['total_fee'] - user.min_cap
-                        profit_percent = (net_profit / user.min_cap) * 100
-                        eligible_users[user.id] = (profit_percent, user.min_cap)
     return eligible_users
+
+def fetch_eligible_users(opp:Dict)->Dict:
+    users = asyncio.run(fetch_eligible_users_for_opp(opp))
+    return users
 
 def send_sms(phones:List, text:str):
     base_url = "https://api.ng.termii.com/api"
@@ -49,7 +42,7 @@ def send_sms(phones:List, text:str):
     else:
         adapter.info(f"sms successfully sent to {phones}")
 
-def check_user_subscribe_status(user:User):
+async def subscribe_status(user:User):
     if user.chat_id in [5199997067, 5620934799, 1209605960]:
         return True
     if not user.subscribed:
@@ -59,9 +52,54 @@ def check_user_subscribe_status(user:User):
         subscribed_date = user.subscribed_date
     else:
         return False
-    subscribed_datetime = datetime.strptime(subscribed_date, time)
+    subscribed_datetime = datetime.strptime(subscribed_date, timefmt)
     valid_till = subscribed_datetime + timedelta(days=30)
     if current_datetime > valid_till:
         return False
     else:
+        if current_datetime > valid_till - timedelta(days=1) and current_datetime < valid_till:
+            if not hasattr(user, "alerted") or user.alerted is False:
+                from run_telegram import send_message
+                expire_on = valid_till.strftime(timefmt)
+                text = f"Hello {user.username}, your subscription for this service will expire on {expire_on}.\n\n"
+                text += "Subscribe to continue receiving top verified arbitrage opportunities on this bot\n\n"
+                text += "/subscribe"
+                setattr(user, "alerted", True)
+                user.save()
+                await send_message(user.chat_id, text)
         return True
+    
+def check_user_subscribe_status(user:User):
+    status = asyncio.run(subscribe_status(user))
+    return status
+    
+async def free_trial_status(user:User):
+    if user.free_trial == "used":
+        return "used"
+    elif user.free_trial == "unused":
+        return False
+    current_datetime = datetime.now()
+    if hasattr(user, "free_trial_started"):
+        free_trial_started = user.free_trial_started
+    else:
+        return False
+    free_trial_start_date = datetime.strptime(free_trial_started, timefmt)
+    valid_till = free_trial_start_date + timedelta(days=7)
+    if current_datetime > valid_till:
+        return False
+    else:
+        if current_datetime > valid_till - timedelta(days=1) and current_datetime < valid_till:
+            from run_telegram import send_message
+            if not hasattr(user, "trial_alerted") or user.trial_alerted is False:
+                expire_on = valid_till.strftime(timefmt)
+                text = f"Hello {user.username}, your free trial will end on {expire_on}.\n\n"
+                text += "Subscribe now to continue receiving top verified arbitrage signals from this bot\n\n"
+                text += "/subscribe"
+                setattr(user, "trial_alerted", True)
+                user.save()
+                await send_message(user.chat_id, text)
+        return True
+    
+def check_user_free_trial_status(user:User):
+    status = asyncio.run(free_trial_status(user))
+    return status

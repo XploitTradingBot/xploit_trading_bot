@@ -1,27 +1,14 @@
 #!/usr/bin/python3
 
 import json
-# import traceback
-# import new_listing
-from os import getenv
-from model.keys import Key
-from model.bot import Bot
 from model.user import User
-from model.coin import Coin
 from typing import List
-# from model.thread import Thread
-from model.notif import Notification
-from model.usersession import UserSession
 
-classes = {"User": User, "Notification": Notification, "Bot": Bot,
-           "UserSession": UserSession, "Key": Key, "Coin": Coin}
+classes = {"User": User}
+
 
 class Storage():
-    if getenv("TYPE") == "test":
-        __file_path = "file.json"
-    else:
-        __file_path = "file.json"
-
+    __file_path = "file.json"
     __objects = {}
 
     def all(self, cls=None):
@@ -66,6 +53,11 @@ class Storage():
         """This recreates all the objects in the argument into storage"""
         for obj in objs:
             key = f"{obj['__class__']}.{obj['id']}"
+            obj = self.__objects[key]
+            for attr in ['alerted', 'trial_alerted']:
+                if hasattr(obj, attr):
+                    obj[attr] = getattr(obj, attr)
+
             self.__objects[key] = classes[obj['__class__']](**obj)
         self.save()
 
